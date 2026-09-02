@@ -1,12 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sang Hoon Sung</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sang Hoon Sung — Senior Software Engineer, AI Agent Developer, and Product Builder. Portfolio of AI systems and commercial software.">
+  <title>Sang Hoon Sung — Senior Software Engineer &amp; AI Agent Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Sang Hoon Sung</h1>
-    <p>Senior Software Engineer · AI Agent Developer · Product Builder</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="nav__brand" href="index.html">Sang Hoon Sung</a>
+
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+
+      <nav class="nav__menu" id="nav-menu" aria-label="Primary">
+        <ul class="nav__links">
+          <li><a class="nav__link" href="#home">Home</a></li>
+          <li><a class="nav__link" href="#projects">Projects</a></li>
+          <li><a class="nav__link" href="#experience">Experience</a></li>
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav__social">
+          <a href="https://www.linkedin.com/in/woojooin/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/woojooin" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="home" aria-labelledby="hero-name">
+      <div class="container hero__inner">
+        <h1 class="hero__name" id="hero-name">Sang Hoon Sung</h1>
+        <p class="hero__roles">
+          <span class="hero__role">Senior Software Engineer</span>
+          <span class="hero__role">AI Agent Developer</span>
+          <span class="hero__role">Product Builder</span>
+        </p>
+        <p class="hero__intro">
+          Extensive experience designing, building, and shipping commercial software across macOS, iOS, web, and cloud platforms. Currently focused on Agentic AI systems and AI-powered productivity software.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#projects">View Projects</a>
+          <a class="btn btn--secondary" href="https://www.linkedin.com/in/woojooin/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__label">Selected Work</span>
+          <h2 class="section__title" id="projects-title">Featured Projects</h2>
+          <p class="section__intro">
+            AI systems and commercial applications. Detailed case studies will be added as content is finalized.
+          </p>
+        </header>
+
+        <!-- Category 1: AI & Agentic AI -->
+        <div class="project-category">
+          <div class="project-category__header">
+            <h3 class="project-category__title">AI &amp; Agentic AI</h3>
+            <span class="project-category__note">Current focus</span>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card project-card--featured">
+              <div class="project-card__media" aria-hidden="true">
+                <span class="project-card__placeholder">Screenshot placeholder</span>
+              </div>
+              <div class="project-card__body">
+                <h4 class="project-card__name">Office AI Agent</h4>
+                <p class="project-card__desc">
+                  [Short project description will be added here.]
+                </p>
+                <p class="project-card__meta">Tech: [Technologies to be listed]</p>
+                <div class="project-card__footer">
+                  <a class="btn btn--primary btn--small" href="projects/office-ai-agent.html">View Project</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card__media" aria-hidden="true">
+                <span class="project-card__placeholder">Screenshot placeholder</span>
+              </div>
+              <div class="project-card__body">
+                <h4 class="project-card__name">AI Mail Gateway</h4>
+                <p class="project-card__desc">
+                  [Short project description will be added here.]
+                </p>
+                <p class="project-card__meta">Tech: [Technologies to be listed]</p>
+                <div class="project-card__footer">
+                  <a class="btn btn--secondary btn--small" href="projects/ai-mail-gateway.html">View Project</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Category 2: Commercial Software -->
+        <div class="project-category">
+          <div class="project-category__header">
+            <h3 class="project-category__title">Commercial Software</h3>
+            <span class="project-category__note">Shipped products</span>
+          </div>
+
+          <div class="project-grid project-grid--wide">
+            <article class="project-card">
+              <div class="project-card__media" aria-hidden="true">
+                <span class="project-card__placeholder">Screenshot placeholder</span>
+              </div>
+              <div class="project-card__body">
+                <h4 class="project-card__name">TreeSize</h4>
+                <p class="project-card__desc">
+                  [Short project description will be added here.]
+                </p>
+                <p class="project-card__meta">Tech: [Technologies to be listed]</p>
+                <div class="project-card__footer">
+                  <a class="btn btn--secondary btn--small" href="projects/treesize.html">View Project</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card__media" aria-hidden="true">
+                <span class="project-card__placeholder">Screenshot placeholder</span>
+              </div>
+              <div class="project-card__body">
+                <h4 class="project-card__name">zCommander</h4>
+                <p class="project-card__desc">
+                  [Short project description will be added here.]
+                </p>
+                <p class="project-card__meta">Tech: [Technologies to be listed]</p>
+                <div class="project-card__footer">
+                  <a class="btn btn--secondary btn--small" href="projects/zcommander.html">View Project</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card__media" aria-hidden="true">
+                <span class="project-card__placeholder">Screenshot placeholder</span>
+              </div>
+              <div class="project-card__body">
+                <h4 class="project-card__name">zGallery</h4>
+                <p class="project-card__desc">
+                  [Short project description will be added here.]
+                </p>
+                <p class="project-card__meta">Tech: [Technologies to be listed]</p>
+                <div class="project-card__footer">
+                  <a class="btn btn--secondary btn--small" href="projects/zgallery.html">View Project</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card__media" aria-hidden="true">
+                <span class="project-card__placeholder">Screenshot placeholder</span>
+              </div>
+              <div class="project-card__body">
+                <h4 class="project-card__name">1Clipboard</h4>
+                <p class="project-card__desc">
+                  [Short project description will be added here.]
+                </p>
+                <p class="project-card__meta">Tech: [Technologies to be listed]</p>
+                <div class="project-card__footer">
+                  <a class="btn btn--secondary btn--small" href="projects/1clipboard.html">View Project</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card__media" aria-hidden="true">
+                <span class="project-card__placeholder">Screenshot placeholder</span>
+              </div>
+              <div class="project-card__body">
+                <h4 class="project-card__name">Cloud Player</h4>
+                <p class="project-card__desc">
+                  [Short project description will be added here.]
+                </p>
+                <p class="project-card__meta">Tech: [Technologies to be listed]</p>
+                <div class="project-card__footer">
+                  <a class="btn btn--secondary btn--small" href="projects/cloud-player.html">View Project</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section section--alt" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__label">Career</span>
+          <h2 class="section__title" id="experience-title">Experience</h2>
+          <p class="section__intro">
+            Professional history will be listed here with verified employers, roles, and dates.
+          </p>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline__item">
+            <p class="timeline__period">[Dates]</p>
+            <h3 class="timeline__role">[Role / Title]</h3>
+            <p class="timeline__org">[Company / Organization]</p>
+            <p class="timeline__summary timeline__placeholder">
+              [Career history will be added here]
+            </p>
+          </li>
+          <li class="timeline__item">
+            <p class="timeline__period">[Dates]</p>
+            <h3 class="timeline__role">[Role / Title]</h3>
+            <p class="timeline__org">[Company / Organization]</p>
+            <p class="timeline__summary timeline__placeholder">
+              [Career history will be added here]
+            </p>
+          </li>
+          <li class="timeline__item">
+            <p class="timeline__period">[Dates]</p>
+            <h3 class="timeline__role">[Role / Title]</h3>
+            <p class="timeline__org">[Company / Organization]</p>
+            <p class="timeline__summary timeline__placeholder">
+              [Career history will be added here]
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__label">Capabilities</span>
+          <h2 class="section__title" id="skills-title">Skills</h2>
+          <p class="section__intro">
+            Technology areas relevant to software engineering and AI systems work. Specific tools will be finalized next.
+          </p>
+        </header>
+
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3 class="skill-group__title">AI &amp; Agentic AI</h3>
+            <ul class="skill-group__list">
+              <li class="skill-group__item skill-group__item--placeholder">[Placeholder]</li>
+              <li class="skill-group__item skill-group__item--placeholder">[Placeholder]</li>
+              <li class="skill-group__item skill-group__item--placeholder">[Placeholder]</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group__title">Software Engineering</h3>
+            <ul class="skill-group__list">
+              <li class="skill-group__item skill-group__item--placeholder">[Placeholder]</li>
+              <li class="skill-group__item skill-group__item--placeholder">[Placeholder]</li>
+              <li class="skill-group__item skill-group__item--placeholder">[Placeholder]</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group__title">Microsoft 365</h3>
+            <ul class="skill-group__list">
+              <li class="skill-group__item skill-group__item--placeholder">[Placeholder]</li>
+              <li class="skill-group__item skill-group__item--placeholder">[Placeholder]</li>
+              <li class="skill-group__item skill-group__item--placeholder">[Placeholder]</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group__title">macOS &amp; iOS</h3>
+            <ul class="skill-group__list">
+              <li class="skill-group__item skill-group__item--placeholder">[Placeholder]</li>
+              <li class="skill-group__item skill-group__item--placeholder">[Placeholder]</li>
+              <li class="skill-group__item skill-group__item--placeholder">[Placeholder]</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group__title">Web &amp; Cloud</h3>
+            <ul class="skill-group__list">
+              <li class="skill-group__item skill-group__item--placeholder">[Placeholder]</li>
+              <li class="skill-group__item skill-group__item--placeholder">[Placeholder]</li>
+              <li class="skill-group__item skill-group__item--placeholder">[Placeholder]</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group__title">APIs &amp; Infrastructure</h3>
+            <ul class="skill-group__list">
+              <li class="skill-group__item skill-group__item--placeholder">[Placeholder]</li>
+              <li class="skill-group__item skill-group__item--placeholder">[Placeholder]</li>
+              <li class="skill-group__item skill-group__item--placeholder">[Placeholder]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section section--alt" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__label">Profile</span>
+          <h2 class="section__title" id="about-title">About</h2>
+        </header>
+
+        <div class="about__content">
+          <p>
+            Sang Hoon Sung is an experienced software engineer and product builder with a background in commercial application development across desktop, mobile, web, and cloud platforms.
+          </p>
+          <p>
+            His work spans taking software from development through to production, with a focus on shipping reliable products used by real customers.
+          </p>
+          <p>
+            He is currently focused on AI agents and AI-powered productivity software, applying engineering and product experience to Agentic AI systems.
+          </p>
+          <p class="placeholder-text">
+            [A more detailed biography will be added here.]
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section__header">
+          <span class="section__label">Get in touch</span>
+          <h2 class="section__title" id="contact-title">Contact</h2>
+          <p class="section__intro">
+            Open to senior and staff-level software engineering and AI roles. Prefer LinkedIn for professional inquiries.
+          </p>
+        </header>
+
+        <ul class="contact__list">
+          <li class="contact__item">
+            <span class="contact__label">LinkedIn</span>
+            <a class="contact__value" href="https://www.linkedin.com/in/woojooin/" target="_blank" rel="noopener noreferrer">linkedin.com/in/woojooin</a>
+          </li>
+          <li class="contact__item">
+            <span class="contact__label">GitHub</span>
+            <a class="contact__value" href="https://github.com/woojooin" target="_blank" rel="noopener noreferrer">github.com/woojooin</a>
+          </li>
+          <li class="contact__item">
+            <span class="contact__label">Email</span>
+            <span class="contact__value contact__value--muted">[Email address will be added here]</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; Sang Hoon Sung</p>
+      <div class="footer__links">
+        <a href="https://www.linkedin.com/in/woojooin/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/woojooin" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
