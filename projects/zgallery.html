@@ -3,117 +3,253 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="zGallery — project overview by Sang Hoon Sung. Details coming soon.">
+  <meta name="description" content="zGallery for Mac — browse, view, and edit images with thumbnails, slideshow, and built-in file management. Available on the Mac App Store.">
   <title>zGallery — Sang Hoon Sung</title>
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem("portfolio-theme");
+        if (theme !== "light" && theme !== "dark") {
+          theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        }
+        document.documentElement.setAttribute("data-theme", theme);
+
+        var lang = null;
+        try {
+          lang = new URLSearchParams(window.location.search).get("lang");
+        } catch (err) {}
+        if (lang !== "en" && lang !== "ko") {
+          lang = localStorage.getItem("portfolio-lang");
+        }
+        if (lang !== "en" && lang !== "ko") {
+          lang = (navigator.language || "").toLowerCase().indexOf("ko") === 0
+            ? "ko"
+            : "en";
+        }
+        document.documentElement.setAttribute("lang", lang);
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body data-project-title="zGallery" data-project-id="zgallery">
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
   <header class="site-header">
     <div class="container nav">
       <a class="nav__brand" href="../index.html">Sang Hoon Sung</a>
 
-      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
-        <span class="nav__toggle-bar"></span>
-        <span class="nav__toggle-bar"></span>
-        <span class="nav__toggle-bar"></span>
-      </button>
-
-      <nav class="nav__menu" id="nav-menu" aria-label="Primary">
+      <nav class="nav__menu" id="nav-menu" data-i18n-aria="a11y.nav" aria-label="Primary">
         <ul class="nav__links">
-          <li><a class="nav__link" href="../index.html">Home</a></li>
-          <li><a class="nav__link" href="../index.html#projects" aria-current="page">Projects</a></li>
-          <li><a class="nav__link" href="../index.html#experience">Experience</a></li>
-          <li><a class="nav__link" href="../index.html#about">About</a></li>
-          <li><a class="nav__link" href="../index.html#contact">Contact</a></li>
+          <li><a class="nav__link" href="../index.html" data-i18n="nav.home">Home</a></li>
+          <li><a class="nav__link" href="../index.html#projects" aria-current="page" data-i18n="nav.projects">Projects</a></li>
+          <li><a class="nav__link" href="../index.html#experience" data-i18n="nav.experience">Experience</a></li>
+          <li><a class="nav__link" href="../index.html#about" data-i18n="nav.about">About</a></li>
+          <li><a class="nav__link" href="../index.html#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
         <div class="nav__social">
           <a href="https://www.linkedin.com/in/woojooin/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="https://github.com/woojooin" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </nav>
+
+      <div class="nav__controls">
+        <div class="lang-switch" role="group" data-i18n-aria="a11y.langSwitch" aria-label="Language">
+          <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-switch__btn" data-lang="ko" aria-pressed="false">KO</button>
+        </div>
+        <button type="button" class="theme-toggle" data-theme-toggle data-i18n-aria="a11y.themeToDark" aria-label="Switch to dark mode">
+          <span data-theme-label>Dark</span>
+        </button>
+      </div>
+
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" data-i18n-aria="a11y.navToggle" aria-label="Toggle navigation">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
     </div>
   </header>
 
   <main id="main">
-    <section class="project-hero" aria-labelledby="project-title">
+
+    <section class="product-hero" aria-labelledby="project-title">
       <div class="container">
-        <a class="project-hero__back" href="../index.html#projects">&larr; Back to Projects</a>
-        <h1 class="project-hero__title" id="project-title">zGallery</h1>
-        <p class="project-hero__tagline">
-          [One-line project description will be added here.]
-        </p>
-        <div class="project-hero__media" aria-hidden="true">
-          <span class="project-card__placeholder">Hero image placeholder</span>
+        <a class="project-hero__back" href="../index.html#projects" data-i18n="project.back">&larr; Back to Projects</a>
+
+        <div class="product-hero__grid">
+          <div class="product-hero__copy">
+            <img class="product-hero__icon" src="../images/zgallery/app-icon-store.png" width="96" height="96" alt="zGallery app icon">
+            <p class="product-hero__eyebrow" data-i18n="zgallery.eyebrow">Mac App Store · Photo & Video</p>
+            <h1 class="product-hero__title" id="project-title">zGallery</h1>
+            <p class="product-hero__subtitle" data-i18n="zgallery.subtitle">Elegant Image Viewer</p>
+            <p class="product-hero__tagline" data-i18n="zgallery.tagline">Browse, view, and lightly edit images on your Mac — without switching to a separate file manager.</p>
+            <div class="product-hero__actions">
+              <a class="btn btn--primary" href="https://apps.apple.com/app/id702923456" target="_blank" rel="noopener noreferrer" data-i18n="project.appStore">View on App Store</a>
+              <a class="btn btn--secondary" href="#gallery" data-i18n="zgallery.ctaGallery">See screenshots</a>
+            </div>
+            <ul class="product-hero__facts">
+              <li data-i18n="zgallery.factPrice">$9.99</li>
+              <li data-i18n="zgallery.factOs">macOS 10.15+</li>
+              <li data-i18n="zgallery.factSince">Since 2013</li>
+              <li data-i18n="zgallery.factLang">EN · KO</li>
+            </ul>
+          </div>
+
+          <figure class="product-hero__shot">
+            <img src="../images/zgallery/screenshot-1.jpg" width="1600" height="1000" alt="zGallery image viewer window" loading="eager">
+          </figure>
         </div>
       </div>
     </section>
 
-    <div class="project-content">
+    <section class="product-section" aria-labelledby="value-title">
       <div class="container">
-        <section class="project-block" aria-labelledby="overview-title">
-          <h2 class="project-block__title" id="overview-title">Overview</h2>
-          <p class="placeholder-text">[Project overview will be added here.]</p>
-        </section>
+        <header class="product-section__header">
+          <h2 id="value-title" data-i18n="zgallery.valueTitle">See images. Manage them in place.</h2>
+          <p data-i18n="zgallery.valueIntro">zGallery combines fast image browsing with the file actions you need — copy, move, delete, drag and drop — so viewing and organizing stay in one place.</p>
+        </header>
 
-        <section class="project-block" aria-labelledby="features-title">
-          <h2 class="project-block__title" id="features-title">Key Features</h2>
-          <ul>
-            <li class="placeholder-text">[Feature will be added here]</li>
-            <li class="placeholder-text">[Feature will be added here]</li>
-            <li class="placeholder-text">[Feature will be added here]</li>
-          </ul>
-        </section>
-
-        <section class="project-block" aria-labelledby="tech-title">
-          <h2 class="project-block__title" id="tech-title">Technology</h2>
-          <ul>
-            <li class="placeholder-text">[Technology stack will be listed here]</li>
-            <li class="placeholder-text">[Technology stack will be listed here]</li>
-          </ul>
-        </section>
-
-        <section class="project-block" aria-labelledby="architecture-title">
-          <h2 class="project-block__title" id="architecture-title">Architecture</h2>
-          <p class="placeholder-text">[Architecture notes will be added here.]</p>
-        </section>
-
-        <section class="project-block" aria-labelledby="role-title">
-          <h2 class="project-block__title" id="role-title">Development / My Role</h2>
-          <p class="placeholder-text">[Role and contributions will be added here.]</p>
-        </section>
-
-        <section class="project-block" aria-labelledby="screenshots-title">
-          <h2 class="project-block__title" id="screenshots-title">Screenshots</h2>
-          <div class="screenshot-grid">
-            <div class="screenshot-item" aria-hidden="true">
-              <span class="project-card__placeholder">Screenshot placeholder</span>
-            </div>
-            <div class="screenshot-item" aria-hidden="true">
-              <span class="project-card__placeholder">Screenshot placeholder</span>
-            </div>
-          </div>
-        </section>
-
-        <section class="project-block" aria-labelledby="video-title">
-          <h2 class="project-block__title" id="video-title">Demo Video</h2>
-          <div class="video-placeholder" aria-hidden="true">
-            <span class="project-card__placeholder">Demo video placeholder</span>
-          </div>
-        </section>
-
-        <section class="project-block" aria-labelledby="links-title">
-          <h2 class="project-block__title" id="links-title">Links</h2>
-          <div class="project-links">
-            <span class="btn btn--secondary btn--small" style="cursor:default;opacity:0.65;">[App Store / Product link]</span>
-            <span class="btn btn--secondary btn--small" style="cursor:default;opacity:0.65;">[Repository / Docs link]</span>
-          </div>
-          <p class="placeholder-text" style="margin-top:1rem;">[External links will be added when available.]</p>
-        </section>
+        <div class="value-grid">
+          <article class="value-card">
+            <h3 data-i18n="zgallery.value1Title">Browse quickly</h3>
+            <p data-i18n="zgallery.value1Desc">Thumbnail browsing for common image types (and video thumbnails), plus a folder tree to move through disks without losing context.</p>
+          </article>
+          <article class="value-card">
+            <h3 data-i18n="zgallery.value2Title">View the way you want</h3>
+            <p data-i18n="zgallery.value2Desc">Zoom, fullscreen, and slideshow make it easy to review photos and image collections at speed.</p>
+          </article>
+          <article class="value-card">
+            <h3 data-i18n="zgallery.value3Title">Edit and organize</h3>
+            <p data-i18n="zgallery.value3Desc">Rotate, flip, resize, change format, extract GIF frames, set wallpaper, and manage files with Finder-like drag and drop.</p>
+          </article>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <section class="product-feature" aria-labelledby="feat-a-title">
+      <div class="container product-feature__grid">
+        <div class="product-feature__copy">
+          <p class="product-feature__label" data-i18n="zgallery.featALabel">Browsing</p>
+          <h2 id="feat-a-title" data-i18n="zgallery.featATitle">Thumbnails and folders that stay out of the way.</h2>
+          <p data-i18n="zgallery.featADesc">Open a folder and move through images with thumbnail browsing and a tree panel. Folder thumbnails help you spot collections quickly.</p>
+          <ul class="product-feature__list">
+            <li data-i18n="zgallery.featA1">Common image formats supported</li>
+            <li data-i18n="zgallery.featA2">Thumbnail browsing, including video thumbnails</li>
+            <li data-i18n="zgallery.featA3">Folder tree and folder-with-images thumbnails</li>
+          </ul>
+        </div>
+        <figure class="product-feature__media">
+          <img src="../images/zgallery/screenshot-2.jpg" width="1600" height="1000" alt="zGallery thumbnail browsing" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section class="product-feature product-feature--alt" aria-labelledby="feat-b-title">
+      <div class="container product-feature__grid product-feature__grid--reverse">
+        <div class="product-feature__copy">
+          <p class="product-feature__label" data-i18n="zgallery.featBLabel">Viewing</p>
+          <h2 id="feat-b-title" data-i18n="zgallery.featBTitle">Zoom, fullscreen, slideshow.</h2>
+          <p data-i18n="zgallery.featBDesc">Review images comfortably — zoom in and out, go fullscreen, or run a slideshow when you need to go through a set of photos.</p>
+          <ul class="product-feature__list">
+            <li data-i18n="zgallery.featB1">Zoom in / out</li>
+            <li data-i18n="zgallery.featB2">Fullscreen mode</li>
+            <li data-i18n="zgallery.featB3">Slideshow</li>
+          </ul>
+        </div>
+        <figure class="product-feature__media">
+          <img src="../images/zgallery/screenshot-3.jpg" width="1600" height="1000" alt="zGallery fullscreen and viewing" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section class="product-feature" aria-labelledby="feat-c-title">
+      <div class="container product-feature__narrow">
+        <p class="product-feature__label" data-i18n="zgallery.featCLabel">Editing & files</p>
+        <h2 id="feat-c-title" data-i18n="zgallery.featCTitle">Light edits and file actions in one app.</h2>
+        <p data-i18n="zgallery.featCDesc">Rotate, flip, resize, convert format, extract frames from animated GIFs, set the desktop wallpaper, and copy, move, or delete — including Copy & Paste and Drag & Drop like Finder.</p>
+      </div>
+    </section>
+
+    <section class="product-section product-section--alt" aria-labelledby="steps-title">
+      <div class="container">
+        <header class="product-section__header">
+          <h2 id="steps-title" data-i18n="zgallery.stepsTitle">How it works</h2>
+        </header>
+        <ol class="steps">
+          <li class="steps__item">
+            <span class="steps__num">1</span>
+            <h3 data-i18n="zgallery.step1Title">Open a folder</h3>
+            <p data-i18n="zgallery.step1Desc">Browse with thumbnails and the folder tree to find the images you need.</p>
+          </li>
+          <li class="steps__item">
+            <span class="steps__num">2</span>
+            <h3 data-i18n="zgallery.step2Title">View and review</h3>
+            <p data-i18n="zgallery.step2Desc">Zoom, go fullscreen, or start a slideshow to move through the set.</p>
+          </li>
+          <li class="steps__item">
+            <span class="steps__num">3</span>
+            <h3 data-i18n="zgallery.step3Title">Edit or organize</h3>
+            <p data-i18n="zgallery.step3Desc">Apply light edits, set wallpaper, or copy, move, and delete without leaving zGallery.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="product-section" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <header class="product-section__header">
+          <h2 id="gallery-title" data-i18n="zgallery.galleryTitle">In the app</h2>
+          <p data-i18n="zgallery.galleryIntro">Screenshots from the Mac App Store listing.</p>
+        </header>
+        <div class="product-gallery">
+          <figure class="product-gallery__item">
+            <img src="../images/zgallery/screenshot-1.jpg" width="1600" height="1000" alt="zGallery image browsing overview" loading="lazy">
+            <figcaption data-i18n="zgallery.cap1">Image browsing overview</figcaption>
+          </figure>
+          <figure class="product-gallery__item">
+            <img src="../images/zgallery/screenshot-2.jpg" width="1600" height="1000" alt="zGallery thumbnails and folder tree" loading="lazy">
+            <figcaption data-i18n="zgallery.cap2">Thumbnails and folder tree</figcaption>
+          </figure>
+          <figure class="product-gallery__item">
+            <img src="../images/zgallery/screenshot-3.jpg" width="1600" height="1000" alt="zGallery fullscreen viewing" loading="lazy">
+            <figcaption data-i18n="zgallery.cap3">Fullscreen viewing</figcaption>
+          </figure>
+          <figure class="product-gallery__item">
+            <img src="../images/zgallery/screenshot-4.jpg" width="1600" height="1000" alt="zGallery editing tools" loading="lazy">
+            <figcaption data-i18n="zgallery.cap4">Editing and file actions</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-strip" aria-labelledby="avail-title">
+      <div class="container product-strip__inner">
+        <div>
+          <h2 id="avail-title" data-i18n="zgallery.availTitle">Available on the Mac App Store</h2>
+          <p data-i18n="zgallery.availDesc">Native macOS image viewer by woojooin. Continuously updated for fast browsing, viewing, light editing, and in-app file management.</p>
+        </div>
+        <a class="btn btn--primary" href="https://apps.apple.com/app/id702923456" target="_blank" rel="noopener noreferrer" data-i18n="project.appStore">View on App Store</a>
+      </div>
+    </section>
+
+    <section class="product-section" aria-labelledby="role-title">
+      <div class="container product-section__narrow">
+        <header class="product-section__header product-section__header--left">
+          <h2 id="role-title" data-i18n="project.role">Development / My Role</h2>
+        </header>
+        <p data-i18n="zgallery.role">I am the author and developer of zGallery for Mac. I design, ship, and maintain the product end to end — browsing, viewing, light editing, file actions, localization, and App Store releases.</p>
+        <p class="product-note" data-i18n="zgallery.builtWith">Built as a native Mac app with Objective-C and Cocoa.</p>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
@@ -126,6 +262,7 @@
     </div>
   </footer>
 
+  <script src="../js/i18n.js"></script>
   <script src="../js/main.js"></script>
 </body>
 </html>

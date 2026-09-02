@@ -3,117 +3,278 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TreeSize — project overview by Sang Hoon Sung. Details coming soon.">
+  <meta name="description" content="TreeSize for Mac — see what is using your disk space, find large and duplicate files, and reclaim storage. Available on the Mac App Store.">
   <title>TreeSize — Sang Hoon Sung</title>
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem("portfolio-theme");
+        if (theme !== "light" && theme !== "dark") {
+          theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        }
+        document.documentElement.setAttribute("data-theme", theme);
+
+        var lang = null;
+        try {
+          lang = new URLSearchParams(window.location.search).get("lang");
+        } catch (err) {}
+        if (lang !== "en" && lang !== "ko") {
+          lang = localStorage.getItem("portfolio-lang");
+        }
+        if (lang !== "en" && lang !== "ko") {
+          lang = (navigator.language || "").toLowerCase().indexOf("ko") === 0
+            ? "ko"
+            : "en";
+        }
+        document.documentElement.setAttribute("lang", lang);
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body data-project-title="TreeSize" data-project-id="treesize">
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
   <header class="site-header">
     <div class="container nav">
       <a class="nav__brand" href="../index.html">Sang Hoon Sung</a>
 
-      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
-        <span class="nav__toggle-bar"></span>
-        <span class="nav__toggle-bar"></span>
-        <span class="nav__toggle-bar"></span>
-      </button>
-
-      <nav class="nav__menu" id="nav-menu" aria-label="Primary">
+      <nav class="nav__menu" id="nav-menu" data-i18n-aria="a11y.nav" aria-label="Primary">
         <ul class="nav__links">
-          <li><a class="nav__link" href="../index.html">Home</a></li>
-          <li><a class="nav__link" href="../index.html#projects" aria-current="page">Projects</a></li>
-          <li><a class="nav__link" href="../index.html#experience">Experience</a></li>
-          <li><a class="nav__link" href="../index.html#about">About</a></li>
-          <li><a class="nav__link" href="../index.html#contact">Contact</a></li>
+          <li><a class="nav__link" href="../index.html" data-i18n="nav.home">Home</a></li>
+          <li><a class="nav__link" href="../index.html#projects" aria-current="page" data-i18n="nav.projects">Projects</a></li>
+          <li><a class="nav__link" href="../index.html#experience" data-i18n="nav.experience">Experience</a></li>
+          <li><a class="nav__link" href="../index.html#about" data-i18n="nav.about">About</a></li>
+          <li><a class="nav__link" href="../index.html#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
         <div class="nav__social">
           <a href="https://www.linkedin.com/in/woojooin/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="https://github.com/woojooin" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </nav>
+
+      <div class="nav__controls">
+        <div class="lang-switch" role="group" data-i18n-aria="a11y.langSwitch" aria-label="Language">
+          <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-switch__btn" data-lang="ko" aria-pressed="false">KO</button>
+        </div>
+        <button type="button" class="theme-toggle" data-theme-toggle data-i18n-aria="a11y.themeToDark" aria-label="Switch to dark mode">
+          <span data-theme-label>Dark</span>
+        </button>
+      </div>
+
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" data-i18n-aria="a11y.navToggle" aria-label="Toggle navigation">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
     </div>
   </header>
 
   <main id="main">
-    <section class="project-hero" aria-labelledby="project-title">
+    <!-- Product hero -->
+    <section class="product-hero" aria-labelledby="project-title">
       <div class="container">
-        <a class="project-hero__back" href="../index.html#projects">&larr; Back to Projects</a>
-        <h1 class="project-hero__title" id="project-title">TreeSize</h1>
-        <p class="project-hero__tagline">
-          [One-line project description will be added here.]
-        </p>
-        <div class="project-hero__media" aria-hidden="true">
-          <span class="project-card__placeholder">Hero image placeholder</span>
+        <a class="project-hero__back" href="../index.html#projects" data-i18n="project.back">&larr; Back to Projects</a>
+
+        <div class="product-hero__grid">
+          <div class="product-hero__copy">
+            <img class="product-hero__icon" src="../images/treesize/app-icon-store.png" width="96" height="96" alt="TreeSize app icon">
+            <p class="product-hero__eyebrow" data-i18n="treesize.eyebrow">Mac App Store · Utilities</p>
+            <h1 class="product-hero__title" id="project-title">TreeSize</h1>
+            <p class="product-hero__subtitle" data-i18n="treesize.subtitle">Disk Usage Analysis Tool</p>
+            <p class="product-hero__tagline" data-i18n="treesize.tagline">
+              See what is using space on your Mac — then clean it up with confidence.
+            </p>
+            <div class="product-hero__actions">
+              <a class="btn btn--primary" href="https://apps.apple.com/app/id774815014" target="_blank" rel="noopener noreferrer" data-i18n="project.appStore">View on App Store</a>
+              <a class="btn btn--secondary" href="#gallery" data-i18n="treesize.ctaGallery">See screenshots</a>
+            </div>
+            <ul class="product-hero__facts">
+              <li data-i18n="treesize.factPrice">$3.99</li>
+              <li data-i18n="treesize.factOs">macOS 11.0+</li>
+              <li data-i18n="treesize.factSince">Since 2013</li>
+              <li data-i18n="treesize.factLang">EN · KO · DE · FR · IT</li>
+            </ul>
+          </div>
+
+          <figure class="product-hero__shot">
+            <img src="../images/treesize/screenshot-1.jpg" width="1600" height="1000" alt="TreeSize main window with folder tree, pie chart, and scan summary" loading="eager">
+          </figure>
         </div>
       </div>
     </section>
 
-    <div class="project-content">
+    <!-- Value props -->
+    <section class="product-section" aria-labelledby="value-title">
       <div class="container">
-        <section class="project-block" aria-labelledby="overview-title">
-          <h2 class="project-block__title" id="overview-title">Overview</h2>
-          <p class="placeholder-text">[Project overview will be added here.]</p>
-        </section>
+        <header class="product-section__header">
+          <h2 id="value-title" data-i18n="treesize.valueTitle">Find space. Understand it. Reclaim it.</h2>
+          <p data-i18n="treesize.valueIntro">
+            Finder is great for opening files — not for answering where your disk space went. TreeSize makes that answer obvious.
+          </p>
+        </header>
 
-        <section class="project-block" aria-labelledby="features-title">
-          <h2 class="project-block__title" id="features-title">Key Features</h2>
-          <ul>
-            <li class="placeholder-text">[Feature will be added here]</li>
-            <li class="placeholder-text">[Feature will be added here]</li>
-            <li class="placeholder-text">[Feature will be added here]</li>
-          </ul>
-        </section>
-
-        <section class="project-block" aria-labelledby="tech-title">
-          <h2 class="project-block__title" id="tech-title">Technology</h2>
-          <ul>
-            <li class="placeholder-text">[Technology stack will be listed here]</li>
-            <li class="placeholder-text">[Technology stack will be listed here]</li>
-          </ul>
-        </section>
-
-        <section class="project-block" aria-labelledby="architecture-title">
-          <h2 class="project-block__title" id="architecture-title">Architecture</h2>
-          <p class="placeholder-text">[Architecture notes will be added here.]</p>
-        </section>
-
-        <section class="project-block" aria-labelledby="role-title">
-          <h2 class="project-block__title" id="role-title">Development / My Role</h2>
-          <p class="placeholder-text">[Role and contributions will be added here.]</p>
-        </section>
-
-        <section class="project-block" aria-labelledby="screenshots-title">
-          <h2 class="project-block__title" id="screenshots-title">Screenshots</h2>
-          <div class="screenshot-grid">
-            <div class="screenshot-item" aria-hidden="true">
-              <span class="project-card__placeholder">Screenshot placeholder</span>
-            </div>
-            <div class="screenshot-item" aria-hidden="true">
-              <span class="project-card__placeholder">Screenshot placeholder</span>
-            </div>
-          </div>
-        </section>
-
-        <section class="project-block" aria-labelledby="video-title">
-          <h2 class="project-block__title" id="video-title">Demo Video</h2>
-          <div class="video-placeholder" aria-hidden="true">
-            <span class="project-card__placeholder">Demo video placeholder</span>
-          </div>
-        </section>
-
-        <section class="project-block" aria-labelledby="links-title">
-          <h2 class="project-block__title" id="links-title">Links</h2>
-          <div class="project-links">
-            <span class="btn btn--secondary btn--small" style="cursor:default;opacity:0.65;">[App Store / Product link]</span>
-            <span class="btn btn--secondary btn--small" style="cursor:default;opacity:0.65;">[Repository / Docs link]</span>
-          </div>
-          <p class="placeholder-text" style="margin-top:1rem;">[External links will be added when available.]</p>
-        </section>
+        <div class="value-grid">
+          <article class="value-card">
+            <h3 data-i18n="treesize.value1Title">See where space goes</h3>
+            <p data-i18n="treesize.value1Desc">
+              Scan any folder or volume and browse a size-sorted tree with color bars, so large folders stand out immediately.
+            </p>
+          </article>
+          <article class="value-card">
+            <h3 data-i18n="treesize.value2Title">Visualize at a glance</h3>
+            <p data-i18n="treesize.value2Desc">
+              Switch between tree map and pie chart views to understand composition by folder or file category — Audio, Video, Picture, Document, Archive, and more.
+            </p>
+          </article>
+          <article class="value-card">
+            <h3 data-i18n="treesize.value3Title">Clean what matters</h3>
+            <p data-i18n="treesize.value3Desc">
+              Jump to Top 100 files, find likely duplicates, Quick Look contents, reveal in Finder, or move items to Trash — without leaving the app.
+            </p>
+          </article>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <!-- Feature: Scan & explore -->
+    <section class="product-feature" aria-labelledby="feat-scan-title">
+      <div class="container product-feature__grid">
+        <div class="product-feature__copy">
+          <p class="product-feature__label" data-i18n="treesize.featScanLabel">Scan &amp; explore</p>
+          <h2 id="feat-scan-title" data-i18n="treesize.featScanTitle">Drag a folder. See the whole picture.</h2>
+          <p data-i18n="treesize.featScanDesc">
+            Drop a folder or disk onto TreeSize — or open it from the toolbar — and watch the hierarchy fill in as the scan runs. Sort by size, name, or date. Live progress and free/total disk indicators keep you oriented.
+          </p>
+          <ul class="product-feature__list">
+            <li data-i18n="treesize.featScan1">Size-sorted folder tree with color bars</li>
+            <li data-i18n="treesize.featScan2">Warnings for system root and cloud-synced folders</li>
+            <li data-i18n="treesize.featScan3">Finder Services: “TreeSize Calculate…” from context menus</li>
+          </ul>
+        </div>
+        <figure class="product-feature__media">
+          <img src="../images/treesize/screenshot-3.jpg" width="1600" height="1000" alt="TreeSize scanning Applications with live progress" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- Feature: Insights -->
+    <section class="product-feature product-feature--alt" aria-labelledby="feat-clean-title">
+      <div class="container product-feature__grid product-feature__grid--reverse">
+        <div class="product-feature__copy">
+          <p class="product-feature__label" data-i18n="treesize.featCleanLabel">Insights &amp; cleanup</p>
+          <h2 id="feat-clean-title" data-i18n="treesize.featCleanTitle">Largest files and duplicates, ready to act on.</h2>
+          <p data-i18n="treesize.featCleanDesc">
+            After a scan, open Top 100 Biggest Files to spot space hogs quickly. The duplicate finder groups candidates by name and size so you can review potential savings before deleting.
+          </p>
+          <ul class="product-feature__list">
+            <li data-i18n="treesize.featClean1">Top 100 biggest files panel</li>
+            <li data-i18n="treesize.featClean2">Duplicate candidates with potential savings</li>
+            <li data-i18n="treesize.featClean3">Quick Look, Show in Finder, Open, Move to Trash</li>
+          </ul>
+        </div>
+        <figure class="product-feature__media">
+          <img src="../images/treesize/screenshot-2.jpg" width="1600" height="1000" alt="TreeSize Top 100 Biggest Files panel" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- Feature: Share -->
+    <section class="product-feature" aria-labelledby="feat-share-title">
+      <div class="container product-feature__narrow">
+        <p class="product-feature__label" data-i18n="treesize.featShareLabel">Share results</p>
+        <h2 id="feat-share-title" data-i18n="treesize.featShareTitle">Export an HTML report when you need to share.</h2>
+        <p data-i18n="treesize.featShareDesc">
+          Generate a report with the folder tree and charts — useful when you want to review results outside the app or share findings with someone else.
+        </p>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="product-section product-section--alt" aria-labelledby="steps-title">
+      <div class="container">
+        <header class="product-section__header">
+          <h2 id="steps-title" data-i18n="treesize.stepsTitle">How it works</h2>
+        </header>
+        <ol class="steps">
+          <li class="steps__item">
+            <span class="steps__num">1</span>
+            <h3 data-i18n="treesize.step1Title">Choose a folder or disk</h3>
+            <p data-i18n="treesize.step1Desc">Drag and drop, open from the toolbar, or launch from Finder’s Services menu.</p>
+          </li>
+          <li class="steps__item">
+            <span class="steps__num">2</span>
+            <h3 data-i18n="treesize.step2Title">Explore the results</h3>
+            <p data-i18n="treesize.step2Desc">Browse the tree, switch tree map or pie chart, and drill into the folders that matter.</p>
+          </li>
+          <li class="steps__item">
+            <span class="steps__num">3</span>
+            <h3 data-i18n="treesize.step3Title">Clean up</h3>
+            <p data-i18n="treesize.step3Desc">Review Top files or duplicates, preview with Quick Look, then remove what you no longer need.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="product-section" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <header class="product-section__header">
+          <h2 id="gallery-title" data-i18n="treesize.galleryTitle">In the app</h2>
+          <p data-i18n="treesize.galleryIntro">Screenshots from the Mac App Store listing.</p>
+        </header>
+        <div class="product-gallery">
+          <figure class="product-gallery__item">
+            <img src="../images/treesize/screenshot-1.jpg" width="1600" height="1000" alt="TreeSize overview with pie chart and scan complete summary" loading="lazy">
+            <figcaption data-i18n="treesize.cap1">Overview, categories, and scan summary</figcaption>
+          </figure>
+          <figure class="product-gallery__item">
+            <img src="../images/treesize/screenshot-2.jpg" width="1600" height="1000" alt="Top 100 biggest files in TreeSize" loading="lazy">
+            <figcaption data-i18n="treesize.cap2">Top 100 biggest files</figcaption>
+          </figure>
+          <figure class="product-gallery__item">
+            <img src="../images/treesize/screenshot-3.jpg" width="1600" height="1000" alt="TreeSize scanning a folder" loading="lazy">
+            <figcaption data-i18n="treesize.cap3">Live scan progress</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product credibility -->
+    <section class="product-strip" aria-labelledby="avail-title">
+      <div class="container product-strip__inner">
+        <div>
+          <h2 id="avail-title" data-i18n="treesize.availTitle">Available on the Mac App Store</h2>
+          <p data-i18n="treesize.availDesc">
+            Native macOS utility by woojooin. Continuously updated — including faster scanning, tree map, pie charts, duplicate finder, and HTML reports.
+          </p>
+        </div>
+        <a class="btn btn--primary" href="https://apps.apple.com/app/id774815014" target="_blank" rel="noopener noreferrer" data-i18n="project.appStore">View on App Store</a>
+      </div>
+    </section>
+
+    <!-- Role - brief, product context -->
+    <section class="product-section" aria-labelledby="role-title">
+      <div class="container product-section__narrow">
+        <header class="product-section__header product-section__header--left">
+          <h2 id="role-title" data-i18n="project.role">Development / My Role</h2>
+        </header>
+        <p data-i18n="treesize.role">
+          I am the author and developer of TreeSize for Mac. I design, ship, and maintain the product end to end — from scanning and visualization to App Store releases and localization.
+        </p>
+        <p class="product-note" data-i18n="treesize.builtWith">
+          Built as a native Mac app with Objective-C and AppKit.
+        </p>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -126,6 +287,7 @@
     </div>
   </footer>
 
+  <script src="../js/i18n.js"></script>
   <script src="../js/main.js"></script>
 </body>
 </html>

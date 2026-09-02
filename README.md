@@ -4,13 +4,21 @@ Personal professional portfolio site for [woojooin.github.io](https://woojooin.g
 
 Built with plain HTML5, CSS3, and vanilla JavaScript for GitHub Pages. No frameworks or build step.
 
+## Features
+
+- **EN / KO language toggle** — preference stored in `localStorage` (`portfolio-lang`)
+- **Light / dark theme** — respects system preference, override stored in `localStorage` (`portfolio-theme`)
+- Strings live in `js/i18n.js`; mark copy with `data-i18n` / `data-i18n-aria`
+
 ## Structure
 
 ```
 /
 ├── index.html              # Homepage
-├── css/style.css           # Global styles
-├── js/main.js              # Navigation & interactions
+├── css/style.css           # Global styles (incl. dark theme)
+├── js/
+│   ├── i18n.js             # EN / KO strings
+│   └── main.js             # Theme, language, navigation
 ├── images/                 # Screenshots and assets (to be added)
 ├── projects/               # Individual project pages
 │   ├── office-ai-agent.html
