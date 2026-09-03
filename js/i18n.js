@@ -106,7 +106,207 @@ window.PORTFOLIO_I18N = {
     "project.results": "Results",
     "project.decisions": "Design decisions",
     "project.appStore": "View on App Store",
+    "project.productSite": "Visit product site",
     "project.mediaLater": "Screenshots and demo video will be added when available.",
+
+    "officeai.metaDescription":
+      "Office AI Agent (Sidekick AI) — Word, Excel, PowerPoint, and Outlook agents for Microsoft 365. Plain-language chat; structured context only; changes run locally.",
+    "officeai.eyebrow": "Microsoft 365 · AI Agent",
+    "officeai.subtitle": "Sidekick AI for Word · Excel · PowerPoint · Outlook",
+    "officeai.tagline":
+      "Ask in plain language inside Office and Outlook — the agent plans with structured context, then runs changes locally on your PC.",
+    "officeai.factHost": "Word · Excel · PowerPoint · Outlook",
+    "officeai.factPlatform": "Windows · Mac · Web",
+    "officeai.factPrivacy": "Privacy-first context",
+    "officeai.factLang": "EN · KO",
+    "officeai.cardDesc":
+      "Microsoft 365 AI agent for Word, Excel, PowerPoint, and Outlook. Ask in plain language to clean tables, translate selections, build slides, or summarize mail — only structured context goes to the model, and changes run locally on your PC.",
+    "officeai.cardTech": "Office.js · VSTO · React · Gateway",
+    "officeai.valueTitle": "Chat in Office. Change the real work.",
+    "officeai.valueIntro":
+      "Most Office AI workflows upload the whole file or leave you copying answers back in. Sidekick AI keeps workbooks, documents, and mail on your PC — only structured metadata goes to the model.",
+    "officeai.value1Title": "Ask in ordinary language",
+    "officeai.value1Desc":
+      "Clean a table, translate a selection, build slides, or summarize the open mail — without leaving Word, Excel, PowerPoint, or Outlook.",
+    "officeai.value2Title": "Privacy-first context",
+    "officeai.value2Desc":
+      "The agent sends headers, samples, short structure, or mail preview — not the entire workbook, document, or mailbox. API keys stay on the gateway server.",
+    "officeai.value3Title": "Local execution",
+    "officeai.value3Desc":
+      "The model plans; Office.js or the Outlook host runs on your machine. Generated scripts cannot call the network and only use allowed helpers.",
+    "officeai.featExcelLabel": "Excel",
+    "officeai.featExcelTitle": "Plan from a sample. Write a new result sheet.",
+    "officeai.featExcelDesc":
+      "Excel locks the active sheet at send time, sends headers plus a few sample rows, then creates a result sheet — classification, charts, summaries — while keeping the source intact.",
+    "officeai.featExcel1": "New result sheets with suggested short names",
+    "officeai.featExcel2": "Tables, conditional formatting, and charts",
+    "officeai.featExcel3": "Lineage tracking so prior results are not overwritten",
+    "officeai.featWordLabel": "Word",
+    "officeai.featWordTitle": "Edit the selection in place. Keep the layout.",
+    "officeai.featWordDesc":
+      "Word focuses on partial edits — selected text, quoted dialogue, or a named passage. In-place transforms replace segments without rebuilding the whole document.",
+    "officeai.featWord1": "Translate or rewrite selection in place",
+    "officeai.featWord2": "Style updates such as bold or highlight on matches",
+    "officeai.featWord3": "Layout and styles preserved where possible",
+    "officeai.featPptLabel": "PowerPoint",
+    "officeai.featPptTitle": "Rewrite shapes — or build a deck from a long draft.",
+    "officeai.featPptDesc":
+      "PowerPoint works at the text-shape level for in-place edits, or runs a two-stage slides pipeline: topic boundaries first, then line packing and slide creation on the host.",
+    "officeai.featPpt1": "In-place text updates on existing shapes",
+    "officeai.featPpt2": "Long paste or attachment → topic-based slides",
+    "officeai.featPpt3": "Repack by font size and lines per slide",
+    "officeai.featOutlookLabel": "Outlook",
+    "officeai.featOutlookTitle": "Read the open mail. Summarize, analyze, draft replies.",
+    "officeai.featOutlookDesc":
+      "The Outlook desktop panel works from the open item’s preview metadata — subject, senders, body preview, attachment names — then chats, runs structured mail analysis, or drafts reply text in compose.",
+    "officeai.featOutlook1": "Summaries, action items, importance, and spam risk",
+    "officeai.featOutlook2": "Reply / Reply all / Forward shortcuts from the panel",
+    "officeai.featOutlook3": "Compose-only writes; read mode stays analysis and chat",
+    "officeai.stepsTitle": "How it works",
+    "officeai.step1Title": "Gather structured context",
+    "officeai.step1Desc":
+      "The host collects metadata for the active Excel sheet, Word session, PowerPoint shapes, or open Outlook item — not the full file or mailbox.",
+    "officeai.step2Title": "Plan through the gateway",
+    "officeai.step2Desc":
+      "A single complete API call reaches the Office AI Gateway. The model returns a RESULT protocol (chat, document, inplace, or slides).",
+    "officeai.step3Title": "Execute locally in Office",
+    "officeai.step3Desc":
+      "Office.js or the Outlook host applies the change on your PC — new sheets, in-place text, slides, or compose drafts — with network calls blocked in generated scripts.",
+    "officeai.availTitle": "Sidekick AI for Microsoft 365",
+    "officeai.availDesc":
+      "Office Add-in for Word, Excel, and PowerPoint on Windows, Mac, and Office on the web — plus an Outlook desktop panel. Multi-model gateway, monthly credits, and BYOK on paid plans.",
+    "officeai.role":
+      "I design and build Sidekick AI for Office and Outlook end to end — host adapters for Word, Excel, PowerPoint, and Outlook, the agent RESULT protocol, local execution, and the product experience on top of the Office AI Gateway.",
+    "officeai.builtWith":
+      "Built with React, TypeScript, Vite, Office.js, and Outlook VSTO + WebView2. Deployed via Cloudflare Pages with Office add-in manifests for sideload and catalog install.",
+
+    "aimail.metaDescription":
+      "AI Mail Gateway (AiMailProxy) — an AI-powered inbound spam and phishing filter that sits in front of Microsoft Exchange, assigns SCL 0–9, and relays with risk headers.",
+    "aimail.eyebrow": "Exchange · AI Security",
+    "aimail.subtitle": "AiMailProxy for Microsoft Exchange",
+    "aimail.tagline":
+      "An inbound SMTP proxy that inspects mail before Exchange — layered auth, link and attachment scans, and LLM-based SCL 0–9 for transport rules.",
+    "aimail.factRole": "Inbound SMTP proxy",
+    "aimail.factStack": "Python · aiosmtpd",
+    "aimail.factScl": "SCL 0–9 · Exchange rules",
+    "aimail.factDeploy": "On-prem edge",
+    "aimail.cardDesc":
+      "AI-powered inbound spam and phishing filter in front of Microsoft Exchange. Layered auth and scans, LLM SCL 0–9, then relay with policy headers.",
+    "aimail.cardTech": "Python · aiosmtpd · Exchange · LLM",
+    "aimail.valueTitle": "Filter at the edge. Classify for Exchange.",
+    "aimail.valueIntro":
+      "Known-bad senders can be rejected at SMTP with 550. Everything else is analyzed, tagged with SCL and risk headers, then relayed so Exchange transport rules can junk or quarantine without rewriting the mailbox path.",
+    "aimail.value1Title": "Layered defense",
+    "aimail.value1Desc":
+      "Blacklist and whitelist, SPF/DKIM/DMARC, attachment and URL reputation, then AI SCL — no single signal decides alone.",
+    "aimail.value2Title": "Exchange-native SCL",
+    "aimail.value2Desc":
+      "AI assigns Microsoft-compatible SCL 0–9 plus optional Subject prefixes and custom headers for existing transport rules.",
+    "aimail.value3Title": "Cost-aware AI",
+    "aimail.value3Desc":
+      "A body classification cache confirms repeat campaigns after a few analyses, then skips further LLM calls for matching mail.",
+    "aimail.featPipelineLabel": "Inspection pipeline",
+    "aimail.featPipelineTitle": "Every message gets a full Check log.",
+    "aimail.featPipelineDesc":
+      "After SMTP DATA, the proxy parses the message, runs auth and scans, classifies with AI or cache, applies SCL floors, then relays — with per-check outcomes visible in the console and daily logs.",
+    "aimail.featPipeline1": "Auth, blacklist, peer IP, attachments, URL targets",
+    "aimail.featPipeline2": "Cache hit/miss and AI SCL with latency",
+    "aimail.featPipeline3": "Header write and SMTP relay status (250 / 550)",
+    "aimail.featAiLabel": "AI SCL",
+    "aimail.featAiTitle": "LLM classification aligned to Exchange SCL.",
+    "aimail.featAiDesc":
+      "Cerebras or Groq classifies subject, senders, recipients, attachment names, and a body preview into SCL 0–9 via a hot-reloaded prompt. Auth failures, brand impersonation, and high-risk attachments raise floors so weak signals still raise the score before relay.",
+    "aimail.featAi1": "Providers: Cerebras / Groq (key-based selection)",
+    "aimail.featAi2": "Whitelist + auth policy can skip AI while links and attachments still run",
+    "aimail.featAi3": "Defer queue when AI is temporarily unavailable",
+    "aimail.featThreatLabel": "Threat signals",
+    "aimail.featThreatTitle": "Links, attachments, and peer reputation.",
+    "aimail.featThreatDesc":
+      "URLs are checked with APIVoid then VirusTotal. Attachments use banned extensions, zip recursion, magic-byte filetype detection, and oletools macro analysis. SMTP peer IPs can be scored on VirusTotal, including recovery of originating IP when mail arrives via a trusted TMES gateway.",
+    "aimail.featThreat1": "X-AiMailProxy-LinkRisk / PeerRisk / Malicious headers",
+    "aimail.featThreat2": "Optional composite 550 when auth fail + threat + high body SCL align",
+    "aimail.featThreat3": "Hot-reload blacklist, whitelist, prompt, and spam_level files",
+    "aimail.stepsTitle": "How it works",
+    "aimail.step1Title": "Receive at the edge",
+    "aimail.step1Desc":
+      "Inbound MX or connector delivers SMTP to AiMailProxy before Exchange. Exact recipient blacklist can reject at RCPT.",
+    "aimail.step2Title": "Inspect and classify",
+    "aimail.step2Desc":
+      "Whitelist/blacklist, auth, attachments, links, cache or AI SCL, then floors and optional composite reject.",
+    "aimail.step3Title": "Relay with policy hooks",
+    "aimail.step3Desc":
+      "Add X-AiMailProxy-* headers and Subject prefixes, then SMTP-relay to Exchange for Junk, phishing, or quarantine rules.",
+    "aimail.availTitle": "Built for on-prem Exchange",
+    "aimail.availDesc":
+      "Python SMTP edge service with monitor mode for safe rollout, daily stats and optional report mail, spammer accumulation, and Windows-friendly operation.",
+    "aimail.role":
+      "I design and build AiMailProxy end to end — the SMTP receive/relay path, multi-layer inspection pipeline, AI SCL protocol and caching, Exchange header integration, and operational tooling for logs, stats, and hot-reloaded policy files.",
+    "aimail.builtWith":
+      "Built with Python, aiosmtpd, aiohttp, pyspf, dkimpy, VirusTotal / APIVoid integrations, and LLM APIs (Cerebras / Groq).",
+
+    "aiwork.metaDescription":
+      "AI Work Agent — a local agent that does the work you ask for. Describe the task; it plans, runs it on your machine, and saves the result.",
+    "aiwork.eyebrow": "Local CLI · Agentic AI",
+    "aiwork.subtitle": "ai-agent-x — ask, then it does the work",
+    "aiwork.tagline":
+      "Describe the job in plain language. The agent plans it, runs it on your machine, and delivers the result — not just advice.",
+    "aiwork.factMode": "Chat · Do modes",
+    "aiwork.factProviders": "6 LLM providers",
+    "aiwork.factSafety": "Safe local execution",
+    "aiwork.factTools": "Files · Office · Images",
+    "aiwork.cardDesc":
+      "Local agent that does the work you ask for — plans the job, runs it on your machine, and delivers the result. Not just chat.",
+    "aiwork.cardTech": "Python · Multi-LLM · Local execution",
+    "aiwork.valueTitle": "You ask. It does the work.",
+    "aiwork.valueIntro":
+      "Chatbots stop at suggestions. AI Work Agent executes — finding files, transforming documents and images, producing outputs under a sandboxed attempt folder, and retrying when a step fails.",
+    "aiwork.value1Title": "Talk or do",
+    "aiwork.value1Desc":
+      "Each turn chooses chat for Q&A or do-mode to carry out the task on your PC. Force either with /chat or /script.",
+    "aiwork.value2Title": "Runs on your machine",
+    "aiwork.value2Desc":
+      "Work happens locally in the project virtualenv. Reads can go anywhere; writes stay inside the current attempt folder so originals stay read-only.",
+    "aiwork.value3Title": "Ready-made helpers",
+    "aiwork.value3Desc":
+      "Built-in tools for Excel, Word, PowerPoint, PDF, and images are auto-cataloged so common jobs finish without ad-hoc package hunting.",
+    "aiwork.featLoopLabel": "Execution loop",
+    "aiwork.featLoopTitle": "Plan, run, repair — until the job is done.",
+    "aiwork.featLoopDesc":
+      "The agent streams its plan, carries out the steps, installs missing packages after confirmation when needed, and can automatically repair and retry up to a configured limit.",
+    "aiwork.featLoop1": "Streaming plan with a Thinking indicator",
+    "aiwork.featLoop2": "Optional confirm before packages or file-changing work",
+    "aiwork.featLoop3": "Automatic repair retries on failure",
+    "aiwork.featSafetyLabel": "Safe execution",
+    "aiwork.featSafetyTitle": "It works on copies — originals stay untouched.",
+    "aiwork.featSafetyDesc":
+      "Before run, static checks flag delete, write, and rename risks. At runtime, filesystem guards confine changes to the attempt directory. Transforms read sources and save new artifacts — Downloads and Desktop files are never overwritten in place.",
+    "aiwork.featSafety1": "Pre-run risk scan for destructive actions",
+    "aiwork.featSafety2": "Write root under output/<timestamp>_attemptN/",
+    "aiwork.featSafety3": "Optional consent when file changes are detected",
+    "aiwork.featToolsLabel": "What it can do",
+    "aiwork.featToolsTitle": "Files, Office docs, and images — end to end.",
+    "aiwork.featToolsDesc":
+      "Attach folders with /attach, then ask for real outcomes: resize photos, reshape spreadsheets, extract PDF text, build slides. Helpers under agent_tools/ register themselves into the agent catalog at runtime.",
+    "aiwork.featTools1": "Excel · Word · PowerPoint · PDF · Image helpers",
+    "aiwork.featTools2": "/attach paths injected into context",
+    "aiwork.featTools3": "Persistent memory.txt for standing preferences",
+    "aiwork.stepsTitle": "How it works",
+    "aiwork.step1Title": "Describe the job",
+    "aiwork.step1Desc":
+      "Say what you need, optionally /attach files or folders, and pick a model with /model.",
+    "aiwork.step2Title": "Agent plans the work",
+    "aiwork.step2Desc":
+      "It chooses chat or do-mode, streams the plan, and uses conversation history for follow-ups like “do the same for the next folder.”",
+    "aiwork.step3Title": "It runs and delivers",
+    "aiwork.step3Desc":
+      "Work executes locally; results land in the attempt folder. On failure it repairs and retries within the limit you set.",
+    "aiwork.availTitle": "A local agent that finishes the task",
+    "aiwork.availDesc":
+      "OpenAI, Claude, Grok, Cerebras, Kimi, and DeepSeek via .env. Windows, macOS, and Linux with setup/run scripts that keep everything inside .venv. Python is the engine under the hood — the product is getting the work done.",
+    "aiwork.role":
+      "I design and build AI Work Agent end to end — the ask-and-execute loop, streaming CLI, multi-provider LLM client, local execution sandbox and safety scans, auto-discovered tool registry, and the operator workflow around history, attachments, and saved runs.",
+    "aiwork.builtWith":
+      "Built with Python, OpenAI & Anthropic SDKs, prompt_toolkit, pandas/openpyxl, python-docx, python-pptx, pypdf, and Pillow.",
 
     "treesize.metaDescription":
       "TreeSize for Mac — see what is using your disk space, find large and duplicate files, and reclaim storage. Available on the Mac App Store.",
@@ -486,7 +686,207 @@ window.PORTFOLIO_I18N = {
     "project.results": "결과",
     "project.decisions": "설계에서 강조할 점",
     "project.appStore": "App Store에서 보기",
+    "project.productSite": "제품 사이트 보기",
     "project.mediaLater": "스크린샷과 데모 영상은 준비되는 대로 추가됩니다.",
+
+    "officeai.metaDescription":
+      "Office AI Agent (Sidekick AI) — Word · Excel · PowerPoint · Outlook용 Microsoft 365 AI 에이전트. 평소 말하듯 지시하고, 구조화된 맥락만 보내며, 변경은 PC에서 로컬 실행합니다.",
+    "officeai.eyebrow": "Microsoft 365 · AI 에이전트",
+    "officeai.subtitle": "Word · Excel · PowerPoint · Outlook용 Sidekick AI",
+    "officeai.tagline":
+      "Office와 Outlook 안에서 평소 쓰는 말로 요청하세요. 에이전트는 구조화된 맥락으로 계획을 세우고, 변경은 PC에서 로컬로 실행합니다.",
+    "officeai.factHost": "Word · Excel · PowerPoint · Outlook",
+    "officeai.factPlatform": "Windows · Mac · Web",
+    "officeai.factPrivacy": "프라이버시 우선 맥락",
+    "officeai.factLang": "EN · KO",
+    "officeai.cardDesc":
+      "Word · Excel · PowerPoint · Outlook용 Microsoft 365 AI 에이전트입니다. 평소 말하듯 지시해 표 정리, 선택 구간 번역, 슬라이드 구성, 메일 요약까지 처리합니다. 모델에는 구조화된 맥락만 보내고, 변경은 PC에서 로컬로 실행합니다.",
+    "officeai.cardTech": "Office.js · VSTO · React · Gateway",
+    "officeai.valueTitle": "Office에서 채팅하고, 실제 작업을 바꿉니다.",
+    "officeai.valueIntro":
+      "많은 Office AI는 파일 전체를 올리거나, 답을 다시 복사해 붙여 넣게 합니다. Sidekick AI는 통합문서·문서·메일을 PC에 두고, 모델에는 구조화된 메타데이터만 보냅니다.",
+    "officeai.value1Title": "평소 쓰는 말로 요청",
+    "officeai.value1Desc":
+      "표 정리, 선택 문장 번역, 슬라이드 구성, 열린 메일 요약 — Word · Excel · PowerPoint · Outlook을 떠나지 않고 처리합니다.",
+    "officeai.value2Title": "프라이버시 우선 맥락",
+    "officeai.value2Desc":
+      "헤더, 샘플, 짧은 구조, 메일 미리보기만 보냅니다. 통합문서·문서·사서함 전체를 올리지 않으며, API 키는 게이트웨이 서버에만 있습니다.",
+    "officeai.value3Title": "로컬 실행",
+    "officeai.value3Desc":
+      "모델은 계획을 세우고, Office.js 또는 Outlook 호스트가 내 PC에서 실행됩니다. 생성된 스크립트는 네트워크 호출이 금지되며 허용된 helper만 사용합니다.",
+    "officeai.featExcelLabel": "Excel",
+    "officeai.featExcelTitle": "샘플로 계획하고, 새 결과 시트를 만듭니다.",
+    "officeai.featExcelDesc":
+      "Excel은 전송 시점의 활성 시트를 고정하고 헤더와 몇 행의 샘플만 보낸 뒤, 분류·차트·요약이 담긴 결과 시트를 만들며 원본은 그대로 둡니다.",
+    "officeai.featExcel1": "짧은 이름을 제안하는 새 결과 시트",
+    "officeai.featExcel2": "표, 조건부 서식, 차트",
+    "officeai.featExcel3": "계보 추적으로 이전 결과를 덮어쓰지 않음",
+    "officeai.featWordLabel": "Word",
+    "officeai.featWordTitle": "선택 구간만 그 자리에서. 레이아웃은 유지.",
+    "officeai.featWordDesc":
+      "Word는 부분 편집이 핵심입니다 — 선택 텍스트, 따옴표 대화, 지정 구절. In-place 변환으로 문서를 통째로 다시 만들지 않고 구간만 바꿉니다.",
+    "officeai.featWord1": "선택 구간 번역·윤문을 그 자리에서",
+    "officeai.featWord2": "일치 구절에 굵게·형광 등 스타일 적용",
+    "officeai.featWord3": "가능한 범위에서 레이아웃·스타일 유지",
+    "officeai.featPptLabel": "PowerPoint",
+    "officeai.featPptTitle": "도형 텍스트를 고치거나, 긴 초안에서 덱을 만듭니다.",
+    "officeai.featPptDesc":
+      "PowerPoint는 텍스트 도형 단위로 in-place 편집하거나, 주제 경계 → 행수 패킹 → 슬라이드 생성의 2단계 파이프라인으로 덱을 구성합니다.",
+    "officeai.featPpt1": "기존 도형의 텍스트를 그 자리에서 갱신",
+    "officeai.featPpt2": "긴 붙여넣기·첨부 → 주제별 슬라이드",
+    "officeai.featPpt3": "글자 크기·슬라이드당 행수로 다시 패킹",
+    "officeai.featOutlookLabel": "Outlook",
+    "officeai.featOutlookTitle": "열린 메일을 읽고, 요약·분석·회신 초안까지.",
+    "officeai.featOutlookDesc":
+      "Outlook 데스크톱 패널은 열린 항목의 미리보기 메타(제목, 발신/수신, 본문 미리보기, 첨부 파일명)로 동작합니다. 채팅, 구조화된 메일 분석, compose에서의 회신 초안 작성을 지원합니다.",
+    "officeai.featOutlook1": "요약, 할 일, 중요도, 스팸 위험",
+    "officeai.featOutlook2": "패널에서 회신 / 전체 회신 / 전달 바로가기",
+    "officeai.featOutlook3": "쓰기는 compose만 — 읽기 모드는 분석·채팅",
+    "officeai.stepsTitle": "동작 방식",
+    "officeai.step1Title": "구조화된 맥락 수집",
+    "officeai.step1Desc":
+      "호스트가 활성 Excel 시트, Word 세션, PowerPoint 도형, 또는 열린 Outlook 항목의 메타데이터를 모읍니다 — 파일·사서함 전체가 아닙니다.",
+    "officeai.step2Title": "게이트웨이로 계획",
+    "officeai.step2Desc":
+      "단일 complete API가 Office AI Gateway로 전달됩니다. 모델은 RESULT 프로토콜(chat, document, inplace, slides)을 반환합니다.",
+    "officeai.step3Title": "Office에서 로컬 실행",
+    "officeai.step3Desc":
+      "Office.js 또는 Outlook 호스트가 PC에서 변경을 적용합니다 — 새 시트, in-place 텍스트, 슬라이드, compose 초안. 생성 스크립트의 네트워크 호출은 차단됩니다.",
+    "officeai.availTitle": "Microsoft 365용 Sidekick AI",
+    "officeai.availDesc":
+      "Windows · Mac · Office on the web의 Word · Excel · PowerPoint Office 추가 기능과 Outlook 데스크톱 패널. 멀티 모델 게이트웨이, 월간 크레딧, 유료 플랜 BYOK.",
+    "officeai.role":
+      "Sidekick AI for Office와 Outlook을 처음부터 끝까지 설계·구현합니다 — Word · Excel · PowerPoint · Outlook 호스트 어댑터, 에이전트 RESULT 프로토콜, 로컬 실행, Office AI Gateway 위의 제품 경험까지.",
+    "officeai.builtWith":
+      "React, TypeScript, Vite, Office.js, Outlook VSTO + WebView2로 구축했습니다. Cloudflare Pages로 배포하며, 사이드로드·카탈로그 설치용 Office 매니페스트를 사용합니다.",
+
+    "aimail.metaDescription":
+      "AI Mail Gateway (AiMailProxy) — Microsoft Exchange 앞단의 AI 기반 인바운드 스팸·피싱 필터. SCL 0–9를 부여하고 위험 헤더와 함께 릴레이합니다.",
+    "aimail.eyebrow": "Exchange · AI 보안",
+    "aimail.subtitle": "Microsoft Exchange용 AiMailProxy",
+    "aimail.tagline":
+      "Exchange 앞에서 인바운드 SMTP를 검사하는 프록시입니다 — 인증·링크·첨부 다층 검사와 LLM 기반 SCL 0–9로 전송 규칙과 연동합니다.",
+    "aimail.factRole": "인바운드 SMTP 프록시",
+    "aimail.factStack": "Python · aiosmtpd",
+    "aimail.factScl": "SCL 0–9 · Exchange 규칙",
+    "aimail.factDeploy": "온프레미스 엣지",
+    "aimail.cardDesc":
+      "Microsoft Exchange 앞단의 AI 기반 인바운드 스팸·피싱 필터. 다층 인증·스캔, LLM SCL 0–9, 정책 헤더와 함께 릴레이합니다.",
+    "aimail.cardTech": "Python · aiosmtpd · Exchange · LLM",
+    "aimail.valueTitle": "엣지에서 걸러내고, Exchange용으로 분류합니다.",
+    "aimail.valueIntro":
+      "확실한 악성 발신자는 SMTP 550으로 입구에서 거부할 수 있습니다. 그 외 메일은 분석 후 SCL·위험 헤더를 붙여 릴레이하므로, Exchange 전송 규칙으로 정크·격리하면서 사서함 경로를 바꾸지 않아도 됩니다.",
+    "aimail.value1Title": "다층 방어",
+    "aimail.value1Desc":
+      "블랙·화이트리스트, SPF/DKIM/DMARC, 첨부·URL 평판, 그다음 AI SCL — 단일 신호만으로 판단하지 않습니다.",
+    "aimail.value2Title": "Exchange 네이티브 SCL",
+    "aimail.value2Desc":
+      "AI가 Microsoft SCL 0–9를 부여하고, 선택적 Subject 접두사와 커스텀 헤더로 기존 전송 규칙과 연동합니다.",
+    "aimail.value3Title": "비용 인식 AI",
+    "aimail.value3Desc":
+      "본문 분류 캐시가 반복 캠페인을 몇 번 분석해 확정한 뒤, 동일·유사 메일은 추가 LLM 호출을 생략합니다.",
+    "aimail.featPipelineLabel": "검사 파이프라인",
+    "aimail.featPipelineTitle": "메일마다 전체 Check 로그.",
+    "aimail.featPipelineDesc":
+      "SMTP DATA 이후 파싱 → 인증·스캔 → AI/캐시 분류 → SCL floor → 릴레이 순으로 처리하며, 검사별 결과가 콘솔과 일별 로그에 남습니다.",
+    "aimail.featPipeline1": "Auth, 블랙리스트, peer IP, 첨부, URL 대상",
+    "aimail.featPipeline2": "캐시 hit/miss와 AI SCL·지연 시간",
+    "aimail.featPipeline3": "헤더 기록과 SMTP 릴레이 상태 (250 / 550)",
+    "aimail.featAiLabel": "AI SCL",
+    "aimail.featAiTitle": "Exchange SCL에 맞춘 LLM 분류.",
+    "aimail.featAiDesc":
+      "Cerebras 또는 Groq가 제목·발신·수신·첨부 파일명·본문 미리보기를 SCL 0–9로 분류합니다(핫 리로드 프롬프트). 인증 실패·브랜드 사칭·고위험 첨부는 floor로 점수를 올려 약한 신호도 릴레이 전에 반영합니다.",
+    "aimail.featAi1": "제공자: Cerebras / Groq (키 기준 선택)",
+    "aimail.featAi2": "화이트리스트 + Auth 조건 충족 시 AI만 생략 (링크·첨부는 계속)",
+    "aimail.featAi3": "AI 일시 장애 시 defer 큐",
+    "aimail.featThreatLabel": "위협 신호",
+    "aimail.featThreatTitle": "링크, 첨부, peer 평판.",
+    "aimail.featThreatDesc":
+      "URL은 APIVoid 후 VirusTotal로 검사합니다. 첨부는 금지 확장자, zip 재귀, magic-byte filetype, oletools 매크로 분석을 사용합니다. SMTP peer IP도 VirusTotal로 평가하며, 신뢰 TMES 게이트웨이 경유 시 원 발신 IP를 복원해 검증합니다.",
+    "aimail.featThreat1": "X-AiMailProxy-LinkRisk / PeerRisk / Malicious 헤더",
+    "aimail.featThreat2": "auth fail + 위협 + 높은 본문 SCL 동시 충족 시 선택적 composite 550",
+    "aimail.featThreat3": "blacklist, whitelist, prompt, spam_level 파일 핫 리로드",
+    "aimail.stepsTitle": "동작 방식",
+    "aimail.step1Title": "엣지에서 수신",
+    "aimail.step1Desc":
+      "인바운드 MX 또는 커넥터가 Exchange 앞의 AiMailProxy로 SMTP를 보냅니다. 수신 exact 블랙리스트는 RCPT에서 거부할 수 있습니다.",
+    "aimail.step2Title": "검사·분류",
+    "aimail.step2Desc":
+      "화이트·블랙리스트, Auth, 첨부, 링크, 캐시 또는 AI SCL, floor, 선택적 composite reject.",
+    "aimail.step3Title": "정책 훅과 함께 릴레이",
+    "aimail.step3Desc":
+      "X-AiMailProxy-* 헤더와 Subject 접두사를 붙인 뒤 Exchange로 SMTP 릴레이해 정크·피싱·격리 규칙에 사용합니다.",
+    "aimail.availTitle": "온프레미스 Exchange용",
+    "aimail.availDesc":
+      "안전한 롤아웃을 위한 모니터 모드, 일별 통계·선택적 리포트 메일, 스패머 누적, Windows 친화 운영을 갖춘 Python SMTP 엣지 서비스입니다.",
+    "aimail.role":
+      "AiMailProxy를 처음부터 끝까지 설계·구현합니다 — SMTP 수신·릴레이, 다층 검사 파이프라인, AI SCL 프로토콜과 캐시, Exchange 헤더 연동, 로그·통계·핫 리로드 정책 파일 운영 도구까지.",
+    "aimail.builtWith":
+      "Python, aiosmtpd, aiohttp, pyspf, dkimpy, VirusTotal / APIVoid 연동, LLM API(Cerebras / Groq)로 구축했습니다.",
+
+    "aiwork.metaDescription":
+      "AI Work Agent — 원하는 작업을 대신 실행하는 로컬 에이전트. 말로 요청하면 계획하고, PC에서 실행하며, 결과를 남깁니다.",
+    "aiwork.eyebrow": "로컬 CLI · Agentic AI",
+    "aiwork.subtitle": "ai-agent-x — 요청하면 직접 처리",
+    "aiwork.tagline":
+      "평소 쓰는 말로 할 일을 말하세요. 에이전트가 계획하고, 내 PC에서 실행해 결과를 만듭니다 — 조언만 하지 않습니다.",
+    "aiwork.factMode": "Chat · Do 모드",
+    "aiwork.factProviders": "LLM 제공자 6종",
+    "aiwork.factSafety": "안전한 로컬 실행",
+    "aiwork.factTools": "파일 · Office · 이미지",
+    "aiwork.cardDesc":
+      "원하는 작업을 대신 해주는 로컬 에이전트 — 계획하고, 내 PC에서 실행하며, 결과를 전달합니다. 채팅만이 아닙니다.",
+    "aiwork.cardTech": "Python · Multi-LLM · Local execution",
+    "aiwork.valueTitle": "요청하세요. 에이전트가 처리합니다.",
+    "aiwork.valueIntro":
+      "챗봇은 제안에서 멈춥니다. AI Work Agent는 실행합니다 — 파일 찾기, 문서·이미지 변환, 샌드박스 attempt 폴더에 결과 저장, 실패 시 재시도까지.",
+    "aiwork.value1Title": "대화 또는 실행",
+    "aiwork.value1Desc":
+      "매 턴 질의응답(chat) 또는 PC에서 작업을 수행하는 do 모드를 고릅니다. /chat · /script으로 강제할 수 있습니다.",
+    "aiwork.value2Title": "내 PC에서 실행",
+    "aiwork.value2Desc":
+      "작업은 프로젝트 가상환경에서 로컬로 이뤄집니다. 읽기는 어디든 가능하고, 쓰기는 현재 attempt 폴더로만 제한해 원본을 읽기 전용으로 둡니다.",
+    "aiwork.value3Title": "바로 쓰는 헬퍼",
+    "aiwork.value3Desc":
+      "Excel · Word · PowerPoint · PDF · 이미지 빌트인 도구가 자동 등록되어, 흔한 작업은 임시 패키지 탐색 없이 끝냅니다.",
+    "aiwork.featLoopLabel": "실행 루프",
+    "aiwork.featLoopTitle": "계획하고, 실행하고, 고쳐서 — 일을 끝냅니다.",
+    "aiwork.featLoopDesc":
+      "에이전트가 계획을 스트리밍하고 단계를 수행하며, 필요하면 확인 후 패키지를 설치하고, 설정된 한도까지 자동 수리·재시도를 합니다.",
+    "aiwork.featLoop1": "Thinking 표시와 함께 계획 스트리밍",
+    "aiwork.featLoop2": "패키지·파일 변경 작업 전 선택적 확인",
+    "aiwork.featLoop3": "실패 시 자동 수리 재시도",
+    "aiwork.featSafetyLabel": "안전한 실행",
+    "aiwork.featSafetyTitle": "복사본으로 작업 — 원본은 그대로.",
+    "aiwork.featSafetyDesc":
+      "실행 전 정적 검사로 삭제·쓰기·이름변경 위험을 표시합니다. 런타임 가드가 변경을 attempt 폴더로 가둡니다. 변환은 원본을 읽고 새 결과물을 저장하며 Downloads·Desktop 파일을 그 자리에서 덮어쓰지 않습니다.",
+    "aiwork.featSafety1": "파괴적 동작에 대한 실행 전 위험 스캔",
+    "aiwork.featSafety2": "쓰기 루트: output/<timestamp>_attemptN/",
+    "aiwork.featSafety3": "파일 변경 감지 시 선택적 동의",
+    "aiwork.featToolsLabel": "할 수 있는 일",
+    "aiwork.featToolsTitle": "파일, Office 문서, 이미지 — 끝까지.",
+    "aiwork.featToolsDesc":
+      "/attach로 폴더를 붙인 뒤 실제 결과를 요청하세요 — 사진 리사이즈, 스프레드시트 정리, PDF 추출, 슬라이드 생성. agent_tools/ 헬퍼는 런타임에 카탈로그에 등록됩니다.",
+    "aiwork.featTools1": "Excel · Word · PowerPoint · PDF · Image 헬퍼",
+    "aiwork.featTools2": "/attach 경로를 컨텍스트에 주입",
+    "aiwork.featTools3": "상시 선호도를 위한 memory.txt",
+    "aiwork.stepsTitle": "동작 방식",
+    "aiwork.step1Title": "할 일을 말하세요",
+    "aiwork.step1Desc":
+      "필요한 작업을 말하고, 필요하면 /attach로 파일·폴더를 붙이며 /model로 모델을 고릅니다.",
+    "aiwork.step2Title": "에이전트가 계획",
+    "aiwork.step2Desc":
+      "chat 또는 do 모드를 고르고 계획을 스트리밍하며, “다음 폴더도 똑같이” 같은 후속 요청에 대화 이력을 씁니다.",
+    "aiwork.step3Title": "실행하고 결과 전달",
+    "aiwork.step3Desc":
+      "작업은 로컬에서 실행되고 결과는 attempt 폴더에 남습니다. 실패하면 설정한 한도 안에서 수리·재시도합니다.",
+    "aiwork.availTitle": "일을 끝내는 로컬 에이전트",
+    "aiwork.availDesc":
+      ".env로 OpenAI, Claude, Grok, Cerebras, Kimi, DeepSeek를 선택합니다. setup/run 스크립트로 Windows · macOS · Linux에서 .venv 안에서만 동작합니다. Python은 엔진일 뿐 — 제품의 핵심은 작업을 완료하는 것입니다.",
+    "aiwork.role":
+      "AI Work Agent를 처음부터 끝까지 설계·구현합니다 — 요청·실행 루프, 스트리밍 CLI, 멀티 제공자 LLM 클라이언트, 로컬 실행 샌드박스와 안전 검사, 자동 도구 레지스트리, history·첨부·저장 실행 운영 흐름까지.",
+    "aiwork.builtWith":
+      "Python, OpenAI·Anthropic SDK, prompt_toolkit, pandas/openpyxl, python-docx, python-pptx, pypdf, Pillow로 구축했습니다.",
 
     "treesize.metaDescription":
       "TreeSize for Mac — Mac에서 디스크 공간을 어디에 쓰는지 보고, 큰 파일·중복을 찾아 공간을 되찾으세요. Mac App Store에서 제공.",

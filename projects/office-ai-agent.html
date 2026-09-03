@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Office AI Agent — project overview by Sang Hoon Sung. Details coming soon.">
+  <meta name="description" content="Office AI Agent (Sidekick AI) — Word, Excel, PowerPoint, and Outlook agents for Microsoft 365. Plain-language chat; structured context only; changes run locally.">
   <title>Office AI Agent — Sang Hoon Sung</title>
   <script>
     (function () {
@@ -39,7 +39,7 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
 </head>
-<body data-project-title="Office AI Agent">
+<body data-project-title="Office AI Agent" data-project-id="officeai">
   <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
 
   <header class="site-header">
@@ -79,82 +79,199 @@
   </header>
 
   <main id="main">
-    <section class="project-hero" aria-labelledby="project-title">
+    <section class="product-hero" aria-labelledby="project-title">
       <div class="container">
         <a class="project-hero__back" href="../index.html#projects" data-i18n="project.back">&larr; Back to Projects</a>
-        <h1 class="project-hero__title" id="project-title">Office AI Agent</h1>
-        <p class="project-hero__tagline" data-i18n="project.tagline">
-          [One-line project description will be added here.]
-        </p>
-        <div class="project-hero__media" aria-hidden="true">
-          <span class="project-card__placeholder" data-i18n="project.heroImage">Hero image placeholder</span>
+
+        <div class="product-hero__grid">
+          <div class="product-hero__copy">
+            <img class="product-hero__icon" src="../images/office-ai-agent/app-icon.png" width="96" height="96" alt="Sidekick AI icon">
+            <p class="product-hero__eyebrow" data-i18n="officeai.eyebrow">Microsoft 365 · AI Agent</p>
+            <h1 class="product-hero__title" id="project-title">Office AI Agent</h1>
+            <p class="product-hero__subtitle" data-i18n="officeai.subtitle">Sidekick AI for Word · Excel · PowerPoint · Outlook</p>
+            <p class="product-hero__tagline" data-i18n="officeai.tagline">
+              Ask in plain language inside Office and Outlook — the agent plans with structured context, then runs changes locally on your PC.
+            </p>
+            <div class="product-hero__actions">
+              <a class="btn btn--primary" href="https://sidekick-site-617.pages.dev/" target="_blank" rel="noopener noreferrer" data-i18n="project.productSite">Visit product site</a>
+            </div>
+            <ul class="product-hero__facts">
+              <li data-i18n="officeai.factHost">Word · Excel · PowerPoint · Outlook</li>
+              <li data-i18n="officeai.factPlatform">Windows · Mac · Web</li>
+              <li data-i18n="officeai.factPrivacy">Privacy-first context</li>
+              <li data-i18n="officeai.factLang">EN · KO</li>
+            </ul>
+          </div>
+
+          <figure class="product-hero__shot">
+            <img src="../images/office-ai-agent/screenshot-1.png" width="1600" height="1000" alt="Excel with Sidekick AI task pane creating a customer risk report and pie chart" loading="eager">
+          </figure>
         </div>
       </div>
     </section>
 
-    <div class="project-content">
+    <section class="product-section" aria-labelledby="value-title">
       <div class="container">
-        <section class="project-block" aria-labelledby="overview-title">
-          <h2 class="project-block__title" id="overview-title" data-i18n="project.overview">Overview</h2>
-          <p class="placeholder-text" data-i18n="project.overviewPlaceholder">[Project overview will be added here.]</p>
-        </section>
+        <header class="product-section__header">
+          <h2 id="value-title" data-i18n="officeai.valueTitle">Chat in Office. Change the real work.</h2>
+          <p data-i18n="officeai.valueIntro">
+            Most Office AI workflows upload the whole file or leave you copying answers back in. Sidekick AI keeps workbooks, documents, and mail on your PC — only structured metadata goes to the model.
+          </p>
+        </header>
 
-        <section class="project-block" aria-labelledby="features-title">
-          <h2 class="project-block__title" id="features-title" data-i18n="project.features">Key Features</h2>
-          <ul>
-            <li class="placeholder-text" data-i18n="project.featurePlaceholder">[Feature will be added here]</li>
-            <li class="placeholder-text" data-i18n="project.featurePlaceholder">[Feature will be added here]</li>
-            <li class="placeholder-text" data-i18n="project.featurePlaceholder">[Feature will be added here]</li>
-          </ul>
-        </section>
-
-        <section class="project-block" aria-labelledby="tech-title">
-          <h2 class="project-block__title" id="tech-title" data-i18n="project.technology">Technology</h2>
-          <ul>
-            <li class="placeholder-text" data-i18n="project.techItemPlaceholder">[Technology stack will be listed here]</li>
-            <li class="placeholder-text" data-i18n="project.techItemPlaceholder">[Technology stack will be listed here]</li>
-          </ul>
-        </section>
-
-        <section class="project-block" aria-labelledby="architecture-title">
-          <h2 class="project-block__title" id="architecture-title" data-i18n="project.architecture">Architecture</h2>
-          <p class="placeholder-text" data-i18n="project.architecturePlaceholder">[Architecture notes will be added here.]</p>
-        </section>
-
-        <section class="project-block" aria-labelledby="role-title">
-          <h2 class="project-block__title" id="role-title" data-i18n="project.role">Development / My Role</h2>
-          <p class="placeholder-text" data-i18n="project.rolePlaceholder">[Role and contributions will be added here.]</p>
-        </section>
-
-        <section class="project-block" aria-labelledby="screenshots-title">
-          <h2 class="project-block__title" id="screenshots-title" data-i18n="project.screenshots">Screenshots</h2>
-          <div class="screenshot-grid">
-            <div class="screenshot-item" aria-hidden="true">
-              <span class="project-card__placeholder" data-i18n="projects.screenshot">Screenshot placeholder</span>
-            </div>
-            <div class="screenshot-item" aria-hidden="true">
-              <span class="project-card__placeholder" data-i18n="projects.screenshot">Screenshot placeholder</span>
-            </div>
-          </div>
-        </section>
-
-        <section class="project-block" aria-labelledby="video-title">
-          <h2 class="project-block__title" id="video-title" data-i18n="project.video">Demo Video</h2>
-          <div class="video-placeholder" aria-hidden="true">
-            <span class="project-card__placeholder" data-i18n="project.videoPlaceholder">Demo video placeholder</span>
-          </div>
-        </section>
-
-        <section class="project-block" aria-labelledby="links-title">
-          <h2 class="project-block__title" id="links-title" data-i18n="project.links">Links</h2>
-          <div class="project-links">
-            <span class="btn btn--secondary btn--small" style="cursor:default;opacity:0.65;" data-i18n="project.linkProduct">[App Store / Product link]</span>
-            <span class="btn btn--secondary btn--small" style="cursor:default;opacity:0.65;" data-i18n="project.linkRepo">[Repository / Docs link]</span>
-          </div>
-          <p class="placeholder-text" style="margin-top:1rem;" data-i18n="project.linksNote">[External links will be added when available.]</p>
-        </section>
+        <div class="value-grid">
+          <article class="value-card">
+            <h3 data-i18n="officeai.value1Title">Ask in ordinary language</h3>
+            <p data-i18n="officeai.value1Desc">
+              Clean a table, translate a selection, build slides, or summarize the open mail — without leaving Word, Excel, PowerPoint, or Outlook.
+            </p>
+          </article>
+          <article class="value-card">
+            <h3 data-i18n="officeai.value2Title">Privacy-first context</h3>
+            <p data-i18n="officeai.value2Desc">
+              The agent sends headers, samples, short structure, or mail preview — not the entire workbook, document, or mailbox. API keys stay on the gateway server.
+            </p>
+          </article>
+          <article class="value-card">
+            <h3 data-i18n="officeai.value3Title">Local execution</h3>
+            <p data-i18n="officeai.value3Desc">
+              The model plans; Office.js or the Outlook host runs on your machine. Generated scripts cannot call the network and only use allowed helpers.
+            </p>
+          </article>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <section class="product-feature" aria-labelledby="feat-excel-title">
+      <div class="container product-feature__grid">
+        <div class="product-feature__copy">
+          <p class="product-feature__label" data-i18n="officeai.featExcelLabel">Excel</p>
+          <h2 id="feat-excel-title" data-i18n="officeai.featExcelTitle">Plan from a sample. Write a new result sheet.</h2>
+          <p data-i18n="officeai.featExcelDesc">
+            Excel locks the active sheet at send time, sends headers plus a few sample rows, then creates a result sheet — classification, charts, summaries — while keeping the source intact.
+          </p>
+          <ul class="product-feature__list">
+            <li data-i18n="officeai.featExcel1">New result sheets with suggested short names</li>
+            <li data-i18n="officeai.featExcel2">Tables, conditional formatting, and charts</li>
+            <li data-i18n="officeai.featExcel3">Lineage tracking so prior results are not overwritten</li>
+          </ul>
+        </div>
+        <figure class="product-feature__media">
+          <img src="../images/office-ai-agent/screenshot-2.png" width="1600" height="1000" alt="Excel Sidekick AI creating a regional sales summary with color-coded bar chart" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section class="product-feature product-feature--alt" aria-labelledby="feat-word-title">
+      <div class="container product-feature__grid product-feature__grid--reverse">
+        <div class="product-feature__copy">
+          <p class="product-feature__label" data-i18n="officeai.featWordLabel">Word</p>
+          <h2 id="feat-word-title" data-i18n="officeai.featWordTitle">Edit the selection in place. Keep the layout.</h2>
+          <p data-i18n="officeai.featWordDesc">
+            Word focuses on partial edits — selected text, quoted dialogue, or a named passage. In-place transforms replace segments without rebuilding the whole document.
+          </p>
+          <ul class="product-feature__list">
+            <li data-i18n="officeai.featWord1">Translate or rewrite selection in place</li>
+            <li data-i18n="officeai.featWord2">Style updates such as bold or highlight on matches</li>
+            <li data-i18n="officeai.featWord3">Layout and styles preserved where possible</li>
+          </ul>
+        </div>
+        <figure class="product-feature__media">
+          <img src="../images/office-ai-agent/screenshot-3.png" width="1600" height="1000" alt="Word with Sidekick AI translating a selection and highlighting quotations" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section class="product-feature" aria-labelledby="feat-ppt-title">
+      <div class="container product-feature__grid">
+        <div class="product-feature__copy">
+          <p class="product-feature__label" data-i18n="officeai.featPptLabel">PowerPoint</p>
+          <h2 id="feat-ppt-title" data-i18n="officeai.featPptTitle">Rewrite shapes — or build a deck from a long draft.</h2>
+          <p data-i18n="officeai.featPptDesc">
+            PowerPoint works at the text-shape level for in-place edits, or runs a two-stage slides pipeline: topic boundaries first, then line packing and slide creation on the host.
+          </p>
+          <ul class="product-feature__list">
+            <li data-i18n="officeai.featPpt1">In-place text updates on existing shapes</li>
+            <li data-i18n="officeai.featPpt2">Long paste or attachment → topic-based slides</li>
+            <li data-i18n="officeai.featPpt3">Repack by font size and lines per slide</li>
+          </ul>
+        </div>
+        <figure class="product-feature__media">
+          <img src="../images/office-ai-agent/screenshot-4.png" width="1600" height="1000" alt="PowerPoint with Sidekick AI repacking a deck to larger font and fewer lines per slide" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section class="product-feature product-feature--alt" aria-labelledby="feat-outlook-title">
+      <div class="container product-feature__grid product-feature__grid--reverse">
+        <div class="product-feature__copy">
+          <p class="product-feature__label" data-i18n="officeai.featOutlookLabel">Outlook</p>
+          <h2 id="feat-outlook-title" data-i18n="officeai.featOutlookTitle">Read the open mail. Summarize, analyze, draft replies.</h2>
+          <p data-i18n="officeai.featOutlookDesc">
+            The Outlook desktop panel works from the open item’s preview metadata — subject, senders, body preview, attachment names — then chats, runs structured mail analysis, or drafts reply text in compose.
+          </p>
+          <ul class="product-feature__list">
+            <li data-i18n="officeai.featOutlook1">Summaries, action items, importance, and spam risk</li>
+            <li data-i18n="officeai.featOutlook2">Reply / Reply all / Forward shortcuts from the panel</li>
+            <li data-i18n="officeai.featOutlook3">Compose-only writes; read mode stays analysis and chat</li>
+          </ul>
+        </div>
+        <figure class="product-feature__media">
+          <img src="../images/office-ai-agent/screenshot-outlook.png" width="1600" height="1000" alt="Outlook desktop with Sidekick AI summarizing an email and listing recommended actions" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section class="product-section product-section--alt" aria-labelledby="steps-title">
+      <div class="container">
+        <header class="product-section__header">
+          <h2 id="steps-title" data-i18n="officeai.stepsTitle">How it works</h2>
+        </header>
+        <ol class="steps">
+          <li class="steps__item">
+            <span class="steps__num">1</span>
+            <h3 data-i18n="officeai.step1Title">Gather structured context</h3>
+            <p data-i18n="officeai.step1Desc">The host collects metadata for the active Excel sheet, Word session, PowerPoint shapes, or open Outlook item — not the full file or mailbox.</p>
+          </li>
+          <li class="steps__item">
+            <span class="steps__num">2</span>
+            <h3 data-i18n="officeai.step2Title">Plan through the gateway</h3>
+            <p data-i18n="officeai.step2Desc">A single complete API call reaches the Office AI Gateway. The model returns a RESULT protocol (chat, document, inplace, or slides).</p>
+          </li>
+          <li class="steps__item">
+            <span class="steps__num">3</span>
+            <h3 data-i18n="officeai.step3Title">Execute locally in Office</h3>
+            <p data-i18n="officeai.step3Desc">Office.js or the Outlook host applies the change on your PC — new sheets, in-place text, slides, or compose drafts — with network calls blocked in generated scripts.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="product-strip" aria-labelledby="avail-title">
+      <div class="container product-strip__inner">
+        <div>
+          <h2 id="avail-title" data-i18n="officeai.availTitle">Sidekick AI for Microsoft 365</h2>
+          <p data-i18n="officeai.availDesc">
+            Office Add-in for Word, Excel, and PowerPoint on Windows, Mac, and Office on the web — plus an Outlook desktop panel. Multi-model gateway, monthly credits, and BYOK on paid plans.
+          </p>
+        </div>
+        <a class="btn btn--primary" href="https://sidekick-site-617.pages.dev/" target="_blank" rel="noopener noreferrer" data-i18n="project.productSite">Visit product site</a>
+      </div>
+    </section>
+
+    <section class="product-section" aria-labelledby="role-title">
+      <div class="container product-section__narrow">
+        <header class="product-section__header product-section__header--left">
+          <h2 id="role-title" data-i18n="project.role">Development / My Role</h2>
+        </header>
+        <p data-i18n="officeai.role">
+          I design and build Sidekick AI for Office and Outlook end to end — host adapters for Word, Excel, PowerPoint, and Outlook, the agent RESULT protocol, local execution, and the product experience on top of the Office AI Gateway.
+        </p>
+        <p class="product-note" data-i18n="officeai.builtWith">
+          Built with React, TypeScript, Vite, Office.js, and Outlook VSTO + WebView2. Deployed via Cloudflare Pages with Office add-in manifests for sideload and catalog install.
+        </p>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">

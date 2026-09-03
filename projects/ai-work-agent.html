@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI Work Agent — a local agent that does the work you ask for. Describe the task; it plans, runs it on your machine, and saves the result.">
+  <title>AI Work Agent — Sang Hoon Sung</title>
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem("portfolio-theme");
+        if (theme !== "light" && theme !== "dark") {
+          theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        }
+        document.documentElement.setAttribute("data-theme", theme);
+
+        var lang = null;
+        try {
+          lang = new URLSearchParams(window.location.search).get("lang");
+        } catch (err) {}
+        if (lang !== "en" && lang !== "ko") {
+          lang = localStorage.getItem("portfolio-lang");
+        }
+        if (lang !== "en" && lang !== "ko") {
+          lang = (navigator.language || "").toLowerCase().indexOf("ko") === 0
+            ? "ko"
+            : "en";
+        }
+        document.documentElement.setAttribute("lang", lang);
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-project-title="AI Work Agent" data-project-id="aiwork">
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="nav__brand" href="../index.html">Sang Hoon Sung</a>
+
+      <nav class="nav__menu" id="nav-menu" data-i18n-aria="a11y.nav" aria-label="Primary">
+        <ul class="nav__links">
+          <li><a class="nav__link" href="../index.html" data-i18n="nav.home">Home</a></li>
+          <li><a class="nav__link" href="../index.html#projects" aria-current="page" data-i18n="nav.projects">Projects</a></li>
+          <li><a class="nav__link" href="../index.html#experience" data-i18n="nav.experience">Experience</a></li>
+          <li><a class="nav__link" href="../index.html#about" data-i18n="nav.about">About</a></li>
+          <li><a class="nav__link" href="../index.html#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <div class="nav__social">
+          <a href="https://www.linkedin.com/in/woojooin/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/woojooin" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </nav>
+
+      <div class="nav__controls">
+        <div class="lang-switch" role="group" data-i18n-aria="a11y.langSwitch" aria-label="Language">
+          <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-switch__btn" data-lang="ko" aria-pressed="false">KO</button>
+        </div>
+        <button type="button" class="theme-toggle" data-theme-toggle data-i18n-aria="a11y.themeToDark" aria-label="Switch to dark mode">
+          <span data-theme-label>Dark</span>
+        </button>
+      </div>
+
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" data-i18n-aria="a11y.navToggle" aria-label="Toggle navigation">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="product-hero" aria-labelledby="project-title">
+      <div class="container">
+        <a class="project-hero__back" href="../index.html#projects" data-i18n="project.back">&larr; Back to Projects</a>
+
+        <div class="product-hero__grid">
+          <div class="product-hero__copy">
+            <p class="product-hero__eyebrow" data-i18n="aiwork.eyebrow">Local CLI · Agentic AI</p>
+            <h1 class="product-hero__title" id="project-title">AI Work Agent</h1>
+            <p class="product-hero__subtitle" data-i18n="aiwork.subtitle">ai-agent-x — ask, then it does the work</p>
+            <p class="product-hero__tagline" data-i18n="aiwork.tagline">
+              Describe the job in plain language. The agent plans it, runs it on your machine, and delivers the result — not just advice.
+            </p>
+            <ul class="product-hero__facts">
+              <li data-i18n="aiwork.factMode">Chat · Do modes</li>
+              <li data-i18n="aiwork.factProviders">6 LLM providers</li>
+              <li data-i18n="aiwork.factSafety">Safe local execution</li>
+              <li data-i18n="aiwork.factTools">Files · Office · Images</li>
+            </ul>
+          </div>
+
+          <figure class="product-hero__shot">
+            <img src="../images/ai-work-agent/screenshot-1.png" width="1600" height="1000" alt="AI Work Agent terminal completing a local image resize task" loading="eager">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section" aria-labelledby="value-title">
+      <div class="container">
+        <header class="product-section__header">
+          <h2 id="value-title" data-i18n="aiwork.valueTitle">You ask. It does the work.</h2>
+          <p data-i18n="aiwork.valueIntro">
+            Chatbots stop at suggestions. AI Work Agent executes — finding files, transforming documents and images, producing outputs under a sandboxed attempt folder, and retrying when a step fails.
+          </p>
+        </header>
+
+        <div class="value-grid">
+          <article class="value-card">
+            <h3 data-i18n="aiwork.value1Title">Talk or do</h3>
+            <p data-i18n="aiwork.value1Desc">
+              Each turn chooses chat for Q&amp;A or do-mode to carry out the task on your PC. Force either with /chat or /script.
+            </p>
+          </article>
+          <article class="value-card">
+            <h3 data-i18n="aiwork.value2Title">Runs on your machine</h3>
+            <p data-i18n="aiwork.value2Desc">
+              Work happens locally in the project virtualenv. Reads can go anywhere; writes stay inside the current attempt folder so originals stay read-only.
+            </p>
+          </article>
+          <article class="value-card">
+            <h3 data-i18n="aiwork.value3Title">Ready-made helpers</h3>
+            <p data-i18n="aiwork.value3Desc">
+              Built-in tools for Excel, Word, PowerPoint, PDF, and images are auto-cataloged so common jobs finish without ad-hoc package hunting.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-feature" aria-labelledby="feat-loop-title">
+      <div class="container product-feature__grid">
+        <div class="product-feature__copy">
+          <p class="product-feature__label" data-i18n="aiwork.featLoopLabel">Execution loop</p>
+          <h2 id="feat-loop-title" data-i18n="aiwork.featLoopTitle">Plan, run, repair — until the job is done.</h2>
+          <p data-i18n="aiwork.featLoopDesc">
+            The agent streams its plan, carries out the steps, installs missing packages after confirmation when needed, and can automatically repair and retry up to a configured limit.
+          </p>
+          <ul class="product-feature__list">
+            <li data-i18n="aiwork.featLoop1">Streaming plan with a Thinking indicator</li>
+            <li data-i18n="aiwork.featLoop2">Optional confirm before packages or file-changing work</li>
+            <li data-i18n="aiwork.featLoop3">Automatic repair retries on failure</li>
+          </ul>
+        </div>
+        <figure class="product-feature__media">
+          <img src="../images/ai-work-agent/screenshot-1.png" width="1600" height="1000" alt="AI Work Agent planning and finishing a local file task" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section class="product-feature product-feature--alt" aria-labelledby="feat-safety-title">
+      <div class="container product-feature__narrow">
+        <p class="product-feature__label" data-i18n="aiwork.featSafetyLabel">Safe execution</p>
+        <h2 id="feat-safety-title" data-i18n="aiwork.featSafetyTitle">It works on copies — originals stay untouched.</h2>
+        <p data-i18n="aiwork.featSafetyDesc">
+          Before run, static checks flag delete, write, and rename risks. At runtime, filesystem guards confine changes to the attempt directory. Transforms read sources and save new artifacts — Downloads and Desktop files are never overwritten in place.
+        </p>
+        <ul class="product-feature__list">
+          <li data-i18n="aiwork.featSafety1">Pre-run risk scan for destructive actions</li>
+          <li data-i18n="aiwork.featSafety2">Write root under output/&lt;timestamp&gt;_attemptN/</li>
+          <li data-i18n="aiwork.featSafety3">Optional consent when file changes are detected</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="product-feature" aria-labelledby="feat-tools-title">
+      <div class="container product-feature__narrow">
+        <p class="product-feature__label" data-i18n="aiwork.featToolsLabel">What it can do</p>
+        <h2 id="feat-tools-title" data-i18n="aiwork.featToolsTitle">Files, Office docs, and images — end to end.</h2>
+        <p data-i18n="aiwork.featToolsDesc">
+          Attach folders with /attach, then ask for real outcomes: resize photos, reshape spreadsheets, extract PDF text, build slides. Helpers under agent_tools/ register themselves into the agent catalog at runtime.
+        </p>
+        <ul class="product-feature__list">
+          <li data-i18n="aiwork.featTools1">Excel · Word · PowerPoint · PDF · Image helpers</li>
+          <li data-i18n="aiwork.featTools2">/attach paths injected into context</li>
+          <li data-i18n="aiwork.featTools3">Persistent memory.txt for standing preferences</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="product-section product-section--alt" aria-labelledby="steps-title">
+      <div class="container">
+        <header class="product-section__header">
+          <h2 id="steps-title" data-i18n="aiwork.stepsTitle">How it works</h2>
+        </header>
+        <ol class="steps">
+          <li class="steps__item">
+            <span class="steps__num">1</span>
+            <h3 data-i18n="aiwork.step1Title">Describe the job</h3>
+            <p data-i18n="aiwork.step1Desc">Say what you need, optionally /attach files or folders, and pick a model with /model.</p>
+          </li>
+          <li class="steps__item">
+            <span class="steps__num">2</span>
+            <h3 data-i18n="aiwork.step2Title">Agent plans the work</h3>
+            <p data-i18n="aiwork.step2Desc">It chooses chat or do-mode, streams the plan, and uses conversation history for follow-ups like “do the same for the next folder.”</p>
+          </li>
+          <li class="steps__item">
+            <span class="steps__num">3</span>
+            <h3 data-i18n="aiwork.step3Title">It runs and delivers</h3>
+            <p data-i18n="aiwork.step3Desc">Work executes locally; results land in the attempt folder. On failure it repairs and retries within the limit you set.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="product-strip" aria-labelledby="avail-title">
+      <div class="container product-strip__inner">
+        <div>
+          <h2 id="avail-title" data-i18n="aiwork.availTitle">A local agent that finishes the task</h2>
+          <p data-i18n="aiwork.availDesc">
+            OpenAI, Claude, Grok, Cerebras, Kimi, and DeepSeek via .env. Windows, macOS, and Linux with setup/run scripts that keep everything inside .venv. Python is the engine under the hood — the product is getting the work done.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section" aria-labelledby="role-title">
+      <div class="container product-section__narrow">
+        <header class="product-section__header product-section__header--left">
+          <h2 id="role-title" data-i18n="project.role">Development / My Role</h2>
+        </header>
+        <p data-i18n="aiwork.role">
+          I design and build AI Work Agent end to end — the ask-and-execute loop, streaming CLI, multi-provider LLM client, local execution sandbox and safety scans, auto-discovered tool registry, and the operator workflow around history, attachments, and saved runs.
+        </p>
+        <p class="product-note" data-i18n="aiwork.builtWith">
+          Built with Python, OpenAI &amp; Anthropic SDKs, prompt_toolkit, pandas/openpyxl, python-docx, python-pptx, pypdf, and Pillow.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; Sang Hoon Sung</p>
+      <div class="footer__links">
+        <a href="https://www.linkedin.com/in/woojooin/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/woojooin" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AI Mail Gateway — project overview by Sang Hoon Sung. Details coming soon.">
+  <meta name="description" content="AI Mail Gateway (AiMailProxy) — an AI-powered inbound spam and phishing filter that sits in front of Microsoft Exchange, assigns SCL 0–9, and relays with risk headers.">
   <title>AI Mail Gateway — Sang Hoon Sung</title>
   <script>
     (function () {
@@ -39,7 +39,7 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
 </head>
-<body data-project-title="AI Mail Gateway">
+<body data-project-title="AI Mail Gateway" data-project-id="aimail">
   <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
 
   <header class="site-header">
@@ -79,82 +79,164 @@
   </header>
 
   <main id="main">
-    <section class="project-hero" aria-labelledby="project-title">
+    <section class="product-hero" aria-labelledby="project-title">
       <div class="container">
         <a class="project-hero__back" href="../index.html#projects" data-i18n="project.back">&larr; Back to Projects</a>
-        <h1 class="project-hero__title" id="project-title">AI Mail Gateway</h1>
-        <p class="project-hero__tagline" data-i18n="project.tagline">
-          [One-line project description will be added here.]
-        </p>
-        <div class="project-hero__media" aria-hidden="true">
-          <span class="project-card__placeholder" data-i18n="project.heroImage">Hero image placeholder</span>
+
+        <div class="product-hero__grid">
+          <div class="product-hero__copy">
+            <p class="product-hero__eyebrow" data-i18n="aimail.eyebrow">Exchange · AI Security</p>
+            <h1 class="product-hero__title" id="project-title">AI Mail Gateway</h1>
+            <p class="product-hero__subtitle" data-i18n="aimail.subtitle">AiMailProxy for Microsoft Exchange</p>
+            <p class="product-hero__tagline" data-i18n="aimail.tagline">
+              An inbound SMTP proxy that inspects mail before Exchange — layered auth, link and attachment scans, and LLM-based SCL 0–9 for transport rules.
+            </p>
+            <ul class="product-hero__facts">
+              <li data-i18n="aimail.factRole">Inbound SMTP proxy</li>
+              <li data-i18n="aimail.factStack">Python · aiosmtpd</li>
+              <li data-i18n="aimail.factScl">SCL 0–9 · Exchange rules</li>
+              <li data-i18n="aimail.factDeploy">On-prem edge</li>
+            </ul>
+          </div>
+
+          <figure class="product-hero__shot">
+            <img src="../images/ai-mail-gateway/screenshot-1.png" width="1600" height="1000" alt="AI Mail Gateway dashboard showing architecture, live filter results, and SCL details" loading="eager">
+          </figure>
         </div>
       </div>
     </section>
 
-    <div class="project-content">
+    <section class="product-section" aria-labelledby="value-title">
       <div class="container">
-        <section class="project-block" aria-labelledby="overview-title">
-          <h2 class="project-block__title" id="overview-title" data-i18n="project.overview">Overview</h2>
-          <p class="placeholder-text" data-i18n="project.overviewPlaceholder">[Project overview will be added here.]</p>
-        </section>
+        <header class="product-section__header">
+          <h2 id="value-title" data-i18n="aimail.valueTitle">Filter at the edge. Classify for Exchange.</h2>
+          <p data-i18n="aimail.valueIntro">
+            Known-bad senders can be rejected at SMTP with 550. Everything else is analyzed, tagged with SCL and risk headers, then relayed so Exchange transport rules can junk or quarantine without rewriting the mailbox path.
+          </p>
+        </header>
 
-        <section class="project-block" aria-labelledby="features-title">
-          <h2 class="project-block__title" id="features-title" data-i18n="project.features">Key Features</h2>
-          <ul>
-            <li class="placeholder-text" data-i18n="project.featurePlaceholder">[Feature will be added here]</li>
-            <li class="placeholder-text" data-i18n="project.featurePlaceholder">[Feature will be added here]</li>
-            <li class="placeholder-text" data-i18n="project.featurePlaceholder">[Feature will be added here]</li>
-          </ul>
-        </section>
-
-        <section class="project-block" aria-labelledby="tech-title">
-          <h2 class="project-block__title" id="tech-title" data-i18n="project.technology">Technology</h2>
-          <ul>
-            <li class="placeholder-text" data-i18n="project.techItemPlaceholder">[Technology stack will be listed here]</li>
-            <li class="placeholder-text" data-i18n="project.techItemPlaceholder">[Technology stack will be listed here]</li>
-          </ul>
-        </section>
-
-        <section class="project-block" aria-labelledby="architecture-title">
-          <h2 class="project-block__title" id="architecture-title" data-i18n="project.architecture">Architecture</h2>
-          <p class="placeholder-text" data-i18n="project.architecturePlaceholder">[Architecture notes will be added here.]</p>
-        </section>
-
-        <section class="project-block" aria-labelledby="role-title">
-          <h2 class="project-block__title" id="role-title" data-i18n="project.role">Development / My Role</h2>
-          <p class="placeholder-text" data-i18n="project.rolePlaceholder">[Role and contributions will be added here.]</p>
-        </section>
-
-        <section class="project-block" aria-labelledby="screenshots-title">
-          <h2 class="project-block__title" id="screenshots-title" data-i18n="project.screenshots">Screenshots</h2>
-          <div class="screenshot-grid">
-            <div class="screenshot-item" aria-hidden="true">
-              <span class="project-card__placeholder" data-i18n="projects.screenshot">Screenshot placeholder</span>
-            </div>
-            <div class="screenshot-item" aria-hidden="true">
-              <span class="project-card__placeholder" data-i18n="projects.screenshot">Screenshot placeholder</span>
-            </div>
-          </div>
-        </section>
-
-        <section class="project-block" aria-labelledby="video-title">
-          <h2 class="project-block__title" id="video-title" data-i18n="project.video">Demo Video</h2>
-          <div class="video-placeholder" aria-hidden="true">
-            <span class="project-card__placeholder" data-i18n="project.videoPlaceholder">Demo video placeholder</span>
-          </div>
-        </section>
-
-        <section class="project-block" aria-labelledby="links-title">
-          <h2 class="project-block__title" id="links-title" data-i18n="project.links">Links</h2>
-          <div class="project-links">
-            <span class="btn btn--secondary btn--small" style="cursor:default;opacity:0.65;" data-i18n="project.linkProduct">[App Store / Product link]</span>
-            <span class="btn btn--secondary btn--small" style="cursor:default;opacity:0.65;" data-i18n="project.linkRepo">[Repository / Docs link]</span>
-          </div>
-          <p class="placeholder-text" style="margin-top:1rem;" data-i18n="project.linksNote">[External links will be added when available.]</p>
-        </section>
+        <div class="value-grid">
+          <article class="value-card">
+            <h3 data-i18n="aimail.value1Title">Layered defense</h3>
+            <p data-i18n="aimail.value1Desc">
+              Blacklist and whitelist, SPF/DKIM/DMARC, attachment and URL reputation, then AI SCL — no single signal decides alone.
+            </p>
+          </article>
+          <article class="value-card">
+            <h3 data-i18n="aimail.value2Title">Exchange-native SCL</h3>
+            <p data-i18n="aimail.value2Desc">
+              AI assigns Microsoft-compatible SCL 0–9 plus optional Subject prefixes and custom headers for existing transport rules.
+            </p>
+          </article>
+          <article class="value-card">
+            <h3 data-i18n="aimail.value3Title">Cost-aware AI</h3>
+            <p data-i18n="aimail.value3Desc">
+              A body classification cache confirms repeat campaigns after a few analyses, then skips further LLM calls for matching mail.
+            </p>
+          </article>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <section class="product-feature" aria-labelledby="feat-pipeline-title">
+      <div class="container product-feature__grid">
+        <div class="product-feature__copy">
+          <p class="product-feature__label" data-i18n="aimail.featPipelineLabel">Inspection pipeline</p>
+          <h2 id="feat-pipeline-title" data-i18n="aimail.featPipelineTitle">Every message gets a full Check log.</h2>
+          <p data-i18n="aimail.featPipelineDesc">
+            After SMTP DATA, the proxy parses the message, runs auth and scans, classifies with AI or cache, applies SCL floors, then relays — with per-check outcomes visible in the console and daily logs.
+          </p>
+          <ul class="product-feature__list">
+            <li data-i18n="aimail.featPipeline1">Auth, blacklist, peer IP, attachments, URL targets</li>
+            <li data-i18n="aimail.featPipeline2">Cache hit/miss and AI SCL with latency</li>
+            <li data-i18n="aimail.featPipeline3">Header write and SMTP relay status (250 / 550)</li>
+          </ul>
+        </div>
+        <figure class="product-feature__media">
+          <img src="../images/ai-mail-gateway/screenshot-1.png" width="1600" height="1000" alt="AI Mail Gateway live filter results with blocked phishing and SCL scores" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section class="product-feature product-feature--alt" aria-labelledby="feat-ai-title">
+      <div class="container product-feature__narrow">
+        <p class="product-feature__label" data-i18n="aimail.featAiLabel">AI SCL</p>
+        <h2 id="feat-ai-title" data-i18n="aimail.featAiTitle">LLM classification aligned to Exchange SCL.</h2>
+        <p data-i18n="aimail.featAiDesc">
+          Cerebras or Groq classifies subject, senders, recipients, attachment names, and a body preview into SCL 0–9 via a hot-reloaded prompt. Auth failures, brand impersonation, and high-risk attachments raise floors so weak signals still raise the score before relay.
+        </p>
+        <ul class="product-feature__list">
+          <li data-i18n="aimail.featAi1">Providers: Cerebras / Groq (key-based selection)</li>
+          <li data-i18n="aimail.featAi2">Whitelist + auth policy can skip AI while links and attachments still run</li>
+          <li data-i18n="aimail.featAi3">Defer queue when AI is temporarily unavailable</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="product-feature" aria-labelledby="feat-threat-title">
+      <div class="container product-feature__narrow">
+        <p class="product-feature__label" data-i18n="aimail.featThreatLabel">Threat signals</p>
+        <h2 id="feat-threat-title" data-i18n="aimail.featThreatTitle">Links, attachments, and peer reputation.</h2>
+        <p data-i18n="aimail.featThreatDesc">
+          URLs are checked with APIVoid then VirusTotal. Attachments use banned extensions, zip recursion, magic-byte filetype detection, and oletools macro analysis. SMTP peer IPs can be scored on VirusTotal, including recovery of originating IP when mail arrives via a trusted TMES gateway.
+        </p>
+        <ul class="product-feature__list">
+          <li data-i18n="aimail.featThreat1">X-AiMailProxy-LinkRisk / PeerRisk / Malicious headers</li>
+          <li data-i18n="aimail.featThreat2">Optional composite 550 when auth fail + threat + high body SCL align</li>
+          <li data-i18n="aimail.featThreat3">Hot-reload blacklist, whitelist, prompt, and spam_level files</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="product-section product-section--alt" aria-labelledby="steps-title">
+      <div class="container">
+        <header class="product-section__header">
+          <h2 id="steps-title" data-i18n="aimail.stepsTitle">How it works</h2>
+        </header>
+        <ol class="steps">
+          <li class="steps__item">
+            <span class="steps__num">1</span>
+            <h3 data-i18n="aimail.step1Title">Receive at the edge</h3>
+            <p data-i18n="aimail.step1Desc">Inbound MX or connector delivers SMTP to AiMailProxy before Exchange. Exact recipient blacklist can reject at RCPT.</p>
+          </li>
+          <li class="steps__item">
+            <span class="steps__num">2</span>
+            <h3 data-i18n="aimail.step2Title">Inspect and classify</h3>
+            <p data-i18n="aimail.step2Desc">Whitelist/blacklist, auth, attachments, links, cache or AI SCL, then floors and optional composite reject.</p>
+          </li>
+          <li class="steps__item">
+            <span class="steps__num">3</span>
+            <h3 data-i18n="aimail.step3Title">Relay with policy hooks</h3>
+            <p data-i18n="aimail.step3Desc">Add X-AiMailProxy-* headers and Subject prefixes, then SMTP-relay to Exchange for Junk, phishing, or quarantine rules.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="product-strip" aria-labelledby="avail-title">
+      <div class="container product-strip__inner">
+        <div>
+          <h2 id="avail-title" data-i18n="aimail.availTitle">Built for on-prem Exchange</h2>
+          <p data-i18n="aimail.availDesc">
+            Python SMTP edge service with monitor mode for safe rollout, daily stats and optional report mail, spammer accumulation, and Windows-friendly operation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section" aria-labelledby="role-title">
+      <div class="container product-section__narrow">
+        <header class="product-section__header product-section__header--left">
+          <h2 id="role-title" data-i18n="project.role">Development / My Role</h2>
+        </header>
+        <p data-i18n="aimail.role">
+          I design and build AiMailProxy end to end — the SMTP receive/relay path, multi-layer inspection pipeline, AI SCL protocol and caching, Exchange header integration, and operational tooling for logs, stats, and hot-reloaded policy files.
+        </p>
+        <p class="product-note" data-i18n="aimail.builtWith">
+          Built with Python, aiosmtpd, aiohttp, pyspf, dkimpy, VirusTotal / APIVoid integrations, and LLM APIs (Cerebras / Groq).
+        </p>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">

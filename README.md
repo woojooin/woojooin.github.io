@@ -23,6 +23,7 @@ Built with plain HTML5, CSS3, and vanilla JavaScript for GitHub Pages. No framew
 ├── projects/               # Individual project pages
 │   ├── office-ai-agent.html
 │   ├── ai-mail-gateway.html
+│   ├── ai-work-agent.html
 │   ├── treesize.html
 │   ├── zcommander.html
 │   ├── zgallery.html
