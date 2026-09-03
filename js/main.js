@@ -297,7 +297,7 @@
       });
     }
 
-    var sectionIds = ["projects", "experience", "about", "contact"];
+    var sectionIds = ["projects", "skills", "about", "contact"];
     var sections = sectionIds
       .map(function (id) {
         return document.getElementById(id);
