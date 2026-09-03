@@ -180,7 +180,7 @@ p {
 }
 
 .section {
-  padding-block: var(--space-9);
+  padding-block: var(--space-7);
 }
 
 .section--alt {
@@ -189,7 +189,7 @@ p {
 }
 
 .section__header {
-  margin-bottom: var(--space-7);
+  margin-bottom: var(--space-5);
   max-width: 40rem;
 }
 
@@ -242,10 +242,23 @@ p {
   letter-spacing: -0.01em;
   color: var(--color-text);
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
 }
 
 .nav__brand:hover {
   color: var(--color-accent);
+}
+
+.nav__avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  object-fit: cover;
+  background: var(--color-surface);
+  flex: 0 0 auto;
 }
 
 .nav__toggle {
@@ -396,7 +409,7 @@ p {
 /* Hero -------------------------------------------------------------------- */
 
 .hero {
-  padding-block: var(--space-10) var(--space-9);
+  padding-block: var(--space-7) var(--space-6);
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -409,15 +422,28 @@ p {
   font-weight: 600;
   letter-spacing: -0.03em;
   margin-bottom: var(--space-4);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
   opacity: 0;
   animation: fade-up 0.6s ease forwards;
+}
+
+.hero__avatar {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  object-fit: cover;
+  background: var(--color-surface);
+  flex: 0 0 auto;
 }
 
 .hero__roles {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2) var(--space-3);
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-4);
   opacity: 0;
   animation: fade-up 0.6s ease 0.08s forwards;
 }
@@ -438,7 +464,7 @@ p {
   font-size: var(--text-lg);
   line-height: var(--leading-snug);
   color: var(--color-text-secondary);
-  margin-bottom: var(--space-7);
+  margin-bottom: var(--space-5);
   max-width: 38rem;
   opacity: 0;
   animation: fade-up 0.6s ease 0.16s forwards;
@@ -503,7 +529,7 @@ p {
 /* Featured Projects ------------------------------------------------------- */
 
 .project-category {
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-6);
 }
 
 .project-category:last-child {
@@ -549,37 +575,27 @@ p {
   overflow: hidden;
   transition: border-color var(--transition);
   color: inherit;
-  text-decoration: none;
-  cursor: pointer;
 }
 
-a.project-card:hover,
-a.project-card:focus-visible {
+.project-card:has(a.project-card__media:hover),
+.project-card:has(a.project-card__media:focus-visible),
+.project-card:has(.project-card__footer a:hover),
+.project-card:has(.project-card__footer a:focus-visible) {
+  border-color: var(--color-border-strong);
+}
+
+a.project-card__media {
   color: inherit;
   text-decoration: none;
-  border-color: var(--color-border-strong);
 }
 
-a.project-card:focus-visible {
+a.project-card__media:focus-visible {
   outline: 2px solid var(--color-accent);
-  outline-offset: 3px;
+  outline-offset: -2px;
 }
 
-.project-card:hover {
-  border-color: var(--color-border-strong);
-}
-
-a.project-card:hover .btn--secondary,
-a.project-card:focus-visible .btn--secondary {
-  background: var(--color-surface);
-  border-color: var(--color-text-muted);
-  color: var(--color-text);
-}
-
-a.project-card:hover .btn--primary,
-a.project-card:focus-visible .btn--primary {
-  background: var(--color-btn-hover);
-  border-color: var(--color-btn-hover);
+.project-card__footer a.btn {
+  align-self: flex-start;
 }
 
 .project-card--featured {
@@ -628,6 +644,7 @@ a.project-card:focus-visible .btn--primary {
   flex: 1;
   padding: var(--space-5);
   gap: var(--space-3);
+  cursor: default;
 }
 
 .project-card__name {
@@ -808,7 +825,7 @@ a.contact__value:hover {
 /* Footer ------------------------------------------------------------------ */
 
 .site-footer {
-  padding-block: var(--space-6);
+  padding-block: var(--space-5);
   border-top: 1px solid var(--color-border);
   background: var(--color-surface);
 }
@@ -1588,9 +1605,12 @@ html[data-theme="dark"] .product-strip .btn--primary {
 }
 
 @media (max-width: 720px) {
-  :root {
-    --space-9: 4.5rem;
-    --space-10: 5rem;
+  .section {
+    padding-block: var(--space-6);
+  }
+
+  .hero {
+    padding-block: var(--space-6) var(--space-5);
   }
 
   .nav__toggle {

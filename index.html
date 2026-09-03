@@ -44,7 +44,18 @@
 
   <header class="site-header">
     <div class="container nav">
-      <a class="nav__brand" href="index.html">Sang Hoon Sung</a>
+      <a class="nav__brand" href="index.html">
+        <img
+          class="nav__avatar"
+          src="images/rockman.png"
+          alt="Sang Hoon Sung profile image"
+          width="30"
+          height="30"
+          loading="eager"
+          decoding="async"
+        >
+        <span>Sang Hoon Sung</span>
+      </a>
 
       <nav class="nav__menu" id="nav-menu" data-i18n-aria="a11y.nav" aria-label="Primary">
         <ul class="nav__links">
@@ -55,7 +66,7 @@
           <li><a class="nav__link" href="#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
         <div class="nav__social">
-          <a href="https://www.linkedin.com/in/woojooin/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/sanghoons/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="https://github.com/woojooin" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </nav>
@@ -81,7 +92,18 @@
   <main id="main">
     <section class="hero" id="home" aria-labelledby="hero-name">
       <div class="container hero__inner">
-        <h1 class="hero__name" id="hero-name">Sang Hoon Sung</h1>
+        <h1 class="hero__name" id="hero-name">
+          <img
+            class="hero__avatar"
+            src="images/rockman.png"
+            alt="Sang Hoon Sung profile image"
+            width="128"
+            height="128"
+            loading="eager"
+            decoding="async"
+          >
+          <span>Sang Hoon Sung</span>
+        </h1>
         <p class="hero__roles">
           <span class="hero__role" data-i18n="hero.role1">Senior Software Engineer</span>
           <span class="hero__role" data-i18n="hero.role2">AI Agent Developer</span>
@@ -92,7 +114,7 @@
         </p>
         <div class="hero__actions">
           <a class="btn btn--primary" href="#projects" data-i18n="hero.ctaProjects">View Projects</a>
-          <a class="btn btn--secondary" href="https://www.linkedin.com/in/woojooin/" target="_blank" rel="noopener noreferrer" data-i18n="hero.ctaLinkedIn">LinkedIn</a>
+          <a class="btn btn--secondary" href="https://www.linkedin.com/in/sanghoons/" target="_blank" rel="noopener noreferrer" data-i18n="hero.ctaLinkedIn">LinkedIn</a>
         </div>
       </div>
     </section>
@@ -114,10 +136,10 @@
           </div>
 
           <div class="project-grid">
-            <a class="project-card project-card--featured" href="projects/office-ai-agent.html">
-              <div class="project-card__media">
+            <article class="project-card project-card--featured">
+              <a class="project-card__media" href="projects/office-ai-agent.html">
                 <img src="images/office-ai-agent/screenshot-1.png" alt="Office AI Agent in Excel creating a customer report" width="800" height="500" loading="lazy">
-              </div>
+              </a>
               <div class="project-card__body">
                 <h4 class="project-card__name">Office AI Agent</h4>
                 <p class="project-card__desc" data-i18n="officeai.cardDesc">
@@ -125,15 +147,15 @@
                 </p>
                 <p class="project-card__meta" data-i18n="officeai.cardTech">Office.js · VSTO · React · Gateway</p>
                 <div class="project-card__footer">
-                  <span class="btn btn--primary btn--small" data-i18n="projects.view">View Project</span>
+                  <a class="btn btn--primary btn--small" href="projects/office-ai-agent.html" data-i18n="projects.view">View Project</a>
                 </div>
               </div>
-            </a>
+            </article>
 
-            <a class="project-card" href="projects/ai-mail-gateway.html">
-              <div class="project-card__media">
+            <article class="project-card">
+              <a class="project-card__media" href="projects/ai-mail-gateway.html">
                 <img src="images/ai-mail-gateway/screenshot-1.png" alt="AI Mail Gateway dashboard with live filter results and SCL" width="800" height="500" loading="lazy">
-              </div>
+              </a>
               <div class="project-card__body">
                 <h4 class="project-card__name">AI Mail Gateway</h4>
                 <p class="project-card__desc" data-i18n="aimail.cardDesc">
@@ -141,15 +163,15 @@
                 </p>
                 <p class="project-card__meta" data-i18n="aimail.cardTech">Python · aiosmtpd · Exchange · LLM</p>
                 <div class="project-card__footer">
-                  <span class="btn btn--secondary btn--small" data-i18n="projects.view">View Project</span>
+                  <a class="btn btn--secondary btn--small" href="projects/ai-mail-gateway.html" data-i18n="projects.view">View Project</a>
                 </div>
               </div>
-            </a>
+            </article>
 
-            <a class="project-card" href="projects/ai-work-agent.html">
-              <div class="project-card__media">
+            <article class="project-card">
+              <a class="project-card__media" href="projects/ai-work-agent.html">
                 <img src="images/ai-work-agent/screenshot-1.png" alt="AI Work Agent completing a local file task in the terminal" width="800" height="500" loading="lazy">
-              </div>
+              </a>
               <div class="project-card__body">
                 <h4 class="project-card__name">AI Work Agent</h4>
                 <p class="project-card__desc" data-i18n="aiwork.cardDesc">
@@ -157,10 +179,10 @@
                 </p>
                 <p class="project-card__meta" data-i18n="aiwork.cardTech">Python · Multi-LLM · Local execution</p>
                 <div class="project-card__footer">
-                  <span class="btn btn--secondary btn--small" data-i18n="projects.view">View Project</span>
+                  <a class="btn btn--secondary btn--small" href="projects/ai-work-agent.html" data-i18n="projects.view">View Project</a>
                 </div>
               </div>
-            </a>
+            </article>
           </div>
         </div>
 
@@ -171,10 +193,10 @@
           </div>
 
           <div class="project-grid project-grid--wide">
-            <a class="project-card" href="projects/treesize.html">
-              <div class="project-card__media">
+            <article class="project-card">
+              <a class="project-card__media" href="projects/treesize.html">
                 <img src="images/treesize/screenshot-1.jpg" alt="TreeSize app screenshot" width="800" height="500" loading="lazy">
-              </div>
+              </a>
               <div class="project-card__body">
                 <h4 class="project-card__name">TreeSize</h4>
                 <p class="project-card__desc" data-i18n="treesize.cardDesc">
@@ -182,15 +204,15 @@
                 </p>
                 <p class="project-card__meta" data-i18n="treesize.cardTech">macOS · App Store · since 2013</p>
                 <div class="project-card__footer">
-                  <span class="btn btn--secondary btn--small" data-i18n="projects.view">View Project</span>
+                  <a class="btn btn--secondary btn--small" href="projects/treesize.html" data-i18n="projects.view">View Project</a>
                 </div>
               </div>
-            </a>
+            </article>
 
-            <a class="project-card" href="projects/zcommander.html">
-              <div class="project-card__media">
+            <article class="project-card">
+              <a class="project-card__media" href="projects/zcommander.html">
                 <img src="images/zcommander/screenshot-1.jpg" alt="zCommander app screenshot" width="800" height="500" loading="lazy">
-              </div>
+              </a>
               <div class="project-card__body">
                 <h4 class="project-card__name">zCommander</h4>
                 <p class="project-card__desc" data-i18n="zcommander.cardDesc">
@@ -198,15 +220,15 @@
                 </p>
                 <p class="project-card__meta" data-i18n="zcommander.cardTech">macOS · App Store · since 2013</p>
                 <div class="project-card__footer">
-                  <span class="btn btn--secondary btn--small" data-i18n="projects.view">View Project</span>
+                  <a class="btn btn--secondary btn--small" href="projects/zcommander.html" data-i18n="projects.view">View Project</a>
                 </div>
               </div>
-            </a>
+            </article>
 
-            <a class="project-card" href="projects/zgallery.html">
-              <div class="project-card__media">
+            <article class="project-card">
+              <a class="project-card__media" href="projects/zgallery.html">
                 <img src="images/zgallery/screenshot-1.jpg" alt="zGallery app screenshot" width="800" height="500" loading="lazy">
-              </div>
+              </a>
               <div class="project-card__body">
                 <h4 class="project-card__name">zGallery</h4>
                 <p class="project-card__desc" data-i18n="zgallery.cardDesc">
@@ -214,15 +236,15 @@
                 </p>
                 <p class="project-card__meta" data-i18n="zgallery.cardTech">macOS · App Store · since 2013</p>
                 <div class="project-card__footer">
-                  <span class="btn btn--secondary btn--small" data-i18n="projects.view">View Project</span>
+                  <a class="btn btn--secondary btn--small" href="projects/zgallery.html" data-i18n="projects.view">View Project</a>
                 </div>
               </div>
-            </a>
+            </article>
 
-            <a class="project-card" href="projects/1clipboard.html">
-              <div class="project-card__media">
+            <article class="project-card">
+              <a class="project-card__media" href="projects/1clipboard.html">
                 <img src="images/1clipboard/screenshot-1.jpg" alt="1Clipboard app screenshot" width="800" height="500" loading="lazy">
-              </div>
+              </a>
               <div class="project-card__body">
                 <h4 class="project-card__name">1Clipboard</h4>
                 <p class="project-card__desc" data-i18n="clipboard.cardDesc">
@@ -230,15 +252,15 @@
                 </p>
                 <p class="project-card__meta" data-i18n="clipboard.cardTech">macOS · App Store · since 2019</p>
                 <div class="project-card__footer">
-                  <span class="btn btn--secondary btn--small" data-i18n="projects.view">View Project</span>
+                  <a class="btn btn--secondary btn--small" href="projects/1clipboard.html" data-i18n="projects.view">View Project</a>
                 </div>
               </div>
-            </a>
+            </article>
 
-            <a class="project-card" href="projects/cloud-player.html">
-              <div class="project-card__media product-card__media--phone">
+            <article class="project-card">
+              <a class="project-card__media product-card__media--phone" href="projects/cloud-player.html">
                 <img src="images/cloud-player/screenshot-1.jpg" alt="Cloud Player app screenshot" width="400" height="800" loading="lazy">
-              </div>
+              </a>
               <div class="project-card__body">
                 <h4 class="project-card__name">Cloud Player</h4>
                 <p class="project-card__desc" data-i18n="cloudplayer.cardDesc">
@@ -246,10 +268,26 @@
                 </p>
                 <p class="project-card__meta" data-i18n="cloudplayer.cardTech">iOS · App Store · since 2024</p>
                 <div class="project-card__footer">
-                  <span class="btn btn--secondary btn--small" data-i18n="projects.view">View Project</span>
+                  <a class="btn btn--secondary btn--small" href="projects/cloud-player.html" data-i18n="projects.view">View Project</a>
                 </div>
               </div>
-            </a>
+            </article>
+
+            <article class="project-card">
+              <a class="project-card__media" href="projects/dreamview.html">
+                <img src="images/dreamview/screenshot-1.jpg" alt="DreamView comic reader screenshot" width="800" height="500" loading="lazy">
+              </a>
+              <div class="project-card__body">
+                <h4 class="project-card__name">DreamView</h4>
+                <p class="project-card__desc" data-i18n="dreamview.cardDesc">
+                  Mac comic and image viewer with bookshelf UI, CBZ/CBR/archive support, bookmarks, and reading modes for manga and webtoons. On the Mac App Store since 2014.
+                </p>
+                <p class="project-card__meta" data-i18n="dreamview.cardTech">macOS · App Store · since 2014</p>
+                <div class="project-card__footer">
+                  <a class="btn btn--secondary btn--small" href="projects/dreamview.html" data-i18n="projects.view">View Project</a>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </div>
@@ -343,9 +381,6 @@
           <p data-i18n="about.p3">
             He is currently focused on AI agents and AI-powered productivity software, applying engineering and product experience to Agentic AI systems.
           </p>
-          <p class="placeholder-text" data-i18n="about.placeholder">
-            [A more detailed biography will be added here.]
-          </p>
         </div>
       </div>
     </section>
@@ -363,7 +398,7 @@
         <ul class="contact__list">
           <li class="contact__item">
             <span class="contact__label">LinkedIn</span>
-            <a class="contact__value" href="https://www.linkedin.com/in/woojooin/" target="_blank" rel="noopener noreferrer">linkedin.com/in/woojooin</a>
+            <a class="contact__value" href="https://www.linkedin.com/in/sanghoons/" target="_blank" rel="noopener noreferrer">linkedin.com/in/sanghoons</a>
           </li>
           <li class="contact__item">
             <span class="contact__label">GitHub</span>
@@ -371,7 +406,7 @@
           </li>
           <li class="contact__item">
             <span class="contact__label">Email</span>
-            <span class="contact__value contact__value--muted" data-i18n="contact.emailPlaceholder">[Email address will be added here]</span>
+            <a class="contact__value" href="mailto:woojooin@outlook.com">woojooin@outlook.com</a>
           </li>
         </ul>
       </div>
@@ -382,7 +417,7 @@
     <div class="container footer__inner">
       <p class="footer__copy">&copy; Sang Hoon Sung</p>
       <div class="footer__links">
-        <a href="https://www.linkedin.com/in/woojooin/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/sanghoons/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="https://github.com/woojooin" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </div>
