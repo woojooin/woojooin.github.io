@@ -114,9 +114,19 @@
             </ul>
           </div>
 
-          <figure class="product-hero__shot">
+          <button
+            type="button"
+            class="product-hero__shot product-hero__shot--video"
+            data-video-open
+            data-video="excel-1"
+            data-i18n-aria="officeai.videoOpen"
+            aria-label="Play demo videos"
+          >
             <img src="../images/office-ai-agent/screenshot-1.png" width="1600" height="1000" alt="Excel with Sidekick AI task pane creating a customer risk report and pie chart" loading="eager">
-          </figure>
+            <span class="media-play" aria-hidden="true">
+              <span class="media-play__icon"></span>
+            </span>
+          </button>
         </div>
       </div>
     </section>
@@ -167,9 +177,19 @@
             <li data-i18n="officeai.featExcel3">Lineage tracking so prior results are not overwritten</li>
           </ul>
         </div>
-        <figure class="product-feature__media">
+        <button
+          type="button"
+          class="product-feature__media product-feature__media--video"
+          data-video-open
+          data-video="excel-2"
+          data-i18n-aria="officeai.videoOpenExcel"
+          aria-label="Play Excel demo"
+        >
           <img src="../images/office-ai-agent/screenshot-2.png" width="1600" height="1000" alt="Excel Sidekick AI creating a regional sales summary with color-coded bar chart" loading="lazy">
-        </figure>
+          <span class="media-play media-play--sm" aria-hidden="true">
+            <span class="media-play__icon"></span>
+          </span>
+        </button>
       </div>
     </section>
 
@@ -187,9 +207,19 @@
             <li data-i18n="officeai.featWord3">Layout and styles preserved where possible</li>
           </ul>
         </div>
-        <figure class="product-feature__media">
+        <button
+          type="button"
+          class="product-feature__media product-feature__media--video"
+          data-video-open
+          data-video="word"
+          data-i18n-aria="officeai.videoOpenWord"
+          aria-label="Play Word demo"
+        >
           <img src="../images/office-ai-agent/screenshot-3.png" width="1600" height="1000" alt="Word with Sidekick AI translating a selection and highlighting quotations" loading="lazy">
-        </figure>
+          <span class="media-play media-play--sm" aria-hidden="true">
+            <span class="media-play__icon"></span>
+          </span>
+        </button>
       </div>
     </section>
 
@@ -207,9 +237,19 @@
             <li data-i18n="officeai.featPpt3">Repack by font size and lines per slide</li>
           </ul>
         </div>
-        <figure class="product-feature__media">
+        <button
+          type="button"
+          class="product-feature__media product-feature__media--video"
+          data-video-open
+          data-video="powerpoint"
+          data-i18n-aria="officeai.videoOpenPpt"
+          aria-label="Play PowerPoint demo"
+        >
           <img src="../images/office-ai-agent/screenshot-4.png" width="1600" height="1000" alt="PowerPoint with Sidekick AI repacking a deck to larger font and fewer lines per slide" loading="lazy">
-        </figure>
+          <span class="media-play media-play--sm" aria-hidden="true">
+            <span class="media-play__icon"></span>
+          </span>
+        </button>
       </div>
     </section>
 
@@ -285,6 +325,37 @@
     </section>
   </main>
 
+  <dialog class="video-modal" data-video-modal data-i18n-aria="officeai.videoTitle" aria-label="Demo videos">
+    <div class="video-modal__panel">
+      <div class="video-modal__toolbar">
+        <div class="video-modal__tabs" role="tablist" data-i18n-aria="officeai.videoTabs" aria-label="Demo clips">
+          <button type="button" class="video-modal__tab" role="tab" data-video-tab="excel-1" aria-selected="true" data-i18n="officeai.videoTabExcel1">Excel 1</button>
+          <button type="button" class="video-modal__tab" role="tab" data-video-tab="excel-2" aria-selected="false" data-i18n="officeai.videoTabExcel2">Excel 2</button>
+          <button type="button" class="video-modal__tab" role="tab" data-video-tab="word" aria-selected="false" data-i18n="officeai.videoTabWord">Word</button>
+          <button type="button" class="video-modal__tab" role="tab" data-video-tab="powerpoint" aria-selected="false" data-i18n="officeai.videoTabPpt">PowerPoint</button>
+        </div>
+        <button
+          type="button"
+          class="video-modal__close"
+          data-video-close
+          data-i18n-aria="officeai.videoClose"
+          aria-label="Close video"
+        >
+          &times;
+        </button>
+      </div>
+      <div class="video-modal__player">
+        <video
+          data-video-player
+          controls
+          playsinline
+          preload="none"
+          poster="../images/office-ai-agent/screenshot-1.png"
+        ></video>
+      </div>
+    </div>
+  </dialog>
+
   <footer class="site-footer">
     <div class="container footer__inner">
       <p class="footer__copy">&copy; Sang Hoon Sung</p>
@@ -297,5 +368,6 @@
 
   <script src="../js/i18n.js"></script>
   <script src="../js/main.js"></script>
+  <script src="../js/video-modal.js"></script>
 </body>
 </html>

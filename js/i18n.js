@@ -202,6 +202,17 @@ window.PORTFOLIO_I18N = {
       "I design and build Sidekick AI for Office and Outlook end to end — host adapters for Word, Excel, PowerPoint, and Outlook, the agent RESULT protocol, local execution, and the product experience on top of the Office AI Gateway.",
     "officeai.builtWith":
       "Built with React, TypeScript, Vite, Office.js, and Outlook VSTO + WebView2. Deployed via Cloudflare Pages with Office add-in manifests for sideload and catalog install.",
+    "officeai.videoOpen": "Play demo videos",
+    "officeai.videoOpenExcel": "Play Excel demo",
+    "officeai.videoOpenWord": "Play Word demo",
+    "officeai.videoOpenPpt": "Play PowerPoint demo",
+    "officeai.videoTitle": "Demo videos",
+    "officeai.videoClose": "Close video",
+    "officeai.videoTabs": "Demo clips",
+    "officeai.videoTabExcel1": "Excel 1",
+    "officeai.videoTabExcel2": "Excel 2",
+    "officeai.videoTabWord": "Word",
+    "officeai.videoTabPpt": "PowerPoint",
 
     "aimail.metaDescription":
       "AI Mail Gateway (AiMailProxy) — an AI-powered inbound spam and phishing filter that sits in front of Microsoft Exchange, assigns SCL 0–9, and relays with risk headers.",
@@ -851,6 +862,17 @@ window.PORTFOLIO_I18N = {
       "Sidekick AI for Office와 Outlook을 처음부터 끝까지 설계·구현합니다 — Word · Excel · PowerPoint · Outlook 호스트 어댑터, 에이전트 RESULT 프로토콜, 로컬 실행, Office AI Gateway 위의 제품 경험까지.",
     "officeai.builtWith":
       "React, TypeScript, Vite, Office.js, Outlook VSTO + WebView2로 구축했습니다. Cloudflare Pages로 배포하며, 사이드로드·카탈로그 설치용 Office 매니페스트를 사용합니다.",
+    "officeai.videoOpen": "데모 영상 재생",
+    "officeai.videoOpenExcel": "Excel 데모 재생",
+    "officeai.videoOpenWord": "Word 데모 재생",
+    "officeai.videoOpenPpt": "PowerPoint 데모 재생",
+    "officeai.videoTitle": "데모 영상",
+    "officeai.videoClose": "영상 닫기",
+    "officeai.videoTabs": "데모 클립",
+    "officeai.videoTabExcel1": "Excel 1",
+    "officeai.videoTabExcel2": "Excel 2",
+    "officeai.videoTabWord": "Word",
+    "officeai.videoTabPpt": "PowerPoint",
 
     "aimail.metaDescription":
       "AI Mail Gateway (AiMailProxy) — Microsoft Exchange 앞단의 AI 기반 인바운드 스팸·피싱 필터. SCL 0–9를 부여하고 위험 헤더와 함께 릴레이합니다.",
