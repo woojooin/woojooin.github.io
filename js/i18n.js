@@ -60,7 +60,7 @@ window.PORTFOLIO_I18N = {
       "Capabilities drawn from shipped App Store products and current AI agent systems.",
     "skills.ai": "AI & Agentic AI",
     "skills.engineering": "Software Engineering",
-    "skills.m365": "Microsoft 365",
+    "skills.m365": "MS Office",
     "skills.apple": "macOS & iOS",
     "skills.web": "Web & Cloud",
     "skills.apis": "APIs & Infrastructure",
@@ -133,8 +133,8 @@ window.PORTFOLIO_I18N = {
     "project.mediaLater": "Screenshots and demo video will be added when available.",
 
     "officeai.metaDescription":
-      "Office AI Agent (Sidekick AI) — Word, Excel, PowerPoint, and Outlook agents for Microsoft 365. Plain-language chat; structured context only; changes run locally.",
-    "officeai.eyebrow": "Microsoft 365 · AI Agent",
+      "Office AI Agent (Sidekick AI) — Word, Excel, PowerPoint, and Outlook agents for MS Office. Plain-language chat; structured context only; changes run locally.",
+    "officeai.eyebrow": "MS Office · AI Agent",
     "officeai.subtitle": "Sidekick AI for Word · Excel · PowerPoint · Outlook",
     "officeai.tagline":
       "Ask in plain language inside Office and Outlook — the agent plans with structured context, then runs changes locally on your PC.",
@@ -143,7 +143,7 @@ window.PORTFOLIO_I18N = {
     "officeai.factPrivacy": "Privacy-first context",
     "officeai.factLang": "EN · KO",
     "officeai.cardDesc":
-      "Microsoft 365 AI agent for Word, Excel, PowerPoint, and Outlook. Ask in plain language to clean tables, translate selections, build slides, or summarize mail — only structured context goes to the model, and changes run locally on your PC.",
+      "MS Office AI agent for Word, Excel, PowerPoint, and Outlook. Ask in plain language to clean tables, translate selections, build slides, or summarize mail — only structured context goes to the model, and changes run locally on your PC.",
     "officeai.cardTech": "Office.js · VSTO · React · Gateway",
     "officeai.valueTitle": "Chat in Office. Change the real work.",
     "officeai.valueIntro":
@@ -195,7 +195,7 @@ window.PORTFOLIO_I18N = {
     "officeai.step3Title": "Execute locally in Office",
     "officeai.step3Desc":
       "Office.js or the Outlook host applies the change on your PC — new sheets, in-place text, slides, or compose drafts — with network calls blocked in generated scripts.",
-    "officeai.availTitle": "Sidekick AI for Microsoft 365",
+    "officeai.availTitle": "Sidekick AI for MS Office",
     "officeai.availDesc":
       "Office Add-in for Word, Excel, and PowerPoint on Windows, Mac, and Office on the web — plus an Outlook desktop panel. Multi-model gateway, monthly credits, and BYOK on paid plans.",
     "officeai.role":
@@ -727,7 +727,7 @@ window.PORTFOLIO_I18N = {
       "App Store 출시 제품과 현재 AI 에이전트 시스템에서 쌓은 역량입니다.",
     "skills.ai": "AI & Agentic AI",
     "skills.engineering": "소프트웨어 엔지니어링",
-    "skills.m365": "Microsoft 365",
+    "skills.m365": "MS Office",
     "skills.apple": "macOS & iOS",
     "skills.web": "Web & Cloud",
     "skills.apis": "APIs & Infrastructure",
@@ -800,8 +800,8 @@ window.PORTFOLIO_I18N = {
     "project.mediaLater": "스크린샷과 데모 영상은 준비되는 대로 추가됩니다.",
 
     "officeai.metaDescription":
-      "Office AI Agent (Sidekick AI) — Word · Excel · PowerPoint · Outlook용 Microsoft 365 AI 에이전트. 평소 말하듯 지시하고, 구조화된 맥락만 보내며, 변경은 PC에서 로컬 실행합니다.",
-    "officeai.eyebrow": "Microsoft 365 · AI 에이전트",
+      "Office AI Agent (Sidekick AI) — Word · Excel · PowerPoint · Outlook용 MS Office AI 에이전트. 평소 말하듯 지시하고, 구조화된 맥락만 보내며, 변경은 PC에서 로컬 실행합니다.",
+    "officeai.eyebrow": "MS Office · AI 에이전트",
     "officeai.subtitle": "Word · Excel · PowerPoint · Outlook용 Sidekick AI",
     "officeai.tagline":
       "Office와 Outlook 안에서 평소 쓰는 말로 요청하세요. 에이전트는 구조화된 맥락으로 계획을 세우고, 변경은 PC에서 로컬로 실행합니다.",
@@ -810,7 +810,7 @@ window.PORTFOLIO_I18N = {
     "officeai.factPrivacy": "프라이버시 우선 맥락",
     "officeai.factLang": "EN · KO",
     "officeai.cardDesc":
-      "Word · Excel · PowerPoint · Outlook용 Microsoft 365 AI 에이전트입니다. 평소 말하듯 지시해 표 정리, 선택 구간 번역, 슬라이드 구성, 메일 요약까지 처리합니다. 모델에는 구조화된 맥락만 보내고, 변경은 PC에서 로컬로 실행합니다.",
+      "Word · Excel · PowerPoint · Outlook용 MS Office AI 에이전트입니다. 평소 말하듯 지시해 표 정리, 선택 구간 번역, 슬라이드 구성, 메일 요약까지 처리합니다. 모델에는 구조화된 맥락만 보내고, 변경은 PC에서 로컬로 실행합니다.",
     "officeai.cardTech": "Office.js · VSTO · React · Gateway",
     "officeai.valueTitle": "Office에서 채팅하고, 실제 작업을 바꿉니다.",
     "officeai.valueIntro":
@@ -862,7 +862,7 @@ window.PORTFOLIO_I18N = {
     "officeai.step3Title": "Office에서 로컬 실행",
     "officeai.step3Desc":
       "Office.js 또는 Outlook 호스트가 PC에서 변경을 적용합니다 — 새 시트, in-place 텍스트, 슬라이드, compose 초안. 생성 스크립트의 네트워크 호출은 차단됩니다.",
-    "officeai.availTitle": "Microsoft 365용 Sidekick AI",
+    "officeai.availTitle": "MS Office용 Sidekick AI",
     "officeai.availDesc":
       "Windows · Mac · Office on the web의 Word · Excel · PowerPoint Office 추가 기능과 Outlook 데스크톱 패널. 멀티 모델 게이트웨이, 월간 크레딧, 유료 플랜 BYOK.",
     "officeai.role":
