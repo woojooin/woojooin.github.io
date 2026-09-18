@@ -341,6 +341,13 @@ window.PORTFOLIO_I18N = {
       "I design and build AI Work Agent end to end — the ask-and-execute loop, streaming CLI, multi-provider LLM client, local execution sandbox and safety scans, auto-discovered tool registry, and the operator workflow around history, attachments, and saved runs.",
     "aiwork.builtWith":
       "Built with Python, OpenAI & Anthropic SDKs, prompt_toolkit, pandas/openpyxl, python-docx, python-pptx, pypdf, and Pillow.",
+    "aiwork.videoOpen": "Play demo videos",
+    "aiwork.videoOpenLoop": "Play execution loop demo",
+    "aiwork.videoTitle": "Demo videos",
+    "aiwork.videoClose": "Close video",
+    "aiwork.videoTabs": "Demo clips",
+    "aiwork.videoTab1": "Demo 1",
+    "aiwork.videoTab2": "Demo 2",
 
     "treesize.metaDescription":
       "TreeSize for Mac — see what is using your disk space, find large and duplicate files, and reclaim storage. Available on the Mac App Store.",
@@ -1001,6 +1008,13 @@ window.PORTFOLIO_I18N = {
       "AI Work Agent를 처음부터 끝까지 설계·구현합니다 — 요청·실행 루프, 스트리밍 CLI, 멀티 제공자 LLM 클라이언트, 로컬 실행 샌드박스와 안전 검사, 자동 도구 레지스트리, history·첨부·저장 실행 운영 흐름까지.",
     "aiwork.builtWith":
       "Python, OpenAI·Anthropic SDK, prompt_toolkit, pandas/openpyxl, python-docx, python-pptx, pypdf, Pillow로 구축했습니다.",
+    "aiwork.videoOpen": "데모 영상 재생",
+    "aiwork.videoOpenLoop": "실행 루프 데모 재생",
+    "aiwork.videoTitle": "데모 영상",
+    "aiwork.videoClose": "영상 닫기",
+    "aiwork.videoTabs": "데모 클립",
+    "aiwork.videoTab1": "데모 1",
+    "aiwork.videoTab2": "데모 2",
 
     "treesize.metaDescription":
       "TreeSize for Mac — Mac에서 디스크 공간을 어디에 쓰는지 보고, 큰 파일·중복을 찾아 공간을 되찾으세요. Mac App Store에서 제공.",

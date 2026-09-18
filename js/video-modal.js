@@ -1,30 +1,47 @@
 /**
  * Project demo video modal
- * - Open via [data-video-open][data-video="excel-1|excel-2|word|powerpoint"]
+ * - Open via [data-video-open][data-video="<id>"]
+ * - Sources come from CATALOG keyed by body[data-project-id]
  * - Tabs switch sources; closing pauses and clears src
  * - Player size matches the video aspect ratio within the viewport
  */
 (function () {
   "use strict";
 
-  var VIDEO_BASE = "../videos/office-ai-agent/";
-  var SOURCES = {
-    "excel-1": VIDEO_BASE + "excel-1.mp4",
-    "excel-2": VIDEO_BASE + "excel-2.mp4",
-    word: VIDEO_BASE + "word.mp4",
-    powerpoint: VIDEO_BASE + "powerpoint.mp4",
+  var CATALOG = {
+    officeai: {
+      "excel-1": "../videos/office-ai-agent/excel-1.mp4",
+      "excel-2": "../videos/office-ai-agent/excel-2.mp4",
+      word: "../videos/office-ai-agent/word.mp4",
+      powerpoint: "../videos/office-ai-agent/powerpoint.mp4",
+    },
+    aiwork: {
+      "work-1": "../videos/ai-work-agent/sidekick-work%201.mp4",
+      "work-2": "../videos/ai-work-agent/sidekick-work%202.mp4",
+    },
+  };
+
+  var POSTERS = {
+    aiwork: {
+      "work-1": "../images/ai-work-agent/screenshot-1.png",
+      "work-2": "../images/ai-work-agent/screenshot-2.png",
+    },
   };
 
   function initVideoModal() {
     var modal = document.querySelector("[data-video-modal]");
     if (!modal) return;
 
+    var projectId = document.body.getAttribute("data-project-id");
+    var SOURCES = CATALOG[projectId] || {};
+    var POSTER_MAP = POSTERS[projectId] || {};
+    var DEFAULT_ID = Object.keys(SOURCES)[0];
     var player = modal.querySelector("[data-video-player]");
     var toolbar = modal.querySelector(".video-modal__toolbar");
     var tabs = modal.querySelectorAll("[data-video-tab]");
     var openers = document.querySelectorAll("[data-video-open]");
     var closers = modal.querySelectorAll("[data-video-close]");
-    if (!player || !tabs.length) return;
+    if (!player || !tabs.length || !DEFAULT_ID) return;
 
     function isOpen() {
       return modal.open || modal.hasAttribute("open");
@@ -61,6 +78,10 @@
       var src = SOURCES[id];
       if (!src) return;
       setActiveTab(id);
+      var poster = POSTER_MAP[id];
+      if (poster) {
+        player.setAttribute("poster", poster);
+      }
       if (player.getAttribute("src") !== src) {
         player.pause();
         clearFit();
@@ -80,7 +101,7 @@
     }
 
     function openModal(id) {
-      var videoId = SOURCES[id] ? id : "excel-1";
+      var videoId = SOURCES[id] ? id : DEFAULT_ID;
       if (typeof modal.showModal === "function") {
         modal.showModal();
       } else {
