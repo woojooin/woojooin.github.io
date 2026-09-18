@@ -16,8 +16,8 @@
       powerpoint: "../videos/office-ai-agent/powerpoint.mp4",
     },
     aiwork: {
-      "work-1": "../videos/ai-work-agent/sidekick-work%201.mp4",
-      "work-2": "../videos/ai-work-agent/sidekick-work%202.mp4",
+      "work-1": "../videos/ai-work-agent/sidekick-work%201.mov",
+      "work-2": "../videos/ai-work-agent/sidekick-work%202.mov",
     },
   };
 
