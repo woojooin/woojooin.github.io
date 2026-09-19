@@ -42,15 +42,15 @@
   --space-2: 0.5rem;
   --space-3: 0.75rem;
   --space-4: 1rem;
-  --space-5: 1.5rem;
-  --space-6: 2rem;
-  --space-7: 3rem;
-  --space-8: 4rem;
-  --space-9: 6rem;
-  --space-10: 8rem;
+  --space-5: 1.25rem;
+  --space-6: 1.75rem;
+  --space-7: 2.5rem;
+  --space-8: 3.25rem;
+  --space-9: 5rem;
+  --space-10: 6.5rem;
 
-  --container: 1120px;
-  --nav-height: 4rem;
+  --container: 1100px;
+  --nav-height: 3.75rem;
   --radius: 4px;
   --radius-md: 6px;
 
