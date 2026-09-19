@@ -4,11 +4,11 @@
  */
 window.PORTFOLIO_I18N = {
   en: {
-    "meta.title": "Sang Hoon Sung — Senior Software Engineer & AI Agent Developer",
+    "meta.title": "Sang Hoon Sung — Senior Software Engineer & Agentic AI",
     "meta.description":
-      "Sang Hoon Sung — Senior Software Engineer, AI Agent Developer, and Product Builder. Portfolio of AI systems and commercial software.",
+      "Sang Hoon Sung — Senior Software Engineer, Agentic AI, and Product Engineering. Portfolio of AI systems and commercial software.",
     "meta.projectDescription":
-      "{title} — project overview by Sang Hoon Sung. Details coming soon.",
+      "{title} — project overview by Sang Hoon Sung.",
     "meta.projectTitle": "{title} — Sang Hoon Sung",
 
     "a11y.skip": "Skip to content",
@@ -25,17 +25,18 @@ window.PORTFOLIO_I18N = {
     "nav.contact": "Contact",
 
     "hero.role1": "Senior Software Engineer",
-    "hero.role2": "AI Agent Developer",
-    "hero.role3": "Product Builder",
+    "hero.role2": "AI Agents",
+    "hero.role3": "Product Engineering",
     "hero.intro":
-      "Extensive experience designing, building, and shipping commercial software across macOS, iOS, web, and cloud platforms. Currently focused on Agentic AI systems and AI-powered productivity software.",
+      "Building production AI agents that execute real-world work across desktop, Microsoft Office, and enterprise systems.",
     "hero.ctaProjects": "View Projects",
+    "hero.ctaResume": "Resume",
     "hero.ctaLinkedIn": "LinkedIn",
 
     "projects.label": "Selected Work",
     "projects.title": "Featured Projects",
     "projects.intro":
-      "AI systems and commercial applications. Detailed case studies will be added as content is finalized.",
+      "Production-oriented AI products, enterprise systems, and commercial apps shipped to customers.",
     "projects.aiTitle": "AI & Agentic AI",
     "projects.aiNote": "Current focus",
     "projects.commercialTitle": "Commercial Software",
@@ -92,11 +93,11 @@ window.PORTFOLIO_I18N = {
     "about.label": "Profile",
     "about.title": "About",
     "about.p1":
-      "Sang Hoon Sung is an experienced software engineer and product builder with a background in commercial application development across desktop, mobile, web, and cloud platforms.",
+      "I am a senior software engineer and product builder with extensive experience shipping commercial software across desktop, mobile, web, cloud, and enterprise environments.",
     "about.p2":
-      "His work spans taking software from development through to production, with a focus on shipping reliable products used by real customers.",
+      "My current focus is Agentic AI — building production systems that move beyond chat to plan, execute, recover, and complete real-world work.",
     "about.p3":
-      "He is currently focused on AI agents and AI-powered productivity software, applying engineering and product experience to Agentic AI systems.",
+      "I am the creator of Sidekick, a family of AI products spanning desktop work automation, Microsoft Office, and browser workflows.",
     "about.placeholder": "[A more detailed biography will be added here.]",
 
     "contact.label": "Get in touch",
@@ -104,6 +105,8 @@ window.PORTFOLIO_I18N = {
     "contact.intro":
       "Open to senior and staff-level software engineering and AI roles. Prefer LinkedIn for professional inquiries.",
     "contact.emailPlaceholder": "woojooin@outlook.com",
+    "contact.resume": "Resume",
+    "contact.resumeLink": "View / print CV",
 
     "project.back": "← Back to Projects",
     "project.tagline": "[One-line project description will be added here.]",
@@ -130,12 +133,29 @@ window.PORTFOLIO_I18N = {
     "project.decisions": "Design decisions",
     "project.appStore": "View on App Store",
     "project.productSite": "Visit product site",
+    "project.watchDemo": "Watch demo",
+    "project.watchDemo90": "Watch 90-sec Demo",
+    "project.tryDownload": "Try / Download",
+    "officeai.status": "In production",
+    "officeai.badge": "In production",
+    "officeai.maturity":
+      "Multi-model AI gateway · Authentication · Usage credits · Subscription infrastructure",
+    "officeai.cardSubtitle": "AI Agent for Microsoft Office",
+    "officeai.tryDownload": "Try / Download Sidekick Office",
+    "aiwork.status": "In production",
+    "aiwork.badge": "In production",
+    "aiwork.maturity": "Plan → Run → Repair · Local execution · Multi-provider LLM",
+    "aiwork.cardSubtitle": "General-purpose AI Work Agent",
+    "aiwork.tryDownload": "Try / Download Sidekick Work",
+    "aimail.badge": "Production system · Enterprise deployment",
+    "aimail.maturity": "SMTP edge · SPF/DKIM/DMARC · LLM SCL · Exchange relay",
+    "aimail.cardSubtitle": "AI-powered Email Security for Microsoft Exchange",
     "project.mediaLater": "Screenshots and demo video will be added when available.",
 
     "officeai.metaDescription":
-      "Office AI Agent (Sidekick AI) — Word, Excel, PowerPoint, and Outlook agents for MS Office. Plain-language chat; structured context only; changes run locally.",
+      "Sidekick Office (Sidekick AI) — Word, Excel, PowerPoint, and Outlook agents for MS Office. Plain-language chat; structured context only; changes run locally.",
     "officeai.eyebrow": "MS Office · AI Agent",
-    "officeai.subtitle": "Sidekick AI for Word · Excel · PowerPoint · Outlook",
+    "officeai.subtitle": "AI Agent for Microsoft Office",
     "officeai.tagline":
       "Ask in plain language inside Office and Outlook — the agent plans with structured context, then runs changes locally on your PC.",
     "officeai.factHost": "Word · Excel · PowerPoint · Outlook",
@@ -217,7 +237,7 @@ window.PORTFOLIO_I18N = {
     "aimail.metaDescription":
       "AI Mail Gateway (AiMailProxy) — an AI-powered inbound spam and phishing filter that sits in front of Microsoft Exchange, assigns SCL 0–9, and relays with risk headers.",
     "aimail.eyebrow": "Exchange · AI Security",
-    "aimail.subtitle": "AiMailProxy for Microsoft Exchange",
+    "aimail.subtitle": "AI-powered Email Security for Microsoft Exchange",
     "aimail.tagline":
       "An inbound SMTP proxy that inspects mail before Exchange — layered auth, link and attachment scans, and LLM-based SCL 0–9 for transport rules.",
     "aimail.factRole": "Inbound SMTP proxy",
@@ -279,9 +299,9 @@ window.PORTFOLIO_I18N = {
       "Built with Python, aiosmtpd, aiohttp, pyspf, dkimpy, VirusTotal / APIVoid integrations, and LLM APIs (Cerebras / Groq).",
 
     "aiwork.metaDescription":
-      "AI Work Agent — a local agent that does the work you ask for. Describe the task; it plans, runs it on your machine, and saves the result.",
+      "Sidekick Work — a local agent that does the work you ask for. Describe the task; it plans, runs it on your machine, and saves the result.",
     "aiwork.eyebrow": "Local CLI · Agentic AI",
-    "aiwork.subtitle": "ai-agent-x — ask, then it does the work",
+    "aiwork.subtitle": "General-purpose AI Work Agent",
     "aiwork.tagline":
       "Describe the job in plain language. The agent plans it, runs it on your machine, and delivers the result — not just advice.",
     "aiwork.factMode": "Chat · Do modes",
@@ -293,7 +313,7 @@ window.PORTFOLIO_I18N = {
     "aiwork.cardTech": "Python · Multi-LLM · Local execution",
     "aiwork.valueTitle": "You ask. It does the work.",
     "aiwork.valueIntro":
-      "Chatbots stop at suggestions. AI Work Agent executes — finding files, transforming documents and images, producing outputs under a sandboxed attempt folder, and retrying when a step fails.",
+      "Chatbots stop at suggestions. Sidekick Work executes — finding files, transforming documents and images, producing outputs under a sandboxed attempt folder, and retrying when a step fails.",
     "aiwork.value1Title": "Talk or do",
     "aiwork.value1Desc":
       "Each turn chooses chat for Q&A or do-mode to carry out the task on your PC. Force either with /chat or /script.",
@@ -338,7 +358,7 @@ window.PORTFOLIO_I18N = {
     "aiwork.availDesc":
       "OpenAI, Claude, Grok, Cerebras, Kimi, and DeepSeek via .env. Windows, macOS, and Linux with setup/run scripts that keep everything inside .venv. Python is the engine under the hood — the product is getting the work done.",
     "aiwork.role":
-      "I design and build AI Work Agent end to end — the ask-and-execute loop, streaming CLI, multi-provider LLM client, local execution sandbox and safety scans, auto-discovered tool registry, and the operator workflow around history, attachments, and saved runs.",
+      "I design and build Sidekick Work end to end — the ask-and-execute loop, streaming CLI, multi-provider LLM client, local execution sandbox and safety scans, auto-discovered tool registry, and the operator workflow around history, attachments, and saved runs.",
     "aiwork.builtWith":
       "Built with Python, OpenAI & Anthropic SDKs, prompt_toolkit, pandas/openpyxl, python-docx, python-pptx, pypdf, and Pillow.",
     "aiwork.videoOpen": "Play demo videos",
@@ -346,8 +366,26 @@ window.PORTFOLIO_I18N = {
     "aiwork.videoTitle": "Demo videos",
     "aiwork.videoClose": "Close video",
     "aiwork.videoTabs": "Demo clips",
-    "aiwork.videoTab1": "Demo 1",
-    "aiwork.videoTab2": "Demo 2",
+    "aiwork.videoTab1": "90-sec Demo",
+    "aiwork.videoTab2": "Plan → Run → Repair",
+
+    "resume.metaTitle": "Resume — Sang Hoon Sung",
+    "resume.metaDescription":
+      "Resume of Sang Hoon Sung — Senior Software Engineer building production AI agents and commercial software.",
+    "resume.print": "Save as PDF",
+    "resume.summaryTitle": "Summary",
+    "resume.productsTitle": "Selected products",
+    "resume.commercialTitle": "Commercial software",
+    "resume.skillsTitle": "Skills",
+    "resume.contactTitle": "Contact",
+    "resume.officeDesc":
+      "Production Microsoft Office agent with a multi-model gateway, authentication, usage credits, and subscription infrastructure. Structured context only; changes run locally.",
+    "resume.workDesc":
+      "General-purpose local work agent. Natural-language request → plan → execute → repair/retry → delivered result. Sandboxed writes and destructive-action checks.",
+    "resume.mailDesc":
+      "Inbound SMTP edge filter for Microsoft Exchange: SPF/DKIM/DMARC, attachment/URL reputation, LLM SCL 0–9, cache, policy headers, then relay.",
+    "resume.commercialIntro":
+      "Shipped and maintained App Store products since 2013 — the same product-engineering discipline now applied to AI agents.",
 
     "treesize.metaDescription":
       "TreeSize for Mac — see what is using your disk space, find large and duplicate files, and reclaim storage. Available on the Mac App Store.",
@@ -671,11 +709,11 @@ window.PORTFOLIO_I18N = {
   },
 
   ko: {
-    "meta.title": "성상훈 — 시니어 소프트웨어 엔지니어 & AI 에이전트 개발자",
+    "meta.title": "성상훈 — 시니어 소프트웨어 엔지니어 & Agentic AI",
     "meta.description":
-      "성상훈 — 시니어 소프트웨어 엔지니어, AI 에이전트 개발자, 프로덕트 빌더. AI 시스템 및 상용 소프트웨어 포트폴리오.",
+      "성상훈 — 시니어 소프트웨어 엔지니어, Agentic AI, 프로덕트 엔지니어링. 프로덕션 AI 에이전트와 상용 소프트웨어 포트폴리오.",
     "meta.projectDescription":
-      "{title} — 성상훈 프로젝트 소개. 상세 내용은 곧 추가됩니다.",
+      "{title} — 성상훈의 프로젝트 소개.",
     "meta.projectTitle": "{title} — 성상훈",
 
     "a11y.skip": "본문으로 건너뛰기",
@@ -692,17 +730,18 @@ window.PORTFOLIO_I18N = {
     "nav.contact": "연락",
 
     "hero.role1": "시니어 소프트웨어 엔지니어",
-    "hero.role2": "AI 에이전트 개발자",
-    "hero.role3": "프로덕트 빌더",
+    "hero.role2": "AI 에이전트",
+    "hero.role3": "프로덕트 엔지니어링",
     "hero.intro":
-      "macOS, iOS, 웹, 클라우드 환경에서 상용 소프트웨어를 설계·개발·출시한 경험이 있습니다. 현재는 Agentic AI 시스템과 AI 기반 생산성 소프트웨어에 집중하고 있습니다.",
+      "데스크톱, Microsoft Office, 기업 시스템에서 실제 업무를 수행하는 프로덕션 AI 에이전트를 만듭니다.",
     "hero.ctaProjects": "프로젝트 보기",
+    "hero.ctaResume": "이력서",
     "hero.ctaLinkedIn": "LinkedIn",
 
     "projects.label": "주요 작업",
     "projects.title": "대표 프로젝트",
     "projects.intro":
-      "AI 시스템과 상용 애플리케이션입니다. 상세 케이스 스터디는 내용이 확정되는 대로 추가됩니다.",
+      "실제 제품을 목표로 개발 중인 AI 시스템, 기업용 시스템, 고객에게 출시한 상용 앱입니다.",
     "projects.aiTitle": "AI & Agentic AI",
     "projects.aiNote": "현재 포커스",
     "projects.commercialTitle": "상용 소프트웨어",
@@ -759,11 +798,11 @@ window.PORTFOLIO_I18N = {
     "about.label": "프로필",
     "about.title": "소개",
     "about.p1":
-      "성상훈은 데스크톱, 모바일, 웹, 클라우드 전반의 상용 애플리케이션 개발 경험을 가진 소프트웨어 엔지니어이자 프로덕트 빌더입니다.",
+      "저는 데스크톱, 모바일, 웹, 클라우드, 엔터프라이즈 환경에서 상용 소프트웨어를 출시해 온 시니어 소프트웨어 엔지니어이자 프로덕트 빌더입니다.",
     "about.p2":
-      "개발부터 프로덕션 출시까지 이어지는 제품 개발에 참여해 왔으며, 실제 사용자가 쓰는 안정적인 소프트웨어를 만드는 데 중점을 둡니다.",
+      "현재 초점은 Agentic AI입니다. 채팅을 넘어 계획하고, 실행하고, 복구하고, 실제 업무를 끝내는 프로덕션 시스템을 만듭니다.",
     "about.p3":
-      "현재는 AI 에이전트와 AI 기반 생산성 소프트웨어에 집중하며, 엔지니어링·제품 경험을 Agentic AI 시스템에 적용하고 있습니다.",
+      "Sidekick은 데스크톱 업무 자동화, Microsoft Office, 브라우저 워크플로를 아우르는 AI 제품군이며, 이 제품들을 직접 만들고 있습니다.",
     "about.placeholder": "[더 자세한 소개가 여기에 추가됩니다.]",
 
     "contact.label": "연락하기",
@@ -771,6 +810,8 @@ window.PORTFOLIO_I18N = {
     "contact.intro":
       "시니어·스태프급 소프트웨어 엔지니어링 및 AI 역할에 열려 있습니다. 업무 문의는 LinkedIn을 선호합니다.",
     "contact.emailPlaceholder": "woojooin@outlook.com",
+    "contact.resume": "이력서",
+    "contact.resumeLink": "CV 보기 / 인쇄",
 
     "project.back": "← 프로젝트 목록으로",
     "project.tagline": "[한 줄 프로젝트 설명이 여기에 추가됩니다.]",
@@ -797,12 +838,29 @@ window.PORTFOLIO_I18N = {
     "project.decisions": "설계에서 강조할 점",
     "project.appStore": "App Store에서 보기",
     "project.productSite": "제품 사이트 보기",
+    "project.watchDemo": "데모 보기",
+    "project.watchDemo90": "90초 데모 보기",
+    "project.tryDownload": "써보기 / 다운로드",
+    "officeai.status": "운영 중",
+    "officeai.badge": "운영 중",
+    "officeai.maturity":
+      "멀티 모델 AI 게이트웨이 · 인증 · 사용 크레딧 · 구독 인프라",
+    "officeai.cardSubtitle": "Microsoft Office용 AI Agent",
+    "officeai.tryDownload": "Sidekick Office 써보기 / 다운로드",
+    "aiwork.status": "운영 중",
+    "aiwork.badge": "운영 중",
+    "aiwork.maturity": "Plan → Run → Repair · 로컬 실행 · 멀티 제공자 LLM",
+    "aiwork.cardSubtitle": "범용 AI Work Agent",
+    "aiwork.tryDownload": "Sidekick Work 써보기 / 다운로드",
+    "aimail.badge": "프로덕션 시스템 · 엔터프라이즈 배포",
+    "aimail.maturity": "SMTP 엣지 · SPF/DKIM/DMARC · LLM SCL · Exchange 릴레이",
+    "aimail.cardSubtitle": "Microsoft Exchange용 AI 이메일 보안",
     "project.mediaLater": "스크린샷과 데모 영상은 준비되는 대로 추가됩니다.",
 
     "officeai.metaDescription":
-      "Office AI Agent (Sidekick AI) — Word · Excel · PowerPoint · Outlook용 MS Office AI 에이전트. 평소 말하듯 지시하고, 구조화된 맥락만 보내며, 변경은 PC에서 로컬 실행합니다.",
+      "Sidekick Office (Sidekick AI) — Word · Excel · PowerPoint · Outlook용 MS Office AI 에이전트. 평소 말하듯 지시하고, 구조화된 맥락만 보내며, 변경은 PC에서 로컬 실행합니다.",
     "officeai.eyebrow": "MS Office · AI 에이전트",
-    "officeai.subtitle": "Word · Excel · PowerPoint · Outlook용 Sidekick AI",
+    "officeai.subtitle": "Microsoft Office용 AI Agent",
     "officeai.tagline":
       "Office와 Outlook 안에서 평소 쓰는 말로 요청하세요. 에이전트는 구조화된 맥락으로 계획을 세우고, 변경은 PC에서 로컬로 실행합니다.",
     "officeai.factHost": "Word · Excel · PowerPoint · Outlook",
@@ -884,7 +942,7 @@ window.PORTFOLIO_I18N = {
     "aimail.metaDescription":
       "AI Mail Gateway (AiMailProxy) — Microsoft Exchange 앞단의 AI 기반 인바운드 스팸·피싱 필터. SCL 0–9를 부여하고 위험 헤더와 함께 릴레이합니다.",
     "aimail.eyebrow": "Exchange · AI 보안",
-    "aimail.subtitle": "Microsoft Exchange용 AiMailProxy",
+    "aimail.subtitle": "Microsoft Exchange용 AI 이메일 보안",
     "aimail.tagline":
       "Exchange 앞에서 인바운드 SMTP를 검사하는 프록시입니다 — 인증·링크·첨부 다층 검사와 LLM 기반 SCL 0–9로 전송 규칙과 연동합니다.",
     "aimail.factRole": "인바운드 SMTP 프록시",
@@ -946,9 +1004,9 @@ window.PORTFOLIO_I18N = {
       "Python, aiosmtpd, aiohttp, pyspf, dkimpy, VirusTotal / APIVoid 연동, LLM API(Cerebras / Groq)로 구축했습니다.",
 
     "aiwork.metaDescription":
-      "AI Work Agent — 원하는 작업을 대신 실행하는 로컬 에이전트. 말로 요청하면 계획하고, PC에서 실행하며, 결과를 남깁니다.",
+      "Sidekick Work — 원하는 작업을 대신 실행하는 로컬 에이전트. 말로 요청하면 계획하고, PC에서 실행하며, 결과를 남깁니다.",
     "aiwork.eyebrow": "로컬 CLI · Agentic AI",
-    "aiwork.subtitle": "ai-agent-x — 요청하면 직접 처리",
+    "aiwork.subtitle": "범용 AI Work Agent",
     "aiwork.tagline":
       "평소 쓰는 말로 할 일을 말하세요. 에이전트가 계획하고, 내 PC에서 실행해 결과를 만듭니다 — 조언만 하지 않습니다.",
     "aiwork.factMode": "Chat · Do 모드",
@@ -960,7 +1018,7 @@ window.PORTFOLIO_I18N = {
     "aiwork.cardTech": "Python · Multi-LLM · Local execution",
     "aiwork.valueTitle": "요청하세요. 에이전트가 처리합니다.",
     "aiwork.valueIntro":
-      "챗봇은 제안에서 멈춥니다. AI Work Agent는 실행합니다 — 파일 찾기, 문서·이미지 변환, 샌드박스 attempt 폴더에 결과 저장, 실패 시 재시도까지.",
+      "챗봇은 제안에서 멈춥니다. Sidekick Work는 실행합니다 — 파일 찾기, 문서·이미지 변환, 샌드박스 attempt 폴더에 결과 저장, 실패 시 재시도까지.",
     "aiwork.value1Title": "대화 또는 실행",
     "aiwork.value1Desc":
       "매 턴 질의응답(chat) 또는 PC에서 작업을 수행하는 do 모드를 고릅니다. /chat · /script으로 강제할 수 있습니다.",
@@ -1005,7 +1063,7 @@ window.PORTFOLIO_I18N = {
     "aiwork.availDesc":
       ".env로 OpenAI, Claude, Grok, Cerebras, Kimi, DeepSeek를 선택합니다. setup/run 스크립트로 Windows · macOS · Linux에서 .venv 안에서만 동작합니다. Python은 엔진일 뿐 — 제품의 핵심은 작업을 완료하는 것입니다.",
     "aiwork.role":
-      "AI Work Agent를 처음부터 끝까지 설계·구현합니다 — 요청·실행 루프, 스트리밍 CLI, 멀티 제공자 LLM 클라이언트, 로컬 실행 샌드박스와 안전 검사, 자동 도구 레지스트리, history·첨부·저장 실행 운영 흐름까지.",
+      "Sidekick Work를 처음부터 끝까지 설계·구현합니다 — 요청·실행 루프, 스트리밍 CLI, 멀티 제공자 LLM 클라이언트, 로컬 실행 샌드박스와 안전 검사, 자동 도구 레지스트리, history·첨부·저장 실행 운영 흐름까지.",
     "aiwork.builtWith":
       "Python, OpenAI·Anthropic SDK, prompt_toolkit, pandas/openpyxl, python-docx, python-pptx, pypdf, Pillow로 구축했습니다.",
     "aiwork.videoOpen": "데모 영상 재생",
@@ -1013,8 +1071,26 @@ window.PORTFOLIO_I18N = {
     "aiwork.videoTitle": "데모 영상",
     "aiwork.videoClose": "영상 닫기",
     "aiwork.videoTabs": "데모 클립",
-    "aiwork.videoTab1": "데모 1",
-    "aiwork.videoTab2": "데모 2",
+    "aiwork.videoTab1": "90초 데모",
+    "aiwork.videoTab2": "Plan → Run → Repair",
+
+    "resume.metaTitle": "이력서 — 성상훈",
+    "resume.metaDescription":
+      "성상훈 이력서 — 프로덕션 AI 에이전트와 상용 소프트웨어를 만드는 시니어 소프트웨어 엔지니어.",
+    "resume.print": "PDF로 저장",
+    "resume.summaryTitle": "요약",
+    "resume.productsTitle": "주요 제품",
+    "resume.commercialTitle": "상용 소프트웨어",
+    "resume.skillsTitle": "기술",
+    "resume.contactTitle": "연락처",
+    "resume.officeDesc":
+      "멀티 모델 게이트웨이, 인증, 사용 크레딧, 구독 인프라를 갖춘 Microsoft Office 프로덕션 에이전트. 구조화된 맥락만 보내고 변경은 로컬에서 실행합니다.",
+    "resume.workDesc":
+      "범용 로컬 워크 에이전트. 자연어 요청 → 계획 → 실행 → 수리/재시도 → 결과 전달. 샌드박스 쓰기와 파괴적 동작 검사.",
+    "resume.mailDesc":
+      "Microsoft Exchange용 인바운드 SMTP 엣지 필터. SPF/DKIM/DMARC, 첨부·URL 평판, LLM SCL 0–9, 캐시, 정책 헤더 후 릴레이.",
+    "resume.commercialIntro":
+      "2013년부터 App Store 제품을 출시·유지보수해 왔습니다. 그 제품 엔지니어링 경험이 지금 AI 에이전트 작업의 기반입니다.",
 
     "treesize.metaDescription":
       "TreeSize for Mac — Mac에서 디스크 공간을 어디에 쓰는지 보고, 큰 파일·중복을 찾아 공간을 되찾으세요. Mac App Store에서 제공.",

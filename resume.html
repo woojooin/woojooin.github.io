@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Resume of Sang Hoon Sung — Senior Software Engineer building production AI agents and commercial software.">
+  <title>Resume — Sang Hoon Sung</title>
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem("portfolio-theme");
+        if (theme !== "light" && theme !== "dark") {
+          theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        }
+        document.documentElement.setAttribute("data-theme", theme);
+
+        var lang = null;
+        try {
+          lang = new URLSearchParams(window.location.search).get("lang");
+        } catch (err) {}
+        if (lang !== "en" && lang !== "ko") {
+          lang = localStorage.getItem("portfolio-lang");
+        }
+        if (lang !== "en" && lang !== "ko") {
+          lang = (navigator.language || "").toLowerCase().indexOf("ko") === 0
+            ? "ko"
+            : "en";
+        }
+        document.documentElement.setAttribute("lang", lang);
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="resume">
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="nav__brand" href="index.html">
+        <img
+          class="nav__avatar"
+          src="images/rockman.png"
+          alt="Sang Hoon Sung profile image"
+          width="30"
+          height="30"
+          loading="eager"
+          decoding="async"
+        >
+        <span>Sang Hoon Sung</span>
+      </a>
+
+      <nav class="nav__menu" id="nav-menu" data-i18n-aria="a11y.nav" aria-label="Primary">
+        <ul class="nav__links">
+          <li><a class="nav__link" href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a class="nav__link" href="index.html#projects" data-i18n="nav.projects">Projects</a></li>
+          <li><a class="nav__link" href="index.html#skills" data-i18n="nav.skills">Skills</a></li>
+          <li><a class="nav__link" href="index.html#about" data-i18n="nav.about">About</a></li>
+          <li><a class="nav__link" href="index.html#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <div class="nav__social">
+          <a href="https://www.linkedin.com/in/sanghoons/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/woojooin" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </nav>
+
+      <div class="nav__controls">
+        <div class="lang-switch" role="group" data-i18n-aria="a11y.langSwitch" aria-label="Language">
+          <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-switch__btn" data-lang="ko" aria-pressed="false">KO</button>
+        </div>
+        <button type="button" class="theme-toggle" data-theme-toggle data-i18n-aria="a11y.themeToDark" aria-label="Switch to dark mode">
+          <span data-theme-label>Dark</span>
+        </button>
+      </div>
+
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" data-i18n-aria="a11y.navToggle" aria-label="Toggle navigation">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="resume">
+    <div class="container">
+      <div class="resume__toolbar">
+        <button type="button" class="btn btn--secondary" data-print data-i18n="resume.print">Save as PDF</button>
+      </div>
+
+      <header class="resume__header">
+        <h1 class="resume__name">Sang Hoon Sung</h1>
+        <p class="resume__roles">
+          <span data-i18n="hero.role1">Senior Software Engineer</span>
+          ·
+          <span data-i18n="hero.role2">AI Agents</span>
+          ·
+          <span data-i18n="hero.role3">Product Engineering</span>
+        </p>
+        <ul class="resume__contacts">
+          <li><a href="mailto:woojooin@outlook.com">woojooin@outlook.com</a></li>
+          <li><a href="https://www.linkedin.com/in/sanghoons/" target="_blank" rel="noopener noreferrer">linkedin.com/in/sanghoons</a></li>
+          <li><a href="https://github.com/woojooin" target="_blank" rel="noopener noreferrer">github.com/woojooin</a></li>
+          <li><a href="index.html">woojooin.github.io</a></li>
+        </ul>
+      </header>
+
+      <section class="resume__section" aria-labelledby="resume-summary">
+        <h2 id="resume-summary" data-i18n="resume.summaryTitle">Summary</h2>
+        <p data-i18n="about.p1">
+          I am a senior software engineer and product builder with extensive experience shipping commercial software across desktop, mobile, web, cloud, and enterprise environments.
+        </p>
+        <p data-i18n="about.p2">
+          My current focus is Agentic AI — building production systems that move beyond chat to plan, execute, recover, and complete real-world work.
+        </p>
+        <p data-i18n="about.p3">
+          I am the creator of Sidekick, a family of AI products spanning desktop work automation, Microsoft Office, and browser workflows.
+        </p>
+      </section>
+
+      <section class="resume__section" aria-labelledby="resume-products">
+        <h2 id="resume-products" data-i18n="resume.productsTitle">Selected products</h2>
+
+        <article class="resume__item">
+          <h3>Sidekick Office</h3>
+          <p class="resume__item-meta" data-i18n="officeai.cardSubtitle">AI Agent for Microsoft Office</p>
+          <p data-i18n="resume.officeDesc">
+            Production Microsoft Office agent with a multi-model gateway, authentication, usage credits, and subscription infrastructure. Structured context only; changes run locally.
+          </p>
+        </article>
+
+        <article class="resume__item">
+          <h3>Sidekick Work</h3>
+          <p class="resume__item-meta" data-i18n="aiwork.cardSubtitle">General-purpose AI Work Agent</p>
+          <p data-i18n="resume.workDesc">
+            General-purpose local work agent. Natural-language request → plan → execute → repair/retry → delivered result. Sandboxed writes and destructive-action checks.
+          </p>
+        </article>
+
+        <article class="resume__item">
+          <h3>AI Mail Gateway</h3>
+          <p class="resume__item-meta" data-i18n="aimail.cardSubtitle">AI-powered Email Security for Microsoft Exchange</p>
+          <p data-i18n="resume.mailDesc">
+            Inbound SMTP edge filter for Microsoft Exchange: SPF/DKIM/DMARC, attachment/URL reputation, LLM SCL 0–9, cache, policy headers, then relay.
+          </p>
+        </article>
+      </section>
+
+      <section class="resume__section" aria-labelledby="resume-commercial">
+        <h2 id="resume-commercial" data-i18n="resume.commercialTitle">Commercial software</h2>
+        <p data-i18n="resume.commercialIntro">
+          Shipped and maintained App Store products since 2013 — the same product-engineering discipline now applied to AI agents.
+        </p>
+        <ul class="resume__list">
+          <li>TreeSize — Mac App Store since 2013</li>
+          <li>zCommander — Mac App Store since 2013</li>
+          <li>zGallery — Mac App Store since 2013</li>
+          <li>DreamView — Mac App Store since 2014</li>
+          <li>1Clipboard — Mac App Store since 2019</li>
+          <li>Cloud Player — iOS App Store since 2024</li>
+        </ul>
+      </section>
+
+      <section class="resume__section" aria-labelledby="resume-skills">
+        <h2 id="resume-skills" data-i18n="resume.skillsTitle">Skills</h2>
+        <div class="resume__skills">
+          <div>
+            <h3 data-i18n="skills.ai">AI &amp; Agentic AI</h3>
+            <ul class="resume__list">
+              <li data-i18n="skills.ai1">LLM agents &amp; tool calling</li>
+              <li data-i18n="skills.ai2">Multi-provider LLM integration</li>
+              <li data-i18n="skills.ai3">Prompt &amp; RESULT protocols</li>
+              <li data-i18n="skills.ai4">Local execution sandboxes</li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-i18n="skills.engineering">Software Engineering</h3>
+            <ul class="resume__list">
+              <li data-i18n="skills.eng1">Python · TypeScript · Swift · Objective-C</li>
+              <li data-i18n="skills.eng2">React · Vite · .NET / VSTO</li>
+              <li data-i18n="skills.eng3">Product design to App Store release</li>
+              <li data-i18n="skills.eng4">EN / KO localization</li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-i18n="skills.m365">MS Office</h3>
+            <ul class="resume__list">
+              <li data-i18n="skills.m3651">Office.js add-ins (Word · Excel · PowerPoint)</li>
+              <li data-i18n="skills.m3652">Outlook VSTO + WebView2</li>
+              <li data-i18n="skills.m3653">Exchange SMTP · SCL · transport rules</li>
+              <li data-i18n="skills.m3654">SPF / DKIM / DMARC mail auth</li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-i18n="skills.web">Web &amp; Cloud</h3>
+            <ul class="resume__list">
+              <li data-i18n="skills.web1">Cloudflare Pages · Wrangler</li>
+              <li data-i18n="skills.web3">Credits · Stripe · BYOK</li>
+              <li data-i18n="skills.api1">OpenAI · Anthropic · Cerebras · Groq</li>
+              <li data-i18n="skills.api4">REST / SSE gateways</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; Sang Hoon Sung</p>
+      <div class="footer__links">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="https://www.linkedin.com/in/sanghoons/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/woojooin" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

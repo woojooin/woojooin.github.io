@@ -228,6 +228,9 @@
             : t("meta.projectDescription").replace("{title}", projectTitle);
         descEl.setAttribute("content", customDesc);
       }
+    } else if (document.body.getAttribute("data-page") === "resume") {
+      if (titleEl) titleEl.textContent = t("resume.metaTitle");
+      if (descEl) descEl.setAttribute("content", t("resume.metaDescription"));
     } else {
       if (titleEl) titleEl.textContent = t("meta.title");
       if (descEl) descEl.setAttribute("content", t("meta.description"));
@@ -337,9 +340,18 @@
     }
   }
 
+  function initPrint() {
+    document.querySelectorAll("[data-print]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        window.print();
+      });
+    });
+  }
+
   /* Boot ----------------------------------------------------------------- */
 
   initTheme();
   initLang();
   initNav();
+  initPrint();
 })();

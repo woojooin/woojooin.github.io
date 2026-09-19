@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AI Work Agent — a local agent that does the work you ask for. Describe the task; it plans, runs it on your machine, and saves the result.">
-  <title>AI Work Agent — Sang Hoon Sung</title>
+  <meta name="description" content="Sidekick Work — a local agent that does the work you ask for. Describe the task; it plans, runs it on your machine, and saves the result.">
+  <title>Sidekick Work — Sang Hoon Sung</title>
   <script>
     (function () {
       try {
@@ -39,7 +39,7 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
 </head>
-<body data-project-title="AI Work Agent" data-project-id="aiwork">
+<body data-project-title="Sidekick Work" data-project-id="aiwork">
   <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
 
   <header class="site-header">
@@ -96,15 +96,20 @@
 
         <div class="product-hero__grid">
           <div class="product-hero__copy">
-            <p class="product-hero__eyebrow" data-i18n="aiwork.eyebrow">Local CLI · Agentic AI</p>
-            <h1 class="product-hero__title" id="project-title">AI Work Agent</h1>
-            <p class="product-hero__subtitle" data-i18n="aiwork.subtitle">ai-agent-x — ask, then it does the work</p>
+            <p class="product-hero__badge" data-i18n="aiwork.badge">In production</p>
+            <h1 class="product-hero__title" id="project-title">Sidekick Work</h1>
+            <p class="product-hero__subtitle" data-i18n="aiwork.subtitle">General-purpose AI Work Agent</p>
             <p class="product-hero__tagline" data-i18n="aiwork.tagline">
               Describe the job in plain language. The agent plans it, runs it on your machine, and delivers the result — not just advice.
             </p>
             <div class="product-hero__actions">
-              <a class="btn btn--primary" href="https://sidekickai.one/work/" target="_blank" rel="noopener noreferrer" data-i18n="project.productSite">Visit product site</a>
+              <button type="button" class="btn btn--primary" data-video-open data-video="work-1">
+                <span class="btn__play" aria-hidden="true"></span>
+                <span data-i18n="project.watchDemo90">Watch 90-sec Demo</span>
+              </button>
+              <a class="btn btn--secondary" href="https://sidekickai.one/work/" target="_blank" rel="noopener noreferrer" data-i18n="aiwork.tryDownload">Try / Download Sidekick Work</a>
             </div>
+            <p class="product-hero__maturity" data-i18n="aiwork.maturity">Plan → Run → Repair · Local execution · Multi-provider LLM</p>
             <ul class="product-hero__facts">
               <li data-i18n="aiwork.factMode">Chat · Do modes</li>
               <li data-i18n="aiwork.factProviders">6 LLM providers</li>
@@ -119,9 +124,9 @@
             data-video-open
             data-video="work-1"
             data-i18n-aria="aiwork.videoOpen"
-            aria-label="Play demo videos"
+            id="demo" aria-label="Play demo videos"
           >
-            <img src="../images/ai-work-agent/screenshot-1.png" width="1600" height="1000" alt="AI Work Agent terminal completing a local image resize task" loading="eager">
+            <img src="../images/ai-work-agent/screenshot-1.png" width="1600" height="1000" alt="Sidekick Work terminal completing a local image resize task" loading="eager">
             <span class="media-play" aria-hidden="true">
               <span class="media-play__icon"></span>
             </span>
@@ -135,7 +140,7 @@
         <header class="product-section__header">
           <h2 id="value-title" data-i18n="aiwork.valueTitle">You ask. It does the work.</h2>
           <p data-i18n="aiwork.valueIntro">
-            Chatbots stop at suggestions. AI Work Agent executes — finding files, transforming documents and images, producing outputs under a sandboxed attempt folder, and retrying when a step fails.
+            Chatbots stop at suggestions. Sidekick Work executes — finding files, transforming documents and images, producing outputs under a sandboxed attempt folder, and retrying when a step fails.
           </p>
         </header>
 
@@ -184,7 +189,7 @@
           data-i18n-aria="aiwork.videoOpenLoop"
           aria-label="Play execution loop demo"
         >
-          <img src="../images/ai-work-agent/screenshot-2.png" width="1600" height="1000" alt="AI Work Agent completing a regional sales summary from an Excel file" loading="lazy">
+          <img src="../images/ai-work-agent/screenshot-2.png" width="1600" height="1000" alt="Sidekick Work completing a regional sales summary from an Excel file" loading="lazy">
           <span class="media-play media-play--sm" aria-hidden="true">
             <span class="media-play__icon"></span>
           </span>
@@ -255,7 +260,7 @@
             OpenAI, Claude, Grok, Cerebras, Kimi, and DeepSeek via .env. Windows, macOS, and Linux with setup/run scripts that keep everything inside .venv. Python is the engine under the hood — the product is getting the work done.
           </p>
         </div>
-        <a class="btn btn--primary" href="https://sidekickai.one/work/" target="_blank" rel="noopener noreferrer" data-i18n="project.productSite">Visit product site</a>
+        <a class="btn btn--primary" href="https://sidekickai.one/work/" target="_blank" rel="noopener noreferrer" data-i18n="aiwork.tryDownload">Try / Download Sidekick Work</a>
       </div>
     </section>
 
@@ -265,7 +270,7 @@
           <h2 id="role-title" data-i18n="project.role">Development / My Role</h2>
         </header>
         <p data-i18n="aiwork.role">
-          I design and build AI Work Agent end to end — the ask-and-execute loop, streaming CLI, multi-provider LLM client, local execution sandbox and safety scans, auto-discovered tool registry, and the operator workflow around history, attachments, and saved runs.
+          I design and build Sidekick Work end to end — the ask-and-execute loop, streaming CLI, multi-provider LLM client, local execution sandbox and safety scans, auto-discovered tool registry, and the operator workflow around history, attachments, and saved runs.
         </p>
         <p class="product-note" data-i18n="aiwork.builtWith">
           Built with Python, OpenAI &amp; Anthropic SDKs, prompt_toolkit, pandas/openpyxl, python-docx, python-pptx, pypdf, and Pillow.
@@ -278,8 +283,8 @@
     <div class="video-modal__panel">
       <div class="video-modal__toolbar">
         <div class="video-modal__tabs" role="tablist" data-i18n-aria="aiwork.videoTabs" aria-label="Demo clips">
-          <button type="button" class="video-modal__tab" role="tab" data-video-tab="work-1" aria-selected="true" data-i18n="aiwork.videoTab1">Demo 1</button>
-          <button type="button" class="video-modal__tab" role="tab" data-video-tab="work-2" aria-selected="false" data-i18n="aiwork.videoTab2">Demo 2</button>
+          <button type="button" class="video-modal__tab" role="tab" data-video-tab="work-1" aria-selected="true" data-i18n="aiwork.videoTab1">90-sec Demo</button>
+          <button type="button" class="video-modal__tab" role="tab" data-video-tab="work-2" aria-selected="false" data-i18n="aiwork.videoTab2">Plan → Run → Repair</button>
         </div>
         <button
           type="button"
