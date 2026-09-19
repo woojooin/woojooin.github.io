@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Resume of Sang Hoon Sung — Senior Software Engineer building production AI agents and commercial software.">
-  <title>Resume — Sang Hoon Sung</title>
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Resume of Sang Hoon Sung — Senior Software Engineer building production AI agents and commercial software." name="description"/>
+<title>Resume — Sang Hoon Sung</title>
+<script>
     (function () {
       try {
         var theme = localStorage.getItem("portfolio-theme");
@@ -34,196 +35,3984 @@
       }
     })();
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=Noto+Sans+KR:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>/* =============================================================================
+   Sang Hoon Sung — Portfolio
+   Professional, minimal, technical
+   ============================================================================= */
+
+:root {
+  --color-bg: #f6f7f9;
+  --color-surface: #ffffff;
+  --color-text: #12151a;
+  --color-text-secondary: #4a5562;
+  --color-text-muted: #6b7380;
+  --color-border: #dde1e6;
+  --color-border-strong: #c5ccd5;
+  --color-accent: #16324f;
+  --color-accent-hover: #0f2438;
+  --color-accent-soft: #e8eef4;
+  --color-nav-bg: rgba(246, 247, 249, 0.92);
+  --color-control-bg: #ffffff;
+  --color-control-active: #e8eef4;
+  --color-btn-bg: #16324f;
+  --color-btn-text: #ffffff;
+  --color-btn-hover: #0f2438;
+
+  --font-sans: "IBM Plex Sans", "Noto Sans KR", "Apple SD Gothic Neo",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: 2.75rem;
+  --text-hero: clamp(2.25rem, 5vw, 3.25rem);
+
+  --leading-tight: 1.2;
+  --leading-snug: 1.35;
+  --leading-normal: 1.65;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.75rem;
+  --space-7: 2.5rem;
+  --space-8: 3.25rem;
+  --space-9: 5rem;
+  --space-10: 6.5rem;
+
+  --container: 1100px;
+  --nav-height: 3.75rem;
+  --radius: 4px;
+  --radius-md: 6px;
+
+  --shadow-sm: 0 1px 2px rgba(18, 21, 26, 0.04);
+  --transition: 180ms ease;
+  --color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  --color-bg: #0e1116;
+  --color-surface: #161b22;
+  --color-text: #e8eaed;
+  --color-text-secondary: #a8b0ba;
+  --color-text-muted: #7d8794;
+  --color-border: #2a313c;
+  --color-border-strong: #3d4654;
+  --color-accent: #8eb4d8;
+  --color-accent-hover: #b3cce6;
+  --color-accent-soft: #1a2330;
+  --color-nav-bg: rgba(14, 17, 22, 0.92);
+  --color-control-bg: #161b22;
+  --color-control-active: #1f2a38;
+  --color-btn-bg: #8eb4d8;
+  --color-btn-text: #0e1116;
+  --color-btn-hover: #b3cce6;
+  --color-scheme: dark;
+}
+
+html {
+  color-scheme: var(--color-scheme);
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-height) + 1rem);
+}
+
+/* Accessibility ----------------------------------------------------------- */
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 200;
+}
+
+.skip-link:focus {
+  left: var(--space-4);
+  top: var(--space-4);
+  width: auto;
+  height: auto;
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-accent);
+  color: #fff;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  border-radius: var(--radius);
+  overflow: visible;
+}
+
+/* Reset ------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: var(--leading-tight);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+p {
+  color: var(--color-text-secondary);
+}
+
+/* Layout ------------------------------------------------------------------ */
+
+.container {
+  width: min(100% - 2.5rem, var(--container));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--space-7);
+}
+
+.section--alt {
+  background-color: var(--color-surface);
+  border-block: 1px solid var(--color-border);
+}
+
+.section__header {
+  margin-bottom: var(--space-5);
+  max-width: 40rem;
+}
+
+.section__label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-3);
+}
+
+.section__title {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-3);
+}
+
+.section__intro {
+  font-size: var(--text-base);
+  max-width: 36rem;
+}
+
+/* Header / Nav ------------------------------------------------------------ */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--nav-height);
+  background: var(--color-nav-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--nav-height);
+  gap: var(--space-4);
+  position: relative;
+}
+
+.nav__brand {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.nav__brand:hover {
+  color: var(--color-accent);
+}
+
+.nav__avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  object-fit: cover;
+  background: var(--color-surface);
+  flex: 0 0 auto;
+}
+
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.nav__toggle-bar {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background: var(--color-text);
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.nav__link {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.nav__link:hover,
+.nav__link[aria-current="page"] {
+  color: var(--color-text);
+}
+
+.nav__social {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding-left: var(--space-4);
+  border-left: 1px solid var(--color-border);
+}
+
+.nav__social a {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.nav__social a:hover {
+  color: var(--color-text);
+}
+
+.nav__controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--color-control-bg);
+}
+
+.lang-switch__btn {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 0.4rem 0.55rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: background var(--transition), color var(--transition);
+}
+
+.lang-switch__btn:hover {
+  color: var(--color-text);
+}
+
+.lang-switch__btn.is-active {
+  background: var(--color-control-active);
+  color: var(--color-text);
+}
+
+.lang-switch__btn + .lang-switch__btn {
+  border-left: 1px solid var(--color-border);
+}
+
+.theme-toggle {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  height: 1.85rem;
+  padding: 0 0.55rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-control-bg);
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition),
+    border-color var(--transition);
+}
+
+.theme-toggle:hover {
+  color: var(--color-text);
+  border-color: var(--color-border-strong);
+}
+
+/* Hero -------------------------------------------------------------------- */
+
+.hero {
+  padding-block: var(--space-7) var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hero__inner {
+  max-width: 42rem;
+}
+
+.hero__name {
+  font-size: var(--text-hero);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-4);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  opacity: 0;
+  animation: fade-up 0.6s ease forwards;
+}
+
+.hero__avatar {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  object-fit: cover;
+  background: var(--color-surface);
+  flex: 0 0 auto;
+}
+
+.hero__roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-3);
+  margin-bottom: var(--space-4);
+  opacity: 0;
+  animation: fade-up 0.6s ease 0.08s forwards;
+}
+
+.hero__role {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.hero__role:not(:last-child)::after {
+  content: "·";
+  margin-left: var(--space-3);
+  color: var(--color-border-strong);
+}
+
+.hero__intro {
+  font-size: var(--text-lg);
+  line-height: var(--leading-snug);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-5);
+  max-width: 38rem;
+  opacity: 0;
+  animation: fade-up 0.6s ease 0.16s forwards;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  opacity: 0;
+  animation: fade-up 0.6s ease 0.24s forwards;
+}
+
+.btn__play {
+  width: 0;
+  height: 0;
+  border-top: 0.28em solid transparent;
+  border-bottom: 0.28em solid transparent;
+  border-left: 0.42em solid currentColor;
+  margin-right: 0.1em;
+}
+
+/* Buttons ----------------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 0.7rem 1.25rem;
+  font-family: inherit;
+  font-size: var(--text-sm);
+  font-weight: 550;
+  line-height: 1;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition),
+    border-color var(--transition);
+}
+
+.btn--primary {
+  background: var(--color-btn-bg);
+  color: var(--color-btn-text);
+  border-color: var(--color-btn-bg);
+}
+
+.btn--primary:hover {
+  background: var(--color-btn-hover);
+  color: var(--color-btn-text);
+  border-color: var(--color-btn-hover);
+}
+
+.btn--secondary {
+  background: transparent;
+  color: var(--color-text);
+  border-color: var(--color-border-strong);
+}
+
+.btn--secondary:hover {
+  background: var(--color-surface);
+  border-color: var(--color-text-muted);
+  color: var(--color-text);
+}
+
+.btn--small {
+  padding: 0.55rem 1rem;
+  font-size: var(--text-xs);
+}
+
+/* Featured Projects ------------------------------------------------------- */
+
+.project-category {
+  margin-bottom: var(--space-6);
+}
+
+.project-category:last-child {
+  margin-bottom: 0;
+}
+
+.project-category__header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.project-category__title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
+
+.project-category__note {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+
+.project-grid--wide {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color var(--transition);
+  color: inherit;
+}
+
+.project-card:has(a.project-card__media:hover),
+.project-card:has(a.project-card__media:focus-visible),
+.project-card:has(.project-card__footer a:hover),
+.project-card:has(.project-card__footer a:focus-visible) {
+  border-color: var(--color-border-strong);
+}
+
+a.project-card__media {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.project-card__media:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: -2px;
+}
+
+.project-card__footer a.btn {
+  align-self: flex-start;
+}
+
+.project-card--featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  min-height: 280px;
+}
+
+.project-card__media {
+  background: var(--color-accent-soft);
+  border-bottom: 1px solid var(--color-border);
+  aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.project-card--featured .project-card__media {
+  aspect-ratio: auto;
+  border-bottom: none;
+  border-right: 1px solid var(--color-border);
+  min-height: 100%;
+}
+
+.project-card__placeholder {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.project-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: var(--space-5);
+  gap: var(--space-3);
+  cursor: default;
+}
+
+.project-card__name {
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
+
+.project-card__subtitle {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  margin-top: calc(var(--space-2) * -1);
+}
+
+.project-card__badge,
+.product-hero__badge {
+  display: inline-flex;
+  align-self: flex-start;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  background: var(--color-accent-soft);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0.28rem 0.65rem;
+  line-height: 1.2;
+}
+
+.project-card__desc {
+  font-size: var(--text-sm);
+  flex: 1;
+}
+
+.project-card__meta {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  letter-spacing: 0.02em;
+}
+
+.project-card__footer {
+  margin-top: var(--space-2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* Experience -------------------------------------------------------------- */
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-left: 2px solid var(--color-border);
+  margin-left: 0.35rem;
+  padding-left: var(--space-5);
+}
+
+.timeline__item {
+  position: relative;
+  padding-bottom: var(--space-6);
+}
+
+.timeline__item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline__item::before {
+  content: "";
+  position: absolute;
+  left: calc(-1 * var(--space-5) - 5px);
+  top: 0.4rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-surface);
+  border: 2px solid var(--color-accent);
+}
+
+.timeline__period {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-2);
+}
+
+.timeline__role {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin-bottom: var(--space-1);
+}
+
+.timeline__org {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-3);
+}
+
+.timeline__summary {
+  font-size: var(--text-sm);
+  max-width: 40rem;
+}
+
+.timeline__placeholder {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* Skills ------------------------------------------------------------------ */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+
+.skill-group {
+  padding: var(--space-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.skill-group__title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.skill-group__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.skill-group__item {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.skill-group__item--placeholder {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* About ------------------------------------------------------------------- */
+
+.about__content {
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.about__content p {
+  font-size: var(--text-base);
+}
+
+/* Contact ----------------------------------------------------------------- */
+
+.contact__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 28rem;
+}
+
+.contact__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.contact__label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.contact__value {
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.contact__value--muted {
+  color: var(--color-text-muted);
+  font-weight: 400;
+  font-style: italic;
+}
+
+a.contact__value:hover {
+  color: var(--color-accent);
+}
+
+/* Resume ------------------------------------------------------------------ */
+
+.resume {
+  padding-block: var(--space-7);
+}
+
+.resume__toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: var(--space-5);
+}
+
+.resume__header {
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.resume__name {
+  font-size: var(--text-3xl);
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-2);
+}
+
+.resume__roles {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-4);
+}
+
+.resume__contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  list-style: none;
+  font-size: var(--text-sm);
+}
+
+.resume__section {
+  margin-bottom: var(--space-6);
+}
+
+.resume__section h2 {
+  font-size: var(--text-xs);
+  font-family: var(--font-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-4);
+}
+
+.resume__section p,
+.resume__item p {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.resume__item {
+  margin-bottom: var(--space-4);
+}
+
+.resume__item:last-child {
+  margin-bottom: 0;
+}
+
+.resume__item h3 {
+  font-size: var(--text-base);
+  font-weight: 600;
+}
+
+.resume__item-meta {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-2);
+}
+
+.resume__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  list-style: none;
+}
+
+.resume__list li {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.resume__skills {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4) var(--space-6);
+}
+
+.resume__skills h3 {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+
+@media print {
+  .skip-link,
+  .site-header,
+  .site-footer,
+  .resume__toolbar {
+    display: none !important;
+  }
+
+  html,
+  body {
+    background: #fff;
+    color: #12151a;
+  }
+
+  .resume {
+    padding: 0;
+  }
+
+  .resume__name {
+    font-size: 1.75rem;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+/* Footer ------------------------------------------------------------------ */
+
+.site-footer {
+  padding-block: var(--space-5);
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.footer__copy {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.footer__links {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.footer__links a {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.footer__links a:hover {
+  color: var(--color-text);
+}
+
+/* Project pages ----------------------------------------------------------- */
+
+.project-hero {
+  padding-block: var(--space-8) var(--space-7);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.project-hero__back {
+  display: inline-block;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-5);
+}
+
+.project-hero__back:hover {
+  color: var(--color-text);
+}
+
+.project-hero__title {
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-3);
+}
+
+.project-hero__tagline {
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  max-width: 36rem;
+  margin-bottom: var(--space-6);
+}
+
+.project-hero__media {
+  background: var(--color-accent-soft);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  aspect-ratio: 21 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-content {
+  padding-block: var(--space-8);
+}
+
+.project-block {
+  margin-bottom: var(--space-8);
+  max-width: 42rem;
+}
+
+.project-block--wide {
+  max-width: 52rem;
+}
+
+.project-block:last-child {
+  margin-bottom: 0;
+}
+
+.project-block__title {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.project-block__lead {
+  margin-bottom: var(--space-5);
+}
+
+.project-block p,
+.project-block li {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+}
+
+.project-block ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.project-block ul > li {
+  padding-left: var(--space-4);
+  position: relative;
+}
+
+.project-block ul > li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--color-text-muted);
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+  list-style: none;
+}
+
+.project-meta li {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  padding: 0.35rem 0.6rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+
+.project-hero__actions {
+  margin-bottom: var(--space-6);
+}
+
+.project-prose {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.problem-card {
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.problem-card__title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+}
+
+.problem-card p {
+  font-size: var(--text-sm);
+  margin: 0;
+}
+
+.feature-group {
+  margin-bottom: var(--space-5);
+}
+
+.feature-group:last-child {
+  margin-bottom: 0;
+}
+
+.feature-group__title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+  color: var(--color-text);
+}
+
+.tech-list li {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+}
+
+.arch-diagram {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  overflow-x: auto;
+  white-space: pre;
+  margin-bottom: var(--space-6);
+}
+
+.project-subtitle {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-4);
+}
+
+.decision-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  list-style: none;
+  counter-reset: decision;
+}
+
+.decision-list > li {
+  padding-left: 0;
+  counter-increment: decision;
+  position: relative;
+}
+
+.decision-list > li::before {
+  content: counter(decision) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.decision-list > li {
+  padding-left: 1.75rem;
+}
+
+.decision-list h4 {
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+  color: var(--color-text);
+}
+
+.decision-list p {
+  margin: 0;
+  font-size: var(--text-sm);
+}
+
+.placeholder-text {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+  max-width: none;
+}
+
+.screenshot-item {
+  background: var(--color-accent-soft);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-placeholder {
+  background: var(--color-accent-soft);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  aspect-ratio: 16 / 9;
+  max-width: 42rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+/* Product page (TreeSize and similar) ------------------------------------ */
+
+.product-hero {
+  padding-block: var(--space-7) var(--space-8);
+  border-bottom: 1px solid var(--color-border);
+  background:
+    linear-gradient(
+      180deg,
+      var(--color-accent-soft) 0%,
+      var(--color-bg) 72%
+    );
+}
+
+.product-hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.15fr);
+  gap: var(--space-7);
+  align-items: center;
+}
+
+.product-hero__icon {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 1.15rem;
+  margin-bottom: var(--space-4);
+  box-shadow: 0 8px 24px rgba(18, 21, 26, 0.12);
+}
+
+.product-hero__eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-2);
+}
+
+.product-hero__badge {
+  margin-bottom: var(--space-3);
+}
+
+.product-hero__maturity {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--space-5);
+}
+
+.product-hero__actions + .product-hero__maturity,
+.product-hero__tagline + .product-hero__maturity {
+  margin-top: calc(var(--space-5) * -1 + var(--space-3));
+}
+
+.product-hero__title {
+  font-size: var(--text-3xl);
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-2);
+}
+
+.product-hero__subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-4);
+}
+
+.product-hero__tagline {
+  font-size: var(--text-lg);
+  line-height: var(--leading-snug);
+  color: var(--color-text-secondary);
+  max-width: 28rem;
+  margin-bottom: var(--space-5);
+}
+
+.product-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.product-hero__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  list-style: none;
+}
+
+.product-hero__facts li {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  padding: 0.35rem 0.6rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+
+.product-hero__shot {
+  margin: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #1a1a1a;
+  box-shadow: 0 16px 40px rgba(18, 21, 26, 0.12);
+}
+
+.product-hero__shot img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-hero__shot--video,
+.product-feature__media--video {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #1a1a1a;
+  cursor: pointer;
+  text-align: left;
+  color: inherit;
+  font: inherit;
+  box-shadow: 0 16px 40px rgba(18, 21, 26, 0.12);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.product-hero__shot--video:hover,
+.product-feature__media--video:hover,
+.product-hero__shot--video:focus-visible,
+.product-feature__media--video:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 44px rgba(18, 21, 26, 0.16);
+  outline: none;
+}
+
+.product-hero__shot--video:focus-visible,
+.product-feature__media--video:focus-visible {
+  box-shadow:
+    0 18px 44px rgba(18, 21, 26, 0.16),
+    0 0 0 3px var(--color-accent-soft),
+    0 0 0 5px var(--color-accent);
+}
+
+.product-hero__shot--video img,
+.product-feature__media--video img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.media-play {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(14, 17, 22, 0.4);
+  opacity: 0;
+  transition: opacity var(--transition);
+  pointer-events: none;
+}
+
+.product-hero__shot--video:hover .media-play,
+.product-feature__media--video:hover .media-play,
+.product-hero__shot--video:focus-visible .media-play,
+.product-feature__media--video:focus-visible .media-play {
+  opacity: 1;
+}
+
+.media-play__icon {
+  width: 4.25rem;
+  height: 4.25rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+  position: relative;
+  transform: scale(0.92);
+  transition: transform var(--transition);
+}
+
+.product-hero__shot--video:hover .media-play__icon,
+.product-feature__media--video:hover .media-play__icon,
+.product-hero__shot--video:focus-visible .media-play__icon,
+.product-feature__media--video:focus-visible .media-play__icon {
+  transform: scale(1);
+}
+
+.media-play__icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.7rem 0 0.7rem 1.15rem;
+  border-color: transparent transparent transparent var(--color-accent);
+}
+
+.media-play--sm .media-play__icon {
+  width: 3.25rem;
+  height: 3.25rem;
+}
+
+.media-play--sm .media-play__icon::before {
+  border-width: 0.55rem 0 0.55rem 0.9rem;
+}
+
+@media (hover: none) {
+  .media-play {
+    opacity: 1;
+    background: rgba(14, 17, 22, 0.22);
+  }
+
+  .media-play__icon {
+    transform: scale(1);
+  }
+}
+
+.video-modal {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  padding: 0;
+  border: none;
+  background: transparent;
+  width: fit-content;
+  max-width: calc(100vw - 1.5rem);
+  height: fit-content;
+  max-height: calc(100dvh - 1.5rem);
+}
+
+.video-modal::backdrop {
+  background: rgba(14, 17, 22, 0.72);
+  backdrop-filter: blur(4px);
+}
+
+.video-modal__panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.35);
+  max-height: calc(100dvh - 1.5rem);
+  width: fit-content;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-modal__toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0.4rem 0.5rem 0.4rem 0.65rem;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg);
+}
+
+.video-modal__close {
+  flex-shrink: 0;
+  width: 1.85rem;
+  height: 1.85rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-control-bg);
+  color: var(--color-text);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.video-modal__close:hover,
+.video-modal__close:focus-visible {
+  background: var(--color-control-active);
+  outline: none;
+}
+
+.video-modal__tabs {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.video-modal__tab {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  padding: 0.28rem 0.6rem;
+  cursor: pointer;
+}
+
+.video-modal__tab.is-active,
+.video-modal__tab[aria-selected="true"] {
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  border-color: var(--color-border-strong);
+}
+
+.video-modal__tab:hover,
+.video-modal__tab:focus-visible {
+  color: var(--color-text);
+  outline: none;
+}
+
+.video-modal__player {
+  background: #0e1116;
+  line-height: 0;
+}
+
+.video-modal__player video {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: calc(100vw - 1.5rem);
+  max-height: calc(100dvh - 1.5rem - 2.75rem);
+  vertical-align: top;
+  background: #0e1116;
+}
+
+html.is-video-modal-open {
+  overflow: hidden;
+}
+
+.product-hero__grid--phone {
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.7fr);
+  align-items: center;
+}
+
+.product-hero__shot--phone {
+  max-width: 280px;
+  justify-self: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.product-hero__shot--phone img {
+  border: 1px solid var(--color-border);
+  border-radius: 1.25rem;
+  box-shadow: 0 16px 40px rgba(18, 21, 26, 0.12);
+}
+
+.product-feature__grid--phone {
+  grid-template-columns: 1.1fr 0.7fr;
+}
+
+.product-feature__media--phone {
+  max-width: 260px;
+  justify-self: center;
+  background: transparent;
+  border: none;
+}
+
+.product-feature__media--phone img {
+  border: 1px solid var(--color-border);
+  border-radius: 1.25rem;
+}
+
+.product-gallery--phones {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-5);
+  justify-items: center;
+}
+
+.product-gallery--phones .product-gallery__item {
+  max-width: 220px;
+  width: 100%;
+}
+
+.product-gallery--phones .product-gallery__item img {
+  border-radius: 1.1rem;
+  background: transparent;
+}
+
+.product-card__media--phone {
+  background: var(--color-accent-soft);
+}
+
+.product-card__media--phone img {
+  object-fit: contain;
+  padding: var(--space-3);
+}
+
+.product-section {
+  padding-block: var(--space-8);
+}
+
+.product-section--alt {
+  background: var(--color-surface);
+  border-block: 1px solid var(--color-border);
+}
+
+.product-section__header {
+  max-width: 36rem;
+  margin-bottom: var(--space-7);
+  text-align: center;
+  margin-inline: auto;
+}
+
+.product-section__header--left {
+  text-align: left;
+  margin-inline: 0;
+}
+
+.product-section__header h2 {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-3);
+}
+
+.product-section__header p {
+  font-size: var(--text-base);
+}
+
+.product-section__narrow {
+  max-width: 40rem;
+}
+
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+
+.value-card h3 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-3);
+}
+
+.value-card p {
+  font-size: var(--text-sm);
+  margin: 0;
+}
+
+.product-feature {
+  padding-block: var(--space-8);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.product-feature--alt {
+  background: var(--color-surface);
+}
+
+.product-feature__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+.product-feature__grid--reverse .product-feature__copy {
+  order: 2;
+}
+
+.product-feature__grid--reverse .product-feature__media {
+  order: 1;
+}
+
+.product-feature__narrow {
+  max-width: 40rem;
+}
+
+.product-feature__label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-3);
+}
+
+.product-feature__copy h2,
+.product-feature__narrow h2 {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.02em;
+}
+
+.product-feature__copy > p,
+.product-feature__narrow > p {
+  margin-bottom: var(--space-4);
+}
+
+.product-feature__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.product-feature__list li {
+  padding-left: var(--space-4);
+  position: relative;
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.product-feature__list li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--color-text-muted);
+}
+
+.product-feature__media {
+  margin: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+.product-feature__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  list-style: none;
+  counter-reset: none;
+}
+
+.steps__item {
+  padding: 0;
+}
+
+.steps__item::before {
+  content: none;
+}
+
+.steps__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-bottom: var(--space-3);
+  border-radius: 50%;
+  border: 1px solid var(--color-border-strong);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+
+.steps__item h3 {
+  font-size: var(--text-base);
+  margin-bottom: var(--space-2);
+}
+
+.steps__item p {
+  font-size: var(--text-sm);
+  margin: 0;
+}
+
+.product-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+.product-gallery__item {
+  margin: 0;
+}
+
+.product-gallery__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: #1a1a1a;
+}
+
+.product-gallery__item figcaption {
+  margin-top: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.product-strip {
+  padding-block: var(--space-7);
+  background: var(--color-accent);
+  color: #fff;
+}
+
+html[data-theme="dark"] .product-strip {
+  background: #1f2a38;
+}
+
+.product-strip__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.product-strip h2 {
+  color: inherit;
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-2);
+}
+
+.product-strip p {
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 36rem;
+  margin: 0;
+}
+
+.product-strip .btn--primary {
+  background: #fff;
+  color: var(--color-accent);
+  border-color: #fff;
+}
+
+html[data-theme="dark"] .product-strip .btn--primary {
+  color: #0e1116;
+}
+
+.product-strip .btn--primary:hover {
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--color-accent-hover);
+  border-color: rgba(255, 255, 255, 0.92);
+}
+
+.product-note {
+  margin-top: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* Animations -------------------------------------------------------------- */
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    transition: none;
+  }
+
+  .hero__name,
+  .hero__roles,
+  .hero__intro,
+  .hero__actions {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* Responsive -------------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .project-grid--wide {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-card--featured {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card--featured .project-card__media {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    aspect-ratio: 16 / 9;
+    min-height: auto;
+  }
+
+  .skills-grid,
+  .value-grid,
+  .steps,
+  .product-hero__grid,
+  .product-feature__grid,
+  .product-hero__grid--phone,
+  .product-feature__grid--phone,
+  .product-gallery--phones {
+    grid-template-columns: 1fr;
+  }
+
+  .product-hero__shot--phone,
+  .product-feature__media--phone {
+    max-width: 240px;
+  }
+
+  .product-gallery--phones {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .product-feature__grid--reverse .product-feature__copy,
+  .product-feature__grid--reverse .product-feature__media {
+    order: initial;
+  }
+}
+
+@media (max-width: 720px) {
+  .section {
+    padding-block: var(--space-6);
+  }
+
+  .hero {
+    padding-block: var(--space-6) var(--space-5);
+  }
+
+  .nav__toggle {
+    display: flex;
+    order: 3;
+  }
+
+  .nav__controls {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .nav__menu {
+    display: none;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--space-4) var(--space-5) var(--space-5);
+    box-shadow: var(--shadow-sm);
+    order: 4;
+  }
+
+  .nav__menu.is-open {
+    display: flex;
+  }
+
+  .nav__links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .nav__link {
+    padding: var(--space-3) 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .nav__social {
+    border-left: none;
+    padding-left: 0;
+    padding-top: var(--space-4);
+    gap: var(--space-5);
+  }
+
+  .project-grid,
+  .project-grid--wide,
+  .skills-grid,
+  .screenshot-grid,
+  .problem-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__intro {
+    font-size: var(--text-base);
+  }
+
+  .resume__skills {
+    grid-template-columns: 1fr;
+  }
+
+  .project-hero__title,
+  .product-hero__title {
+    font-size: var(--text-2xl);
+  }
+}
+</style>
 </head>
 <body data-page="resume">
-  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
-
-  <header class="site-header">
-    <div class="container nav">
-      <a class="nav__brand" href="index.html">
-        <img
-          class="nav__avatar"
-          src="images/rockman.png"
-          alt="Sang Hoon Sung profile image"
-          width="30"
-          height="30"
-          loading="eager"
-          decoding="async"
-        >
-        <span>Sang Hoon Sung</span>
-      </a>
-
-      <nav class="nav__menu" id="nav-menu" data-i18n-aria="a11y.nav" aria-label="Primary">
-        <ul class="nav__links">
-          <li><a class="nav__link" href="index.html" data-i18n="nav.home">Home</a></li>
-          <li><a class="nav__link" href="index.html#projects" data-i18n="nav.projects">Projects</a></li>
-          <li><a class="nav__link" href="index.html#skills" data-i18n="nav.skills">Skills</a></li>
-          <li><a class="nav__link" href="index.html#about" data-i18n="nav.about">About</a></li>
-          <li><a class="nav__link" href="index.html#contact" data-i18n="nav.contact">Contact</a></li>
-        </ul>
-        <div class="nav__social">
-          <a href="https://www.linkedin.com/in/sanghoons/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://github.com/woojooin" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </div>
-      </nav>
-
-      <div class="nav__controls">
-        <div class="lang-switch" role="group" data-i18n-aria="a11y.langSwitch" aria-label="Language">
-          <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="true">EN</button>
-          <button type="button" class="lang-switch__btn" data-lang="ko" aria-pressed="false">KO</button>
-        </div>
-        <button type="button" class="theme-toggle" data-theme-toggle data-i18n-aria="a11y.themeToDark" aria-label="Switch to dark mode">
-          <span data-theme-label>Dark</span>
-        </button>
-      </div>
-
-      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" data-i18n-aria="a11y.navToggle" aria-label="Toggle navigation">
-        <span class="nav__toggle-bar"></span>
-        <span class="nav__toggle-bar"></span>
-        <span class="nav__toggle-bar"></span>
-      </button>
-    </div>
-  </header>
-
-  <main id="main" class="resume">
-    <div class="container">
-      <div class="resume__toolbar">
-        <button type="button" class="btn btn--secondary" data-print data-i18n="resume.print">Save as PDF</button>
-      </div>
-
-      <header class="resume__header">
-        <h1 class="resume__name">Sang Hoon Sung</h1>
-        <p class="resume__roles">
-          <span data-i18n="hero.role1">Senior Software Engineer</span>
+<a class="skip-link" data-i18n="a11y.skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="container nav">
+<a class="nav__brand" href="https://woojooin.github.io/index.html">
+<img alt="Sang Hoon Sung profile image" class="nav__avatar" decoding="async" height="30" loading="eager" src="data:image/png;base64,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" width="30"/>
+<span>Sang Hoon Sung</span>
+</a>
+<nav aria-label="Primary" class="nav__menu" data-i18n-aria="a11y.nav" id="nav-menu">
+<ul class="nav__links">
+<li><a class="nav__link" data-i18n="nav.home" href="https://woojooin.github.io/index.html">Home</a></li>
+<li><a class="nav__link" data-i18n="nav.projects" href="https://woojooin.github.io/index.html#projects">Projects</a></li>
+<li><a class="nav__link" data-i18n="nav.skills" href="https://woojooin.github.io/index.html#skills">Skills</a></li>
+<li><a class="nav__link" data-i18n="nav.about" href="https://woojooin.github.io/index.html#about">About</a></li>
+<li><a class="nav__link" data-i18n="nav.contact" href="https://woojooin.github.io/index.html#contact">Contact</a></li>
+</ul>
+<div class="nav__social">
+<a href="https://www.linkedin.com/in/sanghoons/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+<a href="https://github.com/woojooin" rel="noopener noreferrer" target="_blank">GitHub</a>
+</div>
+</nav>
+<div class="nav__controls">
+<div aria-label="Language" class="lang-switch" data-i18n-aria="a11y.langSwitch" role="group">
+<button aria-pressed="true" class="lang-switch__btn" data-lang="en" type="button">EN</button>
+<button aria-pressed="false" class="lang-switch__btn" data-lang="ko" type="button">KO</button>
+</div>
+<button aria-label="Switch to dark mode" class="theme-toggle" data-i18n-aria="a11y.themeToDark" data-theme-toggle="" type="button">
+<span data-theme-label="">Dark</span>
+</button>
+</div>
+<button aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation" class="nav__toggle" data-i18n-aria="a11y.navToggle" type="button">
+<span class="nav__toggle-bar"></span>
+<span class="nav__toggle-bar"></span>
+<span class="nav__toggle-bar"></span>
+</button>
+</div>
+</header>
+<main class="resume" id="main">
+<div class="container">
+<div class="resume__toolbar">
+<button class="btn btn--secondary" data-i18n="resume.print" data-print="" type="button">Save as PDF</button>
+</div>
+<header class="resume__header">
+<h1 class="resume__name">Sang Hoon Sung</h1>
+<p class="resume__roles">
+<span data-i18n="hero.role1">Senior Software Engineer</span>
           ·
           <span data-i18n="hero.role2">AI Agents</span>
           ·
           <span data-i18n="hero.role3">Product Engineering</span>
-        </p>
-        <ul class="resume__contacts">
-          <li><a href="mailto:woojooin@outlook.com">woojooin@outlook.com</a></li>
-          <li><a href="https://www.linkedin.com/in/sanghoons/" target="_blank" rel="noopener noreferrer">linkedin.com/in/sanghoons</a></li>
-          <li><a href="https://github.com/woojooin" target="_blank" rel="noopener noreferrer">github.com/woojooin</a></li>
-          <li><a href="index.html">woojooin.github.io</a></li>
-        </ul>
-      </header>
+</p>
+<ul class="resume__contacts">
+<li><a href="mailto:woojooin@outlook.com">woojooin@outlook.com</a></li>
+<li><a href="https://www.linkedin.com/in/sanghoons/" rel="noopener noreferrer" target="_blank">linkedin.com/in/sanghoons</a></li>
+<li><a href="https://github.com/woojooin" rel="noopener noreferrer" target="_blank">github.com/woojooin</a></li>
+<li><a href="https://woojooin.github.io/index.html">woojooin.github.io</a></li>
+</ul>
+</header>
+<section aria-labelledby="resume-summary" class="resume__section">
+<h2 data-i18n="resume.summaryTitle" id="resume-summary">Summary</h2>
 
-      <section class="resume__section" aria-labelledby="resume-summary">
-        <h2 id="resume-summary" data-i18n="resume.summaryTitle">Summary</h2>
-        <p data-i18n="about.p1">
-          I am a senior software engineer and product builder with extensive experience shipping commercial software across desktop, mobile, web, cloud, and enterprise environments.
-        </p>
-        <p data-i18n="about.p2">
-          My current focus is Agentic AI — building production systems that move beyond chat to plan, execute, recover, and complete real-world work.
-        </p>
-        <p data-i18n="about.p3">
-          I am the creator of Sidekick, a family of AI products spanning desktop work automation, Microsoft Office, and browser workflows.
-        </p>
-      </section>
 
-      <section class="resume__section" aria-labelledby="resume-products">
-        <h2 id="resume-products" data-i18n="resume.productsTitle">Selected products</h2>
 
-        <article class="resume__item">
-          <h3>Sidekick Office</h3>
-          <p class="resume__item-meta" data-i18n="officeai.cardSubtitle">AI Agent for Microsoft Office</p>
-          <p data-i18n="resume.officeDesc">
-            Production Microsoft Office agent with a multi-model gateway, authentication, usage credits, and subscription infrastructure. Structured context only; changes run locally.
-          </p>
-        </article>
+<p data-i18n="resume.summary1">Senior Software Engineer and product builder with experience designing, shipping, and maintaining commercial software across desktop, mobile, web, cloud, and enterprise environments. Current focus: Agentic AI systems that plan, execute, validate, recover, and complete real-world work.</p><p data-i18n="resume.summary2">Creator of Sidekick, a family of AI products for local work automation and Microsoft Office, supported by multi-model integration and production product infrastructure.</p></section>
+<section aria-labelledby="resume-products" class="resume__section">
+<h2 data-i18n="resume.productsTitle" id="resume-products">Selected products</h2>
 
-        <article class="resume__item">
-          <h3>Sidekick Work</h3>
-          <p class="resume__item-meta" data-i18n="aiwork.cardSubtitle">General-purpose AI Work Agent</p>
-          <p data-i18n="resume.workDesc">
-            General-purpose local work agent. Natural-language request → plan → execute → repair/retry → delivered result. Sandboxed writes and destructive-action checks.
-          </p>
-        </article>
 
-        <article class="resume__item">
-          <h3>AI Mail Gateway</h3>
-          <p class="resume__item-meta" data-i18n="aimail.cardSubtitle">AI-powered Email Security for Microsoft Exchange</p>
-          <p data-i18n="resume.mailDesc">
-            Inbound SMTP edge filter for Microsoft Exchange: SPF/DKIM/DMARC, attachment/URL reputation, LLM SCL 0–9, cache, policy headers, then relay.
-          </p>
-        </article>
-      </section>
 
-      <section class="resume__section" aria-labelledby="resume-commercial">
-        <h2 id="resume-commercial" data-i18n="resume.commercialTitle">Commercial software</h2>
-        <p data-i18n="resume.commercialIntro">
-          Shipped and maintained App Store products since 2013 — the same product-engineering discipline now applied to AI agents.
-        </p>
-        <ul class="resume__list">
-          <li>TreeSize — Mac App Store since 2013</li>
-          <li>zCommander — Mac App Store since 2013</li>
-          <li>zGallery — Mac App Store since 2013</li>
-          <li>DreamView — Mac App Store since 2014</li>
-          <li>1Clipboard — Mac App Store since 2019</li>
-          <li>Cloud Player — iOS App Store since 2024</li>
-        </ul>
-      </section>
+<article class="resume__item">
+<h3>Sidekick Work</h3>
+<p class="resume__item-meta" data-i18n="aiwork.cardSubtitle">General-purpose AI Work Agent</p>
+<p data-i18n="resume.workDesc">Designed and built the agent orchestration and local execution architecture: natural-language requests become plans, tool actions, validated results, and repair/retry steps. Includes sandboxed local execution, safety checks, an auto-discovered tool registry, and multi-model LLM integration.</p>
+</article><article class="resume__item">
+<h3>Sidekick Office</h3>
+<p class="resume__item-meta" data-i18n="officeai.cardSubtitle">AI Agent for Microsoft Office</p>
+<p data-i18n="resume.officeDesc">Designed and built AI workflows for Excel, Word, PowerPoint, and Outlook. A shared multi-model gateway supports authentication, usage credits, and subscription infrastructure; agents send structured context and apply changes locally.</p>
+</article><article class="resume__item">
+<h3>AI Mail Gateway</h3>
+<p class="resume__item-meta" data-i18n="aimail.cardSubtitle">AI-powered Email Security for Microsoft Exchange</p>
+<p data-i18n="resume.mailDesc">Built an inbound SMTP edge filter for Microsoft Exchange, combining SPF/DKIM/DMARC checks, attachment and URL reputation, LLM-based SCL 0–9 scoring, caching, policy headers, and relay. Demonstrates enterprise integration and security-focused production engineering.</p>
+</article></section>
+<section aria-labelledby="resume-commercial" class="resume__section">
+<h2 data-i18n="resume.commercialTitle" id="resume-commercial">Commercial software</h2>
+<p data-i18n="resume.commercialIntro">Since 2013, designed, shipped, and maintained commercial App Store software. This long-running product engineering work spans release, maintenance, and user-facing delivery across Mac and iOS.</p>
+<ul class="resume__list">
+<li>TreeSize — Mac App Store since 2013</li>
+<li>zCommander — Mac App Store since 2013</li>
+<li>zGallery — Mac App Store since 2013</li>
+<li>DreamView — Mac App Store since 2014</li>
+<li>1Clipboard — Mac App Store since 2019</li>
+<li>Cloud Player — iOS App Store since 2024</li>
+</ul>
+</section>
+<section aria-labelledby="resume-skills" class="resume__section">
+<h2 data-i18n="resume.skillsTitle" id="resume-skills">Skills</h2>
+<div class="resume__skills"><div><h3 data-i18n="resume.agentic">Agentic AI</h3><ul class="resume__list"><li data-i18n="resume.agentic1">LLM agents · planning · tool calling</li><li data-i18n="resume.agentic2">Validation · repair/retry loops</li><li data-i18n="resume.agentic3">Sandboxed local execution · safety checks</li></ul></div><div><h3 data-i18n="resume.platform">AI Platforms &amp; Integration</h3><ul class="resume__list"><li data-i18n="resume.platform1">Multi-provider LLM integration</li><li data-i18n="resume.platform2">OpenAI · Anthropic · Cerebras · Groq</li><li data-i18n="resume.platform3">REST / SSE gateways · structured context</li></ul></div><div><h3 data-i18n="resume.engineering">Software Engineering</h3><ul class="resume__list"><li data-i18n="resume.engineering1">Python · TypeScript · Swift · Objective-C</li><li data-i18n="resume.engineering2">React · Vite · .NET / VSTO</li><li data-i18n="resume.engineering3">Desktop · mobile · web software</li></ul></div><div><h3 data-i18n="resume.enterprise">Microsoft &amp; Enterprise</h3><ul class="resume__list"><li data-i18n="resume.enterprise1">Office.js: Excel · Word · PowerPoint</li><li data-i18n="resume.enterprise2">Outlook VSTO · WebView2</li><li data-i18n="resume.enterprise3">Exchange SMTP · SCL · SPF / DKIM / DMARC</li></ul></div><div><h3 data-i18n="resume.product">Product &amp; Cloud</h3><ul class="resume__list"><li data-i18n="resume.product1">App Store product design · release · maintenance</li><li data-i18n="resume.product2">Cloudflare Pages · Wrangler</li><li data-i18n="resume.product3">Authentication · usage credits · Stripe · BYOK</li></ul></div></div>
+<!-- Add Professional Experience and Education only after employers, roles, dates, and credentials are verified. --></section>
+</div>
+</main>
+<footer class="site-footer">
+<div class="container footer__inner">
+<p class="footer__copy">© Sang Hoon Sung</p>
+<div class="footer__links">
+<a data-i18n="nav.home" href="https://woojooin.github.io/index.html">Home</a>
+<a href="https://www.linkedin.com/in/sanghoons/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+<a href="https://github.com/woojooin" rel="noopener noreferrer" target="_blank">GitHub</a>
+</div>
+</div>
+</footer>
+<script>/**
+ * Locale strings (en / ko)
+ * Product names stay in English.
+ */
+window.PORTFOLIO_I18N = {
+  en: {
+    "meta.title": "Sang Hoon Sung — Senior Software Engineer & Agentic AI",
+    "meta.description":
+      "Sang Hoon Sung — Senior Software Engineer, Agentic AI, and Product Engineering. Portfolio of AI systems and commercial software.",
+    "meta.projectDescription":
+      "{title} — project overview by Sang Hoon Sung.",
+    "meta.projectTitle": "{title} — Sang Hoon Sung",
 
-      <section class="resume__section" aria-labelledby="resume-skills">
-        <h2 id="resume-skills" data-i18n="resume.skillsTitle">Skills</h2>
-        <div class="resume__skills">
-          <div>
-            <h3 data-i18n="skills.ai">AI &amp; Agentic AI</h3>
-            <ul class="resume__list">
-              <li data-i18n="skills.ai1">LLM agents &amp; tool calling</li>
-              <li data-i18n="skills.ai2">Multi-provider LLM integration</li>
-              <li data-i18n="skills.ai3">Prompt &amp; RESULT protocols</li>
-              <li data-i18n="skills.ai4">Local execution sandboxes</li>
-            </ul>
-          </div>
-          <div>
-            <h3 data-i18n="skills.engineering">Software Engineering</h3>
-            <ul class="resume__list">
-              <li data-i18n="skills.eng1">Python · TypeScript · Swift · Objective-C</li>
-              <li data-i18n="skills.eng2">React · Vite · .NET / VSTO</li>
-              <li data-i18n="skills.eng3">Product design to App Store release</li>
-              <li data-i18n="skills.eng4">EN / KO localization</li>
-            </ul>
-          </div>
-          <div>
-            <h3 data-i18n="skills.m365">MS Office</h3>
-            <ul class="resume__list">
-              <li data-i18n="skills.m3651">Office.js add-ins (Word · Excel · PowerPoint)</li>
-              <li data-i18n="skills.m3652">Outlook VSTO + WebView2</li>
-              <li data-i18n="skills.m3653">Exchange SMTP · SCL · transport rules</li>
-              <li data-i18n="skills.m3654">SPF / DKIM / DMARC mail auth</li>
-            </ul>
-          </div>
-          <div>
-            <h3 data-i18n="skills.web">Web &amp; Cloud</h3>
-            <ul class="resume__list">
-              <li data-i18n="skills.web1">Cloudflare Pages · Wrangler</li>
-              <li data-i18n="skills.web3">Credits · Stripe · BYOK</li>
-              <li data-i18n="skills.api1">OpenAI · Anthropic · Cerebras · Groq</li>
-              <li data-i18n="skills.api4">REST / SSE gateways</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-    </div>
-  </main>
+    "a11y.skip": "Skip to content",
+    "a11y.nav": "Primary",
+    "a11y.navToggle": "Toggle navigation",
+    "a11y.themeToDark": "Switch to dark mode",
+    "a11y.themeToLight": "Switch to light mode",
+    "a11y.langSwitch": "Language",
 
-  <footer class="site-footer">
-    <div class="container footer__inner">
-      <p class="footer__copy">&copy; Sang Hoon Sung</p>
-      <div class="footer__links">
-        <a href="index.html" data-i18n="nav.home">Home</a>
-        <a href="https://www.linkedin.com/in/sanghoons/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://github.com/woojooin" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </div>
-    </div>
-  </footer>
+    "nav.home": "Home",
+    "nav.projects": "Projects",
+    "nav.skills": "Skills",
+    "nav.about": "About",
+    "nav.contact": "Contact",
 
-  <script src="js/i18n.js"></script>
-  <script src="js/main.js"></script>
+    "hero.role1": "Senior Software Engineer",
+    "hero.role2": "AI Agents",
+    "hero.role3": "Product Engineering",
+    "hero.intro":
+      "Building production AI agents that execute real-world work across desktop, Microsoft Office, and enterprise systems.",
+    "hero.ctaProjects": "View Projects",
+    "hero.ctaResume": "Resume",
+    "hero.ctaLinkedIn": "LinkedIn",
+
+    "projects.label": "Selected Work",
+    "projects.title": "Featured Projects",
+    "projects.intro":
+      "Production-oriented AI products, enterprise systems, and commercial apps shipped to customers.",
+    "projects.aiTitle": "AI & Agentic AI",
+    "projects.aiNote": "Current focus",
+    "projects.commercialTitle": "Commercial Software",
+    "projects.commercialNote": "Shipped products",
+    "projects.descPlaceholder": "[Short project description will be added here.]",
+    "projects.techPlaceholder": "Tech: [Technologies to be listed]",
+    "projects.view": "View Project",
+    "projects.screenshot": "Screenshot placeholder",
+
+    "experience.label": "Career",
+    "experience.title": "Experience",
+    "experience.intro":
+      "Professional history will be listed here with verified employers, roles, and dates.",
+    "experience.dates": "[Dates]",
+    "experience.role": "[Role / Title]",
+    "experience.org": "[Company / Organization]",
+    "experience.placeholder": "[Career history will be added here]",
+
+    "skills.label": "Capabilities",
+    "skills.title": "Skills",
+    "skills.intro":
+      "Capabilities drawn from shipped App Store products and current AI agent systems.",
+    "skills.ai": "AI & Agentic AI",
+    "skills.engineering": "Software Engineering",
+    "skills.m365": "MS Office",
+    "skills.apple": "macOS & iOS",
+    "skills.web": "Web & Cloud",
+    "skills.apis": "APIs & Infrastructure",
+    "skills.ai1": "LLM agents & tool calling",
+    "skills.ai2": "Multi-provider LLM integration",
+    "skills.ai3": "Prompt & RESULT protocols",
+    "skills.ai4": "Local execution sandboxes",
+    "skills.eng1": "Python · TypeScript · Swift · Objective-C",
+    "skills.eng2": "React · Vite · .NET / VSTO",
+    "skills.eng3": "Product design to App Store release",
+    "skills.eng4": "EN / KO localization",
+    "skills.m3651": "Office.js add-ins (Word · Excel · PowerPoint)",
+    "skills.m3652": "Outlook VSTO + WebView2",
+    "skills.m3653": "Exchange SMTP · SCL · transport rules",
+    "skills.m3654": "SPF / DKIM / DMARC mail auth",
+    "skills.apple1": "AppKit / Cocoa · Objective-C",
+    "skills.apple2": "Swift · UIKit / iOS",
+    "skills.apple3": "Mac & iOS App Store shipping",
+    "skills.apple4": "File managers · media · utilities",
+    "skills.web1": "Cloudflare Pages · Wrangler",
+    "skills.web2": "OAuth (Google · Microsoft)",
+    "skills.web3": "Credits · Stripe · BYOK",
+    "skills.web4": "Drive · Dropbox · OneDrive · iCloud",
+    "skills.api1": "OpenAI · Anthropic · Cerebras · Groq",
+    "skills.api2": "aiosmtpd · SMTP relays",
+    "skills.api3": "VirusTotal · APIVoid · GeoIP",
+    "skills.api4": "REST / SSE gateways",
+
+    "about.label": "Profile",
+    "about.title": "About",
+    "about.p1":
+      "I am a senior software engineer and product builder with extensive experience shipping commercial software across desktop, mobile, web, cloud, and enterprise environments.",
+    "about.p2":
+      "My current focus is Agentic AI — building production systems that move beyond chat to plan, execute, recover, and complete real-world work.",
+    "about.p3":
+      "I am the creator of Sidekick, a family of AI products spanning desktop work automation, Microsoft Office, and browser workflows.",
+    "about.placeholder": "[A more detailed biography will be added here.]",
+
+    "contact.label": "Get in touch",
+    "contact.title": "Contact",
+    "contact.intro":
+      "Open to senior and staff-level software engineering and AI roles. Prefer LinkedIn for professional inquiries.",
+    "contact.emailPlaceholder": "woojooin@outlook.com",
+    "contact.resume": "Resume",
+    "contact.resumeLink": "View / print CV",
+
+    "project.back": "← Back to Projects",
+    "project.tagline": "[One-line project description will be added here.]",
+    "project.heroImage": "Hero image placeholder",
+    "project.overview": "Overview",
+    "project.overviewPlaceholder": "[Project overview will be added here.]",
+    "project.features": "Key Features",
+    "project.featurePlaceholder": "[Feature will be added here]",
+    "project.technology": "Technology",
+    "project.techItemPlaceholder": "[Technology stack will be listed here]",
+    "project.architecture": "Architecture",
+    "project.architecturePlaceholder": "[Architecture notes will be added here.]",
+    "project.role": "Development / My Role",
+    "project.rolePlaceholder": "[Role and contributions will be added here.]",
+    "project.screenshots": "Screenshots",
+    "project.video": "Demo Video",
+    "project.videoPlaceholder": "Demo video placeholder",
+    "project.links": "Links",
+    "project.linkProduct": "[App Store / Product link]",
+    "project.linkRepo": "[Repository / Docs link]",
+    "project.linksNote": "[External links will be added when available.]",
+    "project.problem": "Problem",
+    "project.results": "Results",
+    "project.decisions": "Design decisions",
+    "project.appStore": "View on App Store",
+    "project.productSite": "Visit product site",
+    "project.watchDemo": "Watch demo",
+    "project.watchDemo90": "Watch 90-sec Demo",
+    "project.tryDownload": "Try / Download",
+    "officeai.status": "In production",
+    "officeai.badge": "In production",
+    "officeai.maturity":
+      "Multi-model AI gateway · Authentication · Usage credits · Subscription infrastructure",
+    "officeai.cardSubtitle": "AI Agent for Microsoft Office",
+    "officeai.tryDownload": "Try / Download Sidekick Office",
+    "aiwork.status": "In production",
+    "aiwork.badge": "In production",
+    "aiwork.maturity": "Plan → Run → Repair · Local execution · Multi-provider LLM",
+    "aiwork.cardSubtitle": "General-purpose AI Work Agent",
+    "aiwork.tryDownload": "Try / Download Sidekick Work",
+    "aimail.badge": "Production system · Enterprise deployment",
+    "aimail.maturity": "SMTP edge · SPF/DKIM/DMARC · LLM SCL · Exchange relay",
+    "aimail.cardSubtitle": "AI-powered Email Security for Microsoft Exchange",
+    "project.mediaLater": "Screenshots and demo video will be added when available.",
+
+    "officeai.metaDescription":
+      "Sidekick Office (Sidekick AI) — Word, Excel, PowerPoint, and Outlook agents for MS Office. Plain-language chat; structured context only; changes run locally.",
+    "officeai.eyebrow": "MS Office · AI Agent",
+    "officeai.subtitle": "AI Agent for Microsoft Office",
+    "officeai.tagline":
+      "Ask in plain language inside Office and Outlook — the agent plans with structured context, then runs changes locally on your PC.",
+    "officeai.factHost": "Word · Excel · PowerPoint · Outlook",
+    "officeai.factPlatform": "Windows · Mac · Web",
+    "officeai.factPrivacy": "Privacy-first context",
+    "officeai.factLang": "EN · KO",
+    "officeai.cardDesc":
+      "MS Office AI agent for Word, Excel, PowerPoint, and Outlook. Ask in plain language to clean tables, translate selections, build slides, or summarize mail — only structured context goes to the model, and changes run locally on your PC.",
+    "officeai.cardTech": "Office.js · VSTO · React · Gateway",
+    "officeai.valueTitle": "Chat in Office. Change the real work.",
+    "officeai.valueIntro":
+      "Most Office AI workflows upload the whole file or leave you copying answers back in. Sidekick AI keeps workbooks, documents, and mail on your PC — only structured metadata goes to the model.",
+    "officeai.value1Title": "Ask in ordinary language",
+    "officeai.value1Desc":
+      "Clean a table, translate a selection, build slides, or summarize the open mail — without leaving Word, Excel, PowerPoint, or Outlook.",
+    "officeai.value2Title": "Privacy-first context",
+    "officeai.value2Desc":
+      "The agent sends headers, samples, short structure, or mail preview — not the entire workbook, document, or mailbox. API keys stay on the gateway server.",
+    "officeai.value3Title": "Local execution",
+    "officeai.value3Desc":
+      "The model plans; Office.js or the Outlook host runs on your machine. Generated scripts cannot call the network and only use allowed helpers.",
+    "officeai.featExcelLabel": "Excel",
+    "officeai.featExcelTitle": "Plan from a sample. Write a new result sheet.",
+    "officeai.featExcelDesc":
+      "Excel locks the active sheet at send time, sends headers plus a few sample rows, then creates a result sheet — classification, charts, summaries — while keeping the source intact.",
+    "officeai.featExcel1": "New result sheets with suggested short names",
+    "officeai.featExcel2": "Tables, conditional formatting, and charts",
+    "officeai.featExcel3": "Lineage tracking so prior results are not overwritten",
+    "officeai.featWordLabel": "Word",
+    "officeai.featWordTitle": "Edit the selection in place. Keep the layout.",
+    "officeai.featWordDesc":
+      "Word focuses on partial edits — selected text, quoted dialogue, or a named passage. In-place transforms replace segments without rebuilding the whole document.",
+    "officeai.featWord1": "Translate or rewrite selection in place",
+    "officeai.featWord2": "Style updates such as bold or highlight on matches",
+    "officeai.featWord3": "Layout and styles preserved where possible",
+    "officeai.featPptLabel": "PowerPoint",
+    "officeai.featPptTitle": "Rewrite shapes — or build a deck from a long draft.",
+    "officeai.featPptDesc":
+      "PowerPoint works at the text-shape level for in-place edits, or runs a two-stage slides pipeline: topic boundaries first, then line packing and slide creation on the host.",
+    "officeai.featPpt1": "In-place text updates on existing shapes",
+    "officeai.featPpt2": "Long paste or attachment → topic-based slides",
+    "officeai.featPpt3": "Repack by font size and lines per slide",
+    "officeai.featOutlookLabel": "Outlook",
+    "officeai.featOutlookTitle": "Read the open mail. Summarize, analyze, draft replies.",
+    "officeai.featOutlookDesc":
+      "The Outlook desktop panel works from the open item’s preview metadata — subject, senders, body preview, attachment names — then chats, runs structured mail analysis, or drafts reply text in compose.",
+    "officeai.featOutlook1": "Summaries, action items, importance, and spam risk",
+    "officeai.featOutlook2": "Reply / Reply all / Forward shortcuts from the panel",
+    "officeai.featOutlook3": "Compose-only writes; read mode stays analysis and chat",
+    "officeai.stepsTitle": "How it works",
+    "officeai.step1Title": "Gather structured context",
+    "officeai.step1Desc":
+      "The host collects metadata for the active Excel sheet, Word session, PowerPoint shapes, or open Outlook item — not the full file or mailbox.",
+    "officeai.step2Title": "Plan through the gateway",
+    "officeai.step2Desc":
+      "A single complete API call reaches the Office AI Gateway. The model returns a RESULT protocol (chat, document, inplace, or slides).",
+    "officeai.step3Title": "Execute locally in Office",
+    "officeai.step3Desc":
+      "Office.js or the Outlook host applies the change on your PC — new sheets, in-place text, slides, or compose drafts — with network calls blocked in generated scripts.",
+    "officeai.availTitle": "Sidekick AI for MS Office",
+    "officeai.availDesc":
+      "Office Add-in for Word, Excel, and PowerPoint on Windows, Mac, and Office on the web — plus an Outlook desktop panel. Multi-model gateway, monthly credits, and BYOK on paid plans.",
+    "officeai.role":
+      "I design and build Sidekick AI for Office and Outlook end to end — host adapters for Word, Excel, PowerPoint, and Outlook, the agent RESULT protocol, local execution, and the product experience on top of the Office AI Gateway.",
+    "officeai.builtWith":
+      "Built with React, TypeScript, Vite, Office.js, and Outlook VSTO + WebView2. Deployed via Cloudflare Pages with Office add-in manifests for sideload and catalog install.",
+    "officeai.videoOpen": "Play demo videos",
+    "officeai.videoOpenExcel": "Play Excel demo",
+    "officeai.videoOpenWord": "Play Word demo",
+    "officeai.videoOpenPpt": "Play PowerPoint demo",
+    "officeai.videoTitle": "Demo videos",
+    "officeai.videoClose": "Close video",
+    "officeai.videoTabs": "Demo clips",
+    "officeai.videoTabExcel1": "Excel 1",
+    "officeai.videoTabExcel2": "Excel 2",
+    "officeai.videoTabWord": "Word",
+    "officeai.videoTabPpt": "PowerPoint",
+
+    "aimail.metaDescription":
+      "AI Mail Gateway (AiMailProxy) — an AI-powered inbound spam and phishing filter that sits in front of Microsoft Exchange, assigns SCL 0–9, and relays with risk headers.",
+    "aimail.eyebrow": "Exchange · AI Security",
+    "aimail.subtitle": "AI-powered Email Security for Microsoft Exchange",
+    "aimail.tagline":
+      "An inbound SMTP proxy that inspects mail before Exchange — layered auth, link and attachment scans, and LLM-based SCL 0–9 for transport rules.",
+    "aimail.factRole": "Inbound SMTP proxy",
+    "aimail.factStack": "Python · aiosmtpd",
+    "aimail.factScl": "SCL 0–9 · Exchange rules",
+    "aimail.factDeploy": "On-prem edge",
+    "aimail.cardDesc":
+      "AI-powered inbound spam and phishing filter in front of Microsoft Exchange. Layered auth and scans, LLM SCL 0–9, then relay with policy headers.",
+    "aimail.cardTech": "Python · aiosmtpd · Exchange · LLM",
+    "aimail.valueTitle": "Filter at the edge. Classify for Exchange.",
+    "aimail.valueIntro":
+      "Known-bad senders can be rejected at SMTP with 550. Everything else is analyzed, tagged with SCL and risk headers, then relayed so Exchange transport rules can junk or quarantine without rewriting the mailbox path.",
+    "aimail.value1Title": "Layered defense",
+    "aimail.value1Desc":
+      "Blacklist and whitelist, SPF/DKIM/DMARC, attachment and URL reputation, then AI SCL — no single signal decides alone.",
+    "aimail.value2Title": "Exchange-native SCL",
+    "aimail.value2Desc":
+      "AI assigns Microsoft-compatible SCL 0–9 plus optional Subject prefixes and custom headers for existing transport rules.",
+    "aimail.value3Title": "Cost-aware AI",
+    "aimail.value3Desc":
+      "A body classification cache confirms repeat campaigns after a few analyses, then skips further LLM calls for matching mail.",
+    "aimail.featPipelineLabel": "Inspection pipeline",
+    "aimail.featPipelineTitle": "Every message gets a full Check log.",
+    "aimail.featPipelineDesc":
+      "After SMTP DATA, the proxy parses the message, runs auth and scans, classifies with AI or cache, applies SCL floors, then relays — with per-check outcomes visible in the console and daily logs.",
+    "aimail.featPipeline1": "Auth, blacklist, peer IP, attachments, URL targets",
+    "aimail.featPipeline2": "Cache hit/miss and AI SCL with latency",
+    "aimail.featPipeline3": "Header write and SMTP relay status (250 / 550)",
+    "aimail.featAiLabel": "AI SCL",
+    "aimail.featAiTitle": "LLM classification aligned to Exchange SCL.",
+    "aimail.featAiDesc":
+      "Cerebras or Groq classifies subject, senders, recipients, attachment names, and a body preview into SCL 0–9 via a hot-reloaded prompt. Auth failures, brand impersonation, and high-risk attachments raise floors so weak signals still raise the score before relay.",
+    "aimail.featAi1": "Providers: Cerebras / Groq (key-based selection)",
+    "aimail.featAi2": "Whitelist + auth policy can skip AI while links and attachments still run",
+    "aimail.featAi3": "Defer queue when AI is temporarily unavailable",
+    "aimail.featThreatLabel": "Threat signals",
+    "aimail.featThreatTitle": "Links, attachments, and peer reputation.",
+    "aimail.featThreatDesc":
+      "URLs are checked with APIVoid then VirusTotal. Attachments use banned extensions, zip recursion, magic-byte filetype detection, and oletools macro analysis. SMTP peer IPs can be scored on VirusTotal, including recovery of originating IP when mail arrives via a trusted TMES gateway.",
+    "aimail.featThreat1": "X-AiMailProxy-LinkRisk / PeerRisk / Malicious headers",
+    "aimail.featThreat2": "Optional composite 550 when auth fail + threat + high body SCL align",
+    "aimail.featThreat3": "Hot-reload blacklist, whitelist, prompt, and spam_level files",
+    "aimail.stepsTitle": "How it works",
+    "aimail.step1Title": "Receive at the edge",
+    "aimail.step1Desc":
+      "Inbound MX or connector delivers SMTP to AiMailProxy before Exchange. Exact recipient blacklist can reject at RCPT.",
+    "aimail.step2Title": "Inspect and classify",
+    "aimail.step2Desc":
+      "Whitelist/blacklist, auth, attachments, links, cache or AI SCL, then floors and optional composite reject.",
+    "aimail.step3Title": "Relay with policy hooks",
+    "aimail.step3Desc":
+      "Add X-AiMailProxy-* headers and Subject prefixes, then SMTP-relay to Exchange for Junk, phishing, or quarantine rules.",
+    "aimail.availTitle": "Built for on-prem Exchange",
+    "aimail.availDesc":
+      "Python SMTP edge service with monitor mode for safe rollout, daily stats and optional report mail, spammer accumulation, and Windows-friendly operation.",
+    "aimail.role":
+      "I design and build AiMailProxy end to end — the SMTP receive/relay path, multi-layer inspection pipeline, AI SCL protocol and caching, Exchange header integration, and operational tooling for logs, stats, and hot-reloaded policy files.",
+    "aimail.builtWith":
+      "Built with Python, aiosmtpd, aiohttp, pyspf, dkimpy, VirusTotal / APIVoid integrations, and LLM APIs (Cerebras / Groq).",
+
+    "aiwork.metaDescription":
+      "Sidekick Work — a local agent that does the work you ask for. Describe the task; it plans, runs it on your machine, and saves the result.",
+    "aiwork.eyebrow": "Local CLI · Agentic AI",
+    "aiwork.subtitle": "General-purpose AI Work Agent",
+    "aiwork.tagline":
+      "Describe the job in plain language. The agent plans it, runs it on your machine, and delivers the result — not just advice.",
+    "aiwork.factMode": "Chat · Do modes",
+    "aiwork.factProviders": "6 LLM providers",
+    "aiwork.factSafety": "Safe local execution",
+    "aiwork.factTools": "Files · Office · Images",
+    "aiwork.cardDesc":
+      "Local agent that does the work you ask for — plans the job, runs it on your machine, and delivers the result. Not just chat.",
+    "aiwork.cardTech": "Python · Multi-LLM · Local execution",
+    "aiwork.valueTitle": "You ask. It does the work.",
+    "aiwork.valueIntro":
+      "Chatbots stop at suggestions. Sidekick Work executes — finding files, transforming documents and images, producing outputs under a sandboxed attempt folder, and retrying when a step fails.",
+    "aiwork.value1Title": "Talk or do",
+    "aiwork.value1Desc":
+      "Each turn chooses chat for Q&A or do-mode to carry out the task on your PC. Force either with /chat or /script.",
+    "aiwork.value2Title": "Runs on your machine",
+    "aiwork.value2Desc":
+      "Work happens locally in the project virtualenv. Reads can go anywhere; writes stay inside the current attempt folder so originals stay read-only.",
+    "aiwork.value3Title": "Ready-made helpers",
+    "aiwork.value3Desc":
+      "Built-in tools for Excel, Word, PowerPoint, PDF, and images are auto-cataloged so common jobs finish without ad-hoc package hunting.",
+    "aiwork.featLoopLabel": "Execution loop",
+    "aiwork.featLoopTitle": "Plan, run, repair — until the job is done.",
+    "aiwork.featLoopDesc":
+      "The agent streams its plan, carries out the steps, installs missing packages after confirmation when needed, and can automatically repair and retry up to a configured limit.",
+    "aiwork.featLoop1": "Streaming plan with a Thinking indicator",
+    "aiwork.featLoop2": "Optional confirm before packages or file-changing work",
+    "aiwork.featLoop3": "Automatic repair retries on failure",
+    "aiwork.featSafetyLabel": "Safe execution",
+    "aiwork.featSafetyTitle": "It works on copies — originals stay untouched.",
+    "aiwork.featSafetyDesc":
+      "Before run, static checks flag delete, write, and rename risks. At runtime, filesystem guards confine changes to the attempt directory. Transforms read sources and save new artifacts — Downloads and Desktop files are never overwritten in place.",
+    "aiwork.featSafety1": "Pre-run risk scan for destructive actions",
+    "aiwork.featSafety2": "Write root under output/<timestamp>_attemptN/",
+    "aiwork.featSafety3": "Optional consent when file changes are detected",
+    "aiwork.featToolsLabel": "What it can do",
+    "aiwork.featToolsTitle": "Files, Office docs, and images — end to end.",
+    "aiwork.featToolsDesc":
+      "Attach folders with /attach, then ask for real outcomes: resize photos, reshape spreadsheets, extract PDF text, build slides. Helpers under agent_tools/ register themselves into the agent catalog at runtime.",
+    "aiwork.featTools1": "Excel · Word · PowerPoint · PDF · Image helpers",
+    "aiwork.featTools2": "/attach paths injected into context",
+    "aiwork.featTools3": "Persistent memory.txt for standing preferences",
+    "aiwork.stepsTitle": "How it works",
+    "aiwork.step1Title": "Describe the job",
+    "aiwork.step1Desc":
+      "Say what you need, optionally /attach files or folders, and pick a model with /model.",
+    "aiwork.step2Title": "Agent plans the work",
+    "aiwork.step2Desc":
+      "It chooses chat or do-mode, streams the plan, and uses conversation history for follow-ups like “do the same for the next folder.”",
+    "aiwork.step3Title": "It runs and delivers",
+    "aiwork.step3Desc":
+      "Work executes locally; results land in the attempt folder. On failure it repairs and retries within the limit you set.",
+    "aiwork.availTitle": "A local agent that finishes the task",
+    "aiwork.availDesc":
+      "OpenAI, Claude, Grok, Cerebras, Kimi, and DeepSeek via .env. Windows, macOS, and Linux with setup/run scripts that keep everything inside .venv. Python is the engine under the hood — the product is getting the work done.",
+    "aiwork.role":
+      "I design and build Sidekick Work end to end — the ask-and-execute loop, streaming CLI, multi-provider LLM client, local execution sandbox and safety scans, auto-discovered tool registry, and the operator workflow around history, attachments, and saved runs.",
+    "aiwork.builtWith":
+      "Built with Python, OpenAI & Anthropic SDKs, prompt_toolkit, pandas/openpyxl, python-docx, python-pptx, pypdf, and Pillow.",
+    "aiwork.videoOpen": "Play demo videos",
+    "aiwork.videoOpenLoop": "Play execution loop demo",
+    "aiwork.videoTitle": "Demo videos",
+    "aiwork.videoClose": "Close video",
+    "aiwork.videoTabs": "Demo clips",
+    "aiwork.videoTab1": "90-sec Demo",
+    "aiwork.videoTab2": "Plan → Run → Repair",
+
+    "resume.metaTitle": "Resume — Sang Hoon Sung",
+    "resume.metaDescription":
+      "Resume of Sang Hoon Sung — Senior Software Engineer building production AI agents and commercial software.",
+    "resume.print": "Save as PDF",
+    "resume.summaryTitle": "Summary",
+    "resume.productsTitle": "Selected products",
+    "resume.commercialTitle": "Commercial software",
+    "resume.skillsTitle": "Skills",
+    "resume.contactTitle": "Contact",
+    "resume.officeDesc":
+      "Production Microsoft Office agent with a multi-model gateway, authentication, usage credits, and subscription infrastructure. Structured context only; changes run locally.",
+    "resume.workDesc":
+      "General-purpose local work agent. Natural-language request → plan → execute → repair/retry → delivered result. Sandboxed writes and destructive-action checks.",
+    "resume.mailDesc":
+      "Inbound SMTP edge filter for Microsoft Exchange: SPF/DKIM/DMARC, attachment/URL reputation, LLM SCL 0–9, cache, policy headers, then relay.",
+    "resume.commercialIntro":
+      "Shipped and maintained App Store products since 2013 — the same product-engineering discipline now applied to AI agents.",
+
+    "treesize.metaDescription":
+      "TreeSize for Mac — see what is using your disk space, find large and duplicate files, and reclaim storage. Available on the Mac App Store.",
+    "treesize.eyebrow": "Mac App Store · Utilities",
+    "treesize.subtitle": "Disk Usage Analysis Tool",
+    "treesize.tagline":
+      "See what is using space on your Mac — then clean it up with confidence.",
+    "treesize.ctaGallery": "See screenshots",
+    "treesize.factPrice": "$3.99",
+    "treesize.factOs": "macOS 11.0+",
+    "treesize.factSince": "Since 2013",
+    "treesize.factLang": "EN · KO · DE · FR · IT",
+    "treesize.cardDesc":
+      "Mac disk usage analyzer on the App Store. Scan folders, visualize with tree maps and charts, find large and duplicate files, and reclaim space.",
+    "treesize.cardTech": "macOS · App Store · since 2013",
+    "treesize.valueTitle": "Find space. Understand it. Reclaim it.",
+    "treesize.valueIntro":
+      "Finder is great for opening files — not for answering where your disk space went. TreeSize makes that answer obvious.",
+    "treesize.value1Title": "See where space goes",
+    "treesize.value1Desc":
+      "Scan any folder or volume and browse a size-sorted tree with color bars, so large folders stand out immediately.",
+    "treesize.value2Title": "Visualize at a glance",
+    "treesize.value2Desc":
+      "Switch between tree map and pie chart views to understand composition by folder or file category — Audio, Video, Picture, Document, Archive, and more.",
+    "treesize.value3Title": "Clean what matters",
+    "treesize.value3Desc":
+      "Jump to Top 100 files, find likely duplicates, Quick Look contents, reveal in Finder, or move items to Trash — without leaving the app.",
+    "treesize.featScanLabel": "Scan & explore",
+    "treesize.featScanTitle": "Drag a folder. See the whole picture.",
+    "treesize.featScanDesc":
+      "Drop a folder or disk onto TreeSize — or open it from the toolbar — and watch the hierarchy fill in as the scan runs. Sort by size, name, or date. Live progress and free/total disk indicators keep you oriented.",
+    "treesize.featScan1": "Size-sorted folder tree with color bars",
+    "treesize.featScan2": "Warnings for system root and cloud-synced folders",
+    "treesize.featScan3": "Finder Services: “TreeSize Calculate…” from context menus",
+    "treesize.featCleanLabel": "Insights & cleanup",
+    "treesize.featCleanTitle": "Largest files and duplicates, ready to act on.",
+    "treesize.featCleanDesc":
+      "After a scan, open Top 100 Biggest Files to spot space hogs quickly. The duplicate finder groups candidates by name and size so you can review potential savings before deleting.",
+    "treesize.featClean1": "Top 100 biggest files panel",
+    "treesize.featClean2": "Duplicate candidates with potential savings",
+    "treesize.featClean3": "Quick Look, Show in Finder, Open, Move to Trash",
+    "treesize.featShareLabel": "Share results",
+    "treesize.featShareTitle": "Export an HTML report when you need to share.",
+    "treesize.featShareDesc":
+      "Generate a report with the folder tree and charts — useful when you want to review results outside the app or share findings with someone else.",
+    "treesize.stepsTitle": "How it works",
+    "treesize.step1Title": "Choose a folder or disk",
+    "treesize.step1Desc":
+      "Drag and drop, open from the toolbar, or launch from Finder’s Services menu.",
+    "treesize.step2Title": "Explore the results",
+    "treesize.step2Desc":
+      "Browse the tree, switch tree map or pie chart, and drill into the folders that matter.",
+    "treesize.step3Title": "Clean up",
+    "treesize.step3Desc":
+      "Review Top files or duplicates, preview with Quick Look, then remove what you no longer need.",
+    "treesize.galleryTitle": "In the app",
+    "treesize.galleryIntro": "Screenshots from the Mac App Store listing.",
+    "treesize.cap1": "Overview, categories, and scan summary",
+    "treesize.cap2": "Top 100 biggest files",
+    "treesize.cap3": "Live scan progress",
+    "treesize.availTitle": "Available on the Mac App Store",
+    "treesize.availDesc":
+      "Native macOS utility by woojooin. Continuously updated — including faster scanning, tree map, pie charts, duplicate finder, and HTML reports.",
+    "treesize.role":
+      "I am the author and developer of TreeSize for Mac. I design, ship, and maintain the product end to end — from scanning and visualization to App Store releases and localization.",
+    "treesize.builtWith": "Built as a native Mac app with Objective-C and AppKit.",
+
+    "zcommander.metaDescription": "zCommander for Mac — a dual-pane file manager with tabs, search, zip, and multithreaded file operations. Available on the Mac App Store.",
+    "zcommander.eyebrow": "Mac App Store · Productivity",
+    "zcommander.subtitle": "Advanced File Manager",
+    "zcommander.tagline": "A dual-pane Mac file manager for power users — tabs, speed, and keyboard-first workflows.",
+    "zcommander.ctaGallery": "See screenshots",
+    "zcommander.factPrice": "$9.99",
+    "zcommander.factOs": "macOS 10.15+",
+    "zcommander.factSince": "Since 2013",
+    "zcommander.factLang": "EN · KO",
+    "zcommander.cardDesc": "Dual-pane Mac file manager with tabs, fast search, zip, and multithreaded copy/move/delete. On the Mac App Store since 2013.",
+    "zcommander.cardTech": "macOS · App Store · since 2013",
+    "zcommander.valueTitle": "Two panes. More control.",
+    "zcommander.valueIntro": "Built for people who outgrow Finder — dual panes, tabs, fast search, and file operations that keep pace with real work.",
+    "zcommander.value1Title": "Navigate faster",
+    "zcommander.value1Desc": "Classic dual-pane layout with multiple tabs per pane, so source and destination stay visible while you work.",
+    "zcommander.value2Title": "Find what you need",
+    "zcommander.value2Desc": "Type-to-locate in the list, advanced filters, and content-based search — with full Korean language support for quick typing.",
+    "zcommander.value3Title": "Move work quickly",
+    "zcommander.value3Desc": "Multithreaded copy, move, and delete, plus built-in zip compress/extract, bookmarks, history, and Quick Look previews.",
+    "zcommander.featALabel": "Interface",
+    "zcommander.featATitle": "Dual panes, tabs, and views that fit how you work.",
+    "zcommander.featADesc": "Switch between list and thumbnail views, apply color themes, and color-code file extensions so important files stand out at a glance.",
+    "zcommander.featA1": "Dual-pane interface with multiple tabs",
+    "zcommander.featA2": "List and thumbnail view modes",
+    "zcommander.featA3": "Custom themes and extension coloring",
+    "zcommander.featBLabel": "File operations",
+    "zcommander.featBTitle": "Copy, move, delete — built for volume.",
+    "zcommander.featBDesc": "File operations run with multithreading for speed. Preview almost any file with a click, use keyboard shortcuts or mouse actions, and keep frequent folders close with bookmarks and history.",
+    "zcommander.featB1": "Multithreaded copy, move, and delete",
+    "zcommander.featB2": "Quick previews and keyboard shortcuts",
+    "zcommander.featB3": "Bookmarks, history, and Finder Services (“Reveal in zCommander”)",
+    "zcommander.featCLabel": "Archives",
+    "zcommander.featCTitle": "Zip without leaving the app.",
+    "zcommander.featCDesc": "Compress and extract archives directly in zCommander — useful when you are organizing media libraries or project folders.",
+    "zcommander.stepsTitle": "How it works",
+    "zcommander.step1Title": "Open your folders",
+    "zcommander.step1Desc": "Use dual panes and tabs to keep source and destination side by side.",
+    "zcommander.step2Title": "Find and select",
+    "zcommander.step2Desc": "Type to jump in the list, filter results, or search by content.",
+    "zcommander.step3Title": "Act with confidence",
+    "zcommander.step3Desc": "Copy, move, delete, zip, preview, or reveal in Finder — without breaking your flow.",
+    "zcommander.galleryTitle": "In the app",
+    "zcommander.galleryIntro": "Screenshots from the Mac App Store listing.",
+    "zcommander.cap1": "Dual-pane browsing",
+    "zcommander.cap2": "Tabs, themes, and file views",
+    "zcommander.cap3": "Search and file operations",
+    "zcommander.cap4": "Thumbnails and previews",
+    "zcommander.availTitle": "Available on the Mac App Store",
+    "zcommander.availDesc": "Native macOS file manager by woojooin. Continuously updated for power-user workflows — dual panes, tabs, search, zip, and fast file operations.",
+    "zcommander.role": "I am the author and developer of zCommander for Mac. I design, ship, and maintain the product end to end — dual-pane UI, file operations, search, localization, and App Store releases.",
+    "zcommander.builtWith": "Built as a native Mac app with Objective-C and Cocoa.",
+
+    "zgallery.metaDescription": "zGallery for Mac — browse, view, and edit images with thumbnails, slideshow, and built-in file management. Available on the Mac App Store.",
+    "zgallery.eyebrow": "Mac App Store · Photo & Video",
+    "zgallery.subtitle": "Elegant Image Viewer",
+    "zgallery.tagline": "Browse, view, and lightly edit images on your Mac — without switching to a separate file manager.",
+    "zgallery.ctaGallery": "See screenshots",
+    "zgallery.factPrice": "$9.99",
+    "zgallery.factOs": "macOS 10.15+",
+    "zgallery.factSince": "Since 2013",
+    "zgallery.factLang": "EN · KO",
+    "zgallery.cardDesc": "Mac image viewer with thumbnails, slideshow, light editing, and built-in file management. On the Mac App Store since 2013.",
+    "zgallery.cardTech": "macOS · App Store · since 2013",
+    "zgallery.valueTitle": "See images. Manage them in place.",
+    "zgallery.valueIntro": "zGallery combines fast image browsing with the file actions you need — copy, move, delete, drag and drop — so viewing and organizing stay in one place.",
+    "zgallery.value1Title": "Browse quickly",
+    "zgallery.value1Desc": "Thumbnail browsing for common image types (and video thumbnails), plus a folder tree to move through disks without losing context.",
+    "zgallery.value2Title": "View the way you want",
+    "zgallery.value2Desc": "Zoom, fullscreen, and slideshow make it easy to review photos and image collections at speed.",
+    "zgallery.value3Title": "Edit and organize",
+    "zgallery.value3Desc": "Rotate, flip, resize, change format, extract GIF frames, set wallpaper, and manage files with Finder-like drag and drop.",
+    "zgallery.featALabel": "Browsing",
+    "zgallery.featATitle": "Thumbnails and folders that stay out of the way.",
+    "zgallery.featADesc": "Open a folder and move through images with thumbnail browsing and a tree panel. Folder thumbnails help you spot collections quickly.",
+    "zgallery.featA1": "Common image formats supported",
+    "zgallery.featA2": "Thumbnail browsing, including video thumbnails",
+    "zgallery.featA3": "Folder tree and folder-with-images thumbnails",
+    "zgallery.featBLabel": "Viewing",
+    "zgallery.featBTitle": "Zoom, fullscreen, slideshow.",
+    "zgallery.featBDesc": "Review images comfortably — zoom in and out, go fullscreen, or run a slideshow when you need to go through a set of photos.",
+    "zgallery.featB1": "Zoom in / out",
+    "zgallery.featB2": "Fullscreen mode",
+    "zgallery.featB3": "Slideshow",
+    "zgallery.featCLabel": "Editing & files",
+    "zgallery.featCTitle": "Light edits and file actions in one app.",
+    "zgallery.featCDesc": "Rotate, flip, resize, convert format, extract frames from animated GIFs, set the desktop wallpaper, and copy, move, or delete — including Copy & Paste and Drag & Drop like Finder.",
+    "zgallery.stepsTitle": "How it works",
+    "zgallery.step1Title": "Open a folder",
+    "zgallery.step1Desc": "Browse with thumbnails and the folder tree to find the images you need.",
+    "zgallery.step2Title": "View and review",
+    "zgallery.step2Desc": "Zoom, go fullscreen, or start a slideshow to move through the set.",
+    "zgallery.step3Title": "Edit or organize",
+    "zgallery.step3Desc": "Apply light edits, set wallpaper, or copy, move, and delete without leaving zGallery.",
+    "zgallery.galleryTitle": "In the app",
+    "zgallery.galleryIntro": "Screenshots from the Mac App Store listing.",
+    "zgallery.cap1": "Image browsing overview",
+    "zgallery.cap2": "Thumbnails and folder tree",
+    "zgallery.cap3": "Fullscreen viewing",
+    "zgallery.cap4": "Editing and file actions",
+    "zgallery.availTitle": "Available on the Mac App Store",
+    "zgallery.availDesc": "Native macOS image viewer by woojooin. Continuously updated for fast browsing, viewing, light editing, and in-app file management.",
+    "zgallery.role": "I am the author and developer of zGallery for Mac. I design, ship, and maintain the product end to end — browsing, viewing, light editing, file actions, localization, and App Store releases.",
+    "zgallery.builtWith": "Built as a native Mac app with Objective-C and Cocoa.",
+
+    "clipboard.metaDescription": "1Clipboard for Mac — clipboard history, fast search, multi-clip paste, and iCloud sync. Available on the Mac App Store.",
+    "clipboard.eyebrow": "Mac App Store · Productivity",
+    "clipboard.subtitle": "Clipboard History Manager",
+    "clipboard.tagline": "Keep everything you copy — search it, edit it, and paste it again in one click.",
+    "clipboard.ctaGallery": "See screenshots",
+    "clipboard.factPrice": "$2.99",
+    "clipboard.factOs": "macOS 11.0+",
+    "clipboard.factSince": "Since 2019",
+    "clipboard.factLang": "EN · KO",
+    "clipboard.cardDesc": "Mac clipboard history manager with search, multi-clip paste, shortcuts, and iCloud sync. On the Mac App Store since 2019.",
+    "clipboard.cardTech": "macOS · App Store · since 2019",
+    "clipboard.valueTitle": "Your clipboard, with memory.",
+    "clipboard.valueIntro": "1Clipboard sits in the menu bar and remembers what you copy — text, images, PDFs, and links — so you can find and reuse clips without digging through documents.",
+    "clipboard.value1Title": "Never lose a clip",
+    "clipboard.value1Desc": "Clipboard history keeps recent copies ready. Search by keyword when you need something from earlier.",
+    "clipboard.value2Title": "Edit and rearrange",
+    "clipboard.value2Desc": "Drag and drop to reorder or delete clips. Combine multiple clips, or paste in a chosen format such as text or image.",
+    "clipboard.value3Title": "Works the Mac way",
+    "clipboard.value3Desc": "Global shortcuts, dark mode and themes, drag images or PDFs to paste, Open with… for images, and iCloud Cabinet sync.",
+    "clipboard.featALabel": "History & search",
+    "clipboard.featATitle": "Find the clip you just need.",
+    "clipboard.featADesc": "Type a keyword to filter history quickly. URL clips can show extracted titles so links are easier to recognize.",
+    "clipboard.featA1": "Clipboard history for copied items",
+    "clipboard.featA2": "Fast keyword search",
+    "clipboard.featA3": "Automatic titles for web URL links",
+    "clipboard.featBLabel": "Paste your way",
+    "clipboard.featBTitle": "One clip, many clips, or a specific format.",
+    "clipboard.featBDesc": "Select multiple clips and paste them together. Paste in a specified format, preview clip types, and edit clip data when you need to fine-tune.",
+    "clipboard.featB1": "Multi-clip combine and paste",
+    "clipboard.featB2": "Paste as text, image, and more",
+    "clipboard.featB3": "Per-type viewer and advanced clip editing",
+    "clipboard.featCLabel": "Shortcuts & sync",
+    "clipboard.featCTitle": "Always available from the menu bar.",
+    "clipboard.featCDesc": "Customizable global shortcuts open 1Clipboard instantly. Sync stored clips with iCloud Cabinet, filter out specific apps, and match macOS dark mode or your own theme.",
+    "clipboard.stepsTitle": "How it works",
+    "clipboard.step1Title": "Copy as usual",
+    "clipboard.step1Desc": "1Clipboard quietly records clipboard history from the menu bar.",
+    "clipboard.step2Title": "Find the clip",
+    "clipboard.step2Desc": "Open with a shortcut, search, and pick the item you need.",
+    "clipboard.step3Title": "Paste or refine",
+    "clipboard.step3Desc": "Paste one or many clips, change format, edit, or drag to another app.",
+    "clipboard.galleryTitle": "In the app",
+    "clipboard.galleryIntro": "Screenshots from the Mac App Store listing.",
+    "clipboard.cap1": "Clipboard history",
+    "clipboard.cap2": "Search and organize",
+    "clipboard.cap3": "Multi-clip actions",
+    "clipboard.cap4": "Themes and shortcuts",
+    "clipboard.availTitle": "Available on the Mac App Store",
+    "clipboard.availDesc": "Native macOS clipboard manager by woojooin. Continuously updated for history, search, multi-clip paste, shortcuts, and iCloud sync.",
+    "clipboard.role": "I am the author and developer of 1Clipboard for Mac. I design, ship, and maintain the product end to end — clipboard history, search, paste workflows, shortcuts, localization, and App Store releases.",
+    "clipboard.builtWith": "Built as a native Mac menu bar app with Objective-C and AppKit.",
+
+    "dreamview.metaDescription": "DreamView for Mac — an elegant comic and image viewer with bookshelf UI, archive support (CBZ, CBR, ZIP, RAR, PDF), and reading modes for manga and webtoons. Available on the Mac App Store.",
+    "dreamview.eyebrow": "Mac App Store · Entertainment",
+    "dreamview.subtitle": "Digital Comic Viewer",
+    "dreamview.tagline": "Read comics and images from folders or archives — with a bookshelf, bookmarks, and modes built for manga and webtoons.",
+    "dreamview.ctaGallery": "See screenshots",
+    "dreamview.factPrice": "$3.99",
+    "dreamview.factOs": "macOS 12.4+",
+    "dreamview.factSince": "Since 2014",
+    "dreamview.factLang": "EN · JA · KO",
+    "dreamview.cardDesc": "Mac comic and image viewer with bookshelf UI, CBZ/CBR/archive support, bookmarks, and reading modes for manga and webtoons. On the Mac App Store since 2014.",
+    "dreamview.cardTech": "macOS · App Store · since 2014",
+    "dreamview.valueTitle": "Open the archive. Pick up where you left off.",
+    "dreamview.valueIntro": "DreamView is built for digital comics and image collections — browse folders or compressed files, manage a library on the bookshelf, and read with controls tuned for long sessions.",
+    "dreamview.value1Title": "Folders and archives",
+    "dreamview.value1Desc": "Open image folders or comic archives — CBZ, CBR, CB7, ZIP, RAR, 7z, LHA, ALZ, ISO, and PDF — without unpacking first.",
+    "dreamview.value2Title": "Bookshelf workflow",
+    "dreamview.value2Desc": "Recent items, bookmarks, and one-click next/previous book navigation keep large libraries manageable.",
+    "dreamview.value3Title": "Made for how you read",
+    "dreamview.value3Desc": "Toggle read direction for Japanese comics, switch single or double pages, and scroll vertically for webtoon-style images.",
+    "dreamview.featALabel": "Archives",
+    "dreamview.featATitle": "Comic formats and compressed files, in one viewer.",
+    "dreamview.featADesc": "DreamView uses The Unarchiver (XADMaster) to read split archives, password-protected files, and non-English filenames — then shows images inside without a separate extract step.",
+    "dreamview.featA1": "CBZ · CBR · CB7 · ZIP · RAR · 7z · LHA · ALZ · ISO",
+    "dreamview.featA2": "PDF and common image formats in folders",
+    "dreamview.featA3": "Encrypted and split-compressed archive support",
+    "dreamview.featBLabel": "Reading",
+    "dreamview.featBTitle": "Direction, pages, and progress — your way.",
+    "dreamview.featBDesc": "Switch between left-to-right and right-to-left reading, single and double-page spreads, and smart view mode that fits each image. Track progress with bookmarks and resume from recent items.",
+    "dreamview.featB1": "Read direction toggle for manga",
+    "dreamview.featB2": "Single / double page and smart view modes",
+    "dreamview.featB3": "Recent items, bookmarks, and next/previous book",
+    "dreamview.featCLabel": "Viewing",
+    "dreamview.featCTitle": "Zoom, filters, slideshow, and webtoons.",
+    "dreamview.featCDesc": "Fullscreen reading, thumbnail browsing, image filters (sharpen, mono, sepia), transition effects, clipboard copy, and vertical scroll for long webtoon pages — with trackpad swipe and zoom support.",
+    "dreamview.stepsTitle": "How it works",
+    "dreamview.step1Title": "Add to the bookshelf",
+    "dreamview.step1Desc": "Drop a folder or archive onto DreamView, or browse from the bookshelf to build your library.",
+    "dreamview.step2Title": "Open and read",
+    "dreamview.step2Desc": "Pick a title, set read direction and page mode, then move through pages with keyboard, trackpad, or on-screen controls.",
+    "dreamview.step3Title": "Resume later",
+    "dreamview.step3Desc": "Recent items and bookmarks remember where you stopped — jump to the next book in the series with one click.",
+    "dreamview.availTitle": "Available on the Mac App Store",
+    "dreamview.availDesc": "Native macOS comic and image viewer by woojooin. Continuously updated since 2014 — archive support, bookshelf UI, reading modes, and webtoon-friendly scrolling.",
+    "dreamview.role": "I am the author and developer of DreamView for Mac. I design, ship, and maintain the product end to end — archive integration, bookshelf and reading UX, image rendering and filters, localization, and App Store releases.",
+    "dreamview.builtWith": "Built as a native Mac app with Objective-C, AppKit, and The Unarchiver (XADMaster) framework.",
+
+    "cloudplayer.metaDescription": "Cloud Player for iPhone — download and play music and video from Google Drive, Dropbox, OneDrive, and iCloud. Available on the App Store.",
+    "cloudplayer.eyebrow": "App Store · Music",
+    "cloudplayer.subtitle": "Cloud Music & Video Player",
+    "cloudplayer.tagline": "Download music and video from your cloud — then play, organize, and take it with you.",
+    "cloudplayer.ctaGallery": "See screenshots",
+    "cloudplayer.factPrice": "Free",
+    "cloudplayer.factOs": "iOS 15.0+",
+    "cloudplayer.factSince": "Since 2024",
+    "cloudplayer.factLang": "EN · KO",
+    "cloudplayer.cardDesc": "iPhone music and video player that downloads from Google Drive, Dropbox, OneDrive, and iCloud — with playlists and CarPlay.",
+    "cloudplayer.cardTech": "iOS · App Store · since 2024",
+    "cloudplayer.valueTitle": "Cloud media, without the iTunes shuffle.",
+    "cloudplayer.valueIntro": "Cloud Player helps you pull music and video from major cloud services onto your iPhone, then organize playlists and play them anytime — including in the car with CarPlay.",
+    "cloudplayer.value1Title": "Four clouds, one player",
+    "cloudplayer.value1Desc": "Connect Google Drive, Dropbox, OneDrive, and iCloud to browse and download media files with a few taps.",
+    "cloudplayer.value2Title": "Organize as you go",
+    "cloudplayer.value2Desc": "Add downloads to playlists immediately, rename with a swipe, reorder by drag, and remove what you do not need.",
+    "cloudplayer.value3Title": "Play your way",
+    "cloudplayer.value3Desc": "CarPlay support, skip or ±10 second seek modes, tempo and pitch control, automatic album art, and share-extension downloads from other apps.",
+    "cloudplayer.featALabel": "Cloud download",
+    "cloudplayer.featATitle": "From Drive, Dropbox, OneDrive, or iCloud to your phone.",
+    "cloudplayer.featADesc": "Browse cloud folders, download the tracks and videos you want, and start listening without routing everything through a desktop sync ritual.",
+    "cloudplayer.featA1": "Google Drive, Dropbox, OneDrive, and iCloud",
+    "cloudplayer.featA2": "Download shared media from other apps",
+    "cloudplayer.featA3": "Add to a playlist as soon as a file finishes downloading",
+    "cloudplayer.featBLabel": "Library & playlists",
+    "cloudplayer.featBTitle": "Manage files with simple gestures.",
+    "cloudplayer.featBDesc": "Long-press and drag to change play order. Swipe right to add to a playlist, create a playlist, or rename. Swipe left to delete.",
+    "cloudplayer.featB1": "Drag to reorder playback",
+    "cloudplayer.featB2": "Swipe actions for playlists and renaming",
+    "cloudplayer.featB3": "Quick cleanup for files you no longer need",
+    "cloudplayer.featCLabel": "Listening extras",
+    "cloudplayer.featCTitle": "CarPlay, tempo, pitch, and album art.",
+    "cloudplayer.featCDesc": "Use CarPlay for simple controls while driving. Choose whether forward/back switches tracks or jumps 10 seconds. Adjust tempo and pitch, and show album art automatically while playing.",
+    "cloudplayer.stepsTitle": "How it works",
+    "cloudplayer.step1Title": "Connect a cloud",
+    "cloudplayer.step1Desc": "Sign in to Google Drive, Dropbox, OneDrive, or use iCloud.",
+    "cloudplayer.step2Title": "Download media",
+    "cloudplayer.step2Desc": "Pick music or video files and save them to your library or a playlist.",
+    "cloudplayer.step3Title": "Play anywhere",
+    "cloudplayer.step3Desc": "Listen on iPhone, organize with gestures, or continue in the car with CarPlay.",
+    "cloudplayer.galleryTitle": "In the app",
+    "cloudplayer.galleryIntro": "Screenshots from the App Store listing.",
+    "cloudplayer.cap1": "Library and playback",
+    "cloudplayer.cap2": "Cloud browsing",
+    "cloudplayer.cap3": "Playlists and organization",
+    "cloudplayer.cap4": "Player controls",
+    "cloudplayer.availTitle": "Available on the App Store",
+    "cloudplayer.availDesc": "iPhone and iPad media player by woojooin. Built for cloud downloads, playlists, CarPlay, and everyday listening — without the desktop detour.",
+    "cloudplayer.role": "I am the author and developer of Cloud Player. I design, ship, and maintain the product end to end — cloud integrations, playback, playlists, CarPlay, localization, and App Store releases.",
+    "cloudplayer.builtWith": "Built with Swift for iPhone and iPad, integrating Google Drive, Dropbox, OneDrive, and iCloud.",
+  },
+
+  ko: {
+    "meta.title": "성상훈 — 시니어 소프트웨어 엔지니어 & Agentic AI",
+    "meta.description":
+      "성상훈 — 시니어 소프트웨어 엔지니어, Agentic AI, 프로덕트 엔지니어링. 프로덕션 AI 에이전트와 상용 소프트웨어 포트폴리오.",
+    "meta.projectDescription":
+      "{title} — 성상훈의 프로젝트 소개.",
+    "meta.projectTitle": "{title} — 성상훈",
+
+    "a11y.skip": "본문으로 건너뛰기",
+    "a11y.nav": "주 메뉴",
+    "a11y.navToggle": "메뉴 열기/닫기",
+    "a11y.themeToDark": "다크 모드로 전환",
+    "a11y.themeToLight": "라이트 모드로 전환",
+    "a11y.langSwitch": "언어",
+
+    "nav.home": "홈",
+    "nav.projects": "프로젝트",
+    "nav.skills": "기술",
+    "nav.about": "소개",
+    "nav.contact": "연락",
+
+    "hero.role1": "시니어 소프트웨어 엔지니어",
+    "hero.role2": "AI 에이전트",
+    "hero.role3": "프로덕트 엔지니어링",
+    "hero.intro":
+      "데스크톱, Microsoft Office, 기업 시스템에서 실제 업무를 수행하는 프로덕션 AI 에이전트를 만듭니다.",
+    "hero.ctaProjects": "프로젝트 보기",
+    "hero.ctaResume": "이력서",
+    "hero.ctaLinkedIn": "LinkedIn",
+
+    "projects.label": "주요 작업",
+    "projects.title": "대표 프로젝트",
+    "projects.intro":
+      "실제 제품을 목표로 개발 중인 AI 시스템, 기업용 시스템, 고객에게 출시한 상용 앱입니다.",
+    "projects.aiTitle": "AI & Agentic AI",
+    "projects.aiNote": "현재 포커스",
+    "projects.commercialTitle": "상용 소프트웨어",
+    "projects.commercialNote": "출시 제품",
+    "projects.descPlaceholder": "[프로젝트 짧은 설명이 여기에 추가됩니다.]",
+    "projects.techPlaceholder": "기술: [기술 스택이 여기에 표시됩니다]",
+    "projects.view": "프로젝트 보기",
+    "projects.screenshot": "스크린샷 자리",
+
+    "experience.label": "커리어",
+    "experience.title": "경력",
+    "experience.intro":
+      "검증된 회사, 역할, 기간을 바탕으로 한 경력 이력이 여기에 표시됩니다.",
+    "experience.dates": "[기간]",
+    "experience.role": "[직책 / 역할]",
+    "experience.org": "[회사 / 조직]",
+    "experience.placeholder": "[경력 내용이 여기에 추가됩니다]",
+
+    "skills.label": "역량",
+    "skills.title": "기술",
+    "skills.intro":
+      "App Store 출시 제품과 현재 AI 에이전트 시스템에서 쌓은 역량입니다.",
+    "skills.ai": "AI & Agentic AI",
+    "skills.engineering": "소프트웨어 엔지니어링",
+    "skills.m365": "MS Office",
+    "skills.apple": "macOS & iOS",
+    "skills.web": "Web & Cloud",
+    "skills.apis": "APIs & Infrastructure",
+    "skills.ai1": "LLM 에이전트 · 툴 호출",
+    "skills.ai2": "멀티 제공자 LLM 연동",
+    "skills.ai3": "프롬프트 · RESULT 프로토콜",
+    "skills.ai4": "로컬 실행 샌드박스",
+    "skills.eng1": "Python · TypeScript · Swift · Objective-C",
+    "skills.eng2": "React · Vite · .NET / VSTO",
+    "skills.eng3": "제품 설계부터 App Store 출시",
+    "skills.eng4": "EN / KO 로컬라이즈",
+    "skills.m3651": "Office.js 추가 기능 (Word · Excel · PowerPoint)",
+    "skills.m3652": "Outlook VSTO + WebView2",
+    "skills.m3653": "Exchange SMTP · SCL · 전송 규칙",
+    "skills.m3654": "SPF / DKIM / DMARC 메일 인증",
+    "skills.apple1": "AppKit / Cocoa · Objective-C",
+    "skills.apple2": "Swift · UIKit / iOS",
+    "skills.apple3": "Mac · iOS App Store 출시",
+    "skills.apple4": "파일 관리 · 미디어 · 유틸리티",
+    "skills.web1": "Cloudflare Pages · Wrangler",
+    "skills.web2": "OAuth (Google · Microsoft)",
+    "skills.web3": "크레딧 · Stripe · BYOK",
+    "skills.web4": "Drive · Dropbox · OneDrive · iCloud",
+    "skills.api1": "OpenAI · Anthropic · Cerebras · Groq",
+    "skills.api2": "aiosmtpd · SMTP 릴레이",
+    "skills.api3": "VirusTotal · APIVoid · GeoIP",
+    "skills.api4": "REST / SSE 게이트웨이",
+
+    "about.label": "프로필",
+    "about.title": "소개",
+    "about.p1":
+      "저는 데스크톱, 모바일, 웹, 클라우드, 엔터프라이즈 환경에서 상용 소프트웨어를 출시해 온 시니어 소프트웨어 엔지니어이자 프로덕트 빌더입니다.",
+    "about.p2":
+      "현재 초점은 Agentic AI입니다. 채팅을 넘어 계획하고, 실행하고, 복구하고, 실제 업무를 끝내는 프로덕션 시스템을 만듭니다.",
+    "about.p3":
+      "Sidekick은 데스크톱 업무 자동화, Microsoft Office, 브라우저 워크플로를 아우르는 AI 제품군이며, 이 제품들을 직접 만들고 있습니다.",
+    "about.placeholder": "[더 자세한 소개가 여기에 추가됩니다.]",
+
+    "contact.label": "연락하기",
+    "contact.title": "연락처",
+    "contact.intro":
+      "시니어·스태프급 소프트웨어 엔지니어링 및 AI 역할에 열려 있습니다. 업무 문의는 LinkedIn을 선호합니다.",
+    "contact.emailPlaceholder": "woojooin@outlook.com",
+    "contact.resume": "이력서",
+    "contact.resumeLink": "CV 보기 / 인쇄",
+
+    "project.back": "← 프로젝트 목록으로",
+    "project.tagline": "[한 줄 프로젝트 설명이 여기에 추가됩니다.]",
+    "project.heroImage": "대표 이미지 자리",
+    "project.overview": "개요",
+    "project.overviewPlaceholder": "[프로젝트 개요가 여기에 추가됩니다.]",
+    "project.features": "주요 기능",
+    "project.featurePlaceholder": "[기능이 여기에 추가됩니다]",
+    "project.technology": "기술",
+    "project.techItemPlaceholder": "[기술 스택이 여기에 표시됩니다]",
+    "project.architecture": "아키텍처",
+    "project.architecturePlaceholder": "[아키텍처 설명이 여기에 추가됩니다.]",
+    "project.role": "개발 / 담당 역할",
+    "project.rolePlaceholder": "[역할과 기여 내용이 여기에 추가됩니다.]",
+    "project.screenshots": "스크린샷",
+    "project.video": "데모 영상",
+    "project.videoPlaceholder": "데모 영상 자리",
+    "project.links": "링크",
+    "project.linkProduct": "[App Store / 제품 링크]",
+    "project.linkRepo": "[저장소 / 문서 링크]",
+    "project.linksNote": "[외부 링크는 준비되는 대로 추가됩니다.]",
+    "project.problem": "문제 정의",
+    "project.results": "결과",
+    "project.decisions": "설계에서 강조할 점",
+    "project.appStore": "App Store에서 보기",
+    "project.productSite": "제품 사이트 보기",
+    "project.watchDemo": "데모 보기",
+    "project.watchDemo90": "90초 데모 보기",
+    "project.tryDownload": "써보기 / 다운로드",
+    "officeai.status": "운영 중",
+    "officeai.badge": "운영 중",
+    "officeai.maturity":
+      "멀티 모델 AI 게이트웨이 · 인증 · 사용 크레딧 · 구독 인프라",
+    "officeai.cardSubtitle": "Microsoft Office용 AI Agent",
+    "officeai.tryDownload": "Sidekick Office 써보기 / 다운로드",
+    "aiwork.status": "운영 중",
+    "aiwork.badge": "운영 중",
+    "aiwork.maturity": "Plan → Run → Repair · 로컬 실행 · 멀티 제공자 LLM",
+    "aiwork.cardSubtitle": "범용 AI Work Agent",
+    "aiwork.tryDownload": "Sidekick Work 써보기 / 다운로드",
+    "aimail.badge": "프로덕션 시스템 · 엔터프라이즈 배포",
+    "aimail.maturity": "SMTP 엣지 · SPF/DKIM/DMARC · LLM SCL · Exchange 릴레이",
+    "aimail.cardSubtitle": "Microsoft Exchange용 AI 이메일 보안",
+    "project.mediaLater": "스크린샷과 데모 영상은 준비되는 대로 추가됩니다.",
+
+    "officeai.metaDescription":
+      "Sidekick Office (Sidekick AI) — Word · Excel · PowerPoint · Outlook용 MS Office AI 에이전트. 평소 말하듯 지시하고, 구조화된 맥락만 보내며, 변경은 PC에서 로컬 실행합니다.",
+    "officeai.eyebrow": "MS Office · AI 에이전트",
+    "officeai.subtitle": "Microsoft Office용 AI Agent",
+    "officeai.tagline":
+      "Office와 Outlook 안에서 평소 쓰는 말로 요청하세요. 에이전트는 구조화된 맥락으로 계획을 세우고, 변경은 PC에서 로컬로 실행합니다.",
+    "officeai.factHost": "Word · Excel · PowerPoint · Outlook",
+    "officeai.factPlatform": "Windows · Mac · Web",
+    "officeai.factPrivacy": "프라이버시 우선 맥락",
+    "officeai.factLang": "EN · KO",
+    "officeai.cardDesc":
+      "Word · Excel · PowerPoint · Outlook용 MS Office AI 에이전트입니다. 평소 말하듯 지시해 표 정리, 선택 구간 번역, 슬라이드 구성, 메일 요약까지 처리합니다. 모델에는 구조화된 맥락만 보내고, 변경은 PC에서 로컬로 실행합니다.",
+    "officeai.cardTech": "Office.js · VSTO · React · Gateway",
+    "officeai.valueTitle": "Office에서 채팅하고, 실제 작업을 바꿉니다.",
+    "officeai.valueIntro":
+      "많은 Office AI는 파일 전체를 올리거나, 답을 다시 복사해 붙여 넣게 합니다. Sidekick AI는 통합문서·문서·메일을 PC에 두고, 모델에는 구조화된 메타데이터만 보냅니다.",
+    "officeai.value1Title": "평소 쓰는 말로 요청",
+    "officeai.value1Desc":
+      "표 정리, 선택 문장 번역, 슬라이드 구성, 열린 메일 요약 — Word · Excel · PowerPoint · Outlook을 떠나지 않고 처리합니다.",
+    "officeai.value2Title": "프라이버시 우선 맥락",
+    "officeai.value2Desc":
+      "헤더, 샘플, 짧은 구조, 메일 미리보기만 보냅니다. 통합문서·문서·사서함 전체를 올리지 않으며, API 키는 게이트웨이 서버에만 있습니다.",
+    "officeai.value3Title": "로컬 실행",
+    "officeai.value3Desc":
+      "모델은 계획을 세우고, Office.js 또는 Outlook 호스트가 내 PC에서 실행됩니다. 생성된 스크립트는 네트워크 호출이 금지되며 허용된 helper만 사용합니다.",
+    "officeai.featExcelLabel": "Excel",
+    "officeai.featExcelTitle": "샘플로 계획하고, 새 결과 시트를 만듭니다.",
+    "officeai.featExcelDesc":
+      "Excel은 전송 시점의 활성 시트를 고정하고 헤더와 몇 행의 샘플만 보낸 뒤, 분류·차트·요약이 담긴 결과 시트를 만들며 원본은 그대로 둡니다.",
+    "officeai.featExcel1": "짧은 이름을 제안하는 새 결과 시트",
+    "officeai.featExcel2": "표, 조건부 서식, 차트",
+    "officeai.featExcel3": "계보 추적으로 이전 결과를 덮어쓰지 않음",
+    "officeai.featWordLabel": "Word",
+    "officeai.featWordTitle": "선택 구간만 그 자리에서. 레이아웃은 유지.",
+    "officeai.featWordDesc":
+      "Word는 부분 편집이 핵심입니다 — 선택 텍스트, 따옴표 대화, 지정 구절. In-place 변환으로 문서를 통째로 다시 만들지 않고 구간만 바꿉니다.",
+    "officeai.featWord1": "선택 구간 번역·윤문을 그 자리에서",
+    "officeai.featWord2": "일치 구절에 굵게·형광 등 스타일 적용",
+    "officeai.featWord3": "가능한 범위에서 레이아웃·스타일 유지",
+    "officeai.featPptLabel": "PowerPoint",
+    "officeai.featPptTitle": "도형 텍스트를 고치거나, 긴 초안에서 덱을 만듭니다.",
+    "officeai.featPptDesc":
+      "PowerPoint는 텍스트 도형 단위로 in-place 편집하거나, 주제 경계 → 행수 패킹 → 슬라이드 생성의 2단계 파이프라인으로 덱을 구성합니다.",
+    "officeai.featPpt1": "기존 도형의 텍스트를 그 자리에서 갱신",
+    "officeai.featPpt2": "긴 붙여넣기·첨부 → 주제별 슬라이드",
+    "officeai.featPpt3": "글자 크기·슬라이드당 행수로 다시 패킹",
+    "officeai.featOutlookLabel": "Outlook",
+    "officeai.featOutlookTitle": "열린 메일을 읽고, 요약·분석·회신 초안까지.",
+    "officeai.featOutlookDesc":
+      "Outlook 데스크톱 패널은 열린 항목의 미리보기 메타(제목, 발신/수신, 본문 미리보기, 첨부 파일명)로 동작합니다. 채팅, 구조화된 메일 분석, compose에서의 회신 초안 작성을 지원합니다.",
+    "officeai.featOutlook1": "요약, 할 일, 중요도, 스팸 위험",
+    "officeai.featOutlook2": "패널에서 회신 / 전체 회신 / 전달 바로가기",
+    "officeai.featOutlook3": "쓰기는 compose만 — 읽기 모드는 분석·채팅",
+    "officeai.stepsTitle": "동작 방식",
+    "officeai.step1Title": "구조화된 맥락 수집",
+    "officeai.step1Desc":
+      "호스트가 활성 Excel 시트, Word 세션, PowerPoint 도형, 또는 열린 Outlook 항목의 메타데이터를 모읍니다 — 파일·사서함 전체가 아닙니다.",
+    "officeai.step2Title": "게이트웨이로 계획",
+    "officeai.step2Desc":
+      "단일 complete API가 Office AI Gateway로 전달됩니다. 모델은 RESULT 프로토콜(chat, document, inplace, slides)을 반환합니다.",
+    "officeai.step3Title": "Office에서 로컬 실행",
+    "officeai.step3Desc":
+      "Office.js 또는 Outlook 호스트가 PC에서 변경을 적용합니다 — 새 시트, in-place 텍스트, 슬라이드, compose 초안. 생성 스크립트의 네트워크 호출은 차단됩니다.",
+    "officeai.availTitle": "MS Office용 Sidekick AI",
+    "officeai.availDesc":
+      "Windows · Mac · Office on the web의 Word · Excel · PowerPoint Office 추가 기능과 Outlook 데스크톱 패널. 멀티 모델 게이트웨이, 월간 크레딧, 유료 플랜 BYOK.",
+    "officeai.role":
+      "Sidekick AI for Office와 Outlook을 처음부터 끝까지 설계·구현합니다 — Word · Excel · PowerPoint · Outlook 호스트 어댑터, 에이전트 RESULT 프로토콜, 로컬 실행, Office AI Gateway 위의 제품 경험까지.",
+    "officeai.builtWith":
+      "React, TypeScript, Vite, Office.js, Outlook VSTO + WebView2로 구축했습니다. Cloudflare Pages로 배포하며, 사이드로드·카탈로그 설치용 Office 매니페스트를 사용합니다.",
+    "officeai.videoOpen": "데모 영상 재생",
+    "officeai.videoOpenExcel": "Excel 데모 재생",
+    "officeai.videoOpenWord": "Word 데모 재생",
+    "officeai.videoOpenPpt": "PowerPoint 데모 재생",
+    "officeai.videoTitle": "데모 영상",
+    "officeai.videoClose": "영상 닫기",
+    "officeai.videoTabs": "데모 클립",
+    "officeai.videoTabExcel1": "Excel 1",
+    "officeai.videoTabExcel2": "Excel 2",
+    "officeai.videoTabWord": "Word",
+    "officeai.videoTabPpt": "PowerPoint",
+
+    "aimail.metaDescription":
+      "AI Mail Gateway (AiMailProxy) — Microsoft Exchange 앞단의 AI 기반 인바운드 스팸·피싱 필터. SCL 0–9를 부여하고 위험 헤더와 함께 릴레이합니다.",
+    "aimail.eyebrow": "Exchange · AI 보안",
+    "aimail.subtitle": "Microsoft Exchange용 AI 이메일 보안",
+    "aimail.tagline":
+      "Exchange 앞에서 인바운드 SMTP를 검사하는 프록시입니다 — 인증·링크·첨부 다층 검사와 LLM 기반 SCL 0–9로 전송 규칙과 연동합니다.",
+    "aimail.factRole": "인바운드 SMTP 프록시",
+    "aimail.factStack": "Python · aiosmtpd",
+    "aimail.factScl": "SCL 0–9 · Exchange 규칙",
+    "aimail.factDeploy": "온프레미스 엣지",
+    "aimail.cardDesc":
+      "Microsoft Exchange 앞단의 AI 기반 인바운드 스팸·피싱 필터. 다층 인증·스캔, LLM SCL 0–9, 정책 헤더와 함께 릴레이합니다.",
+    "aimail.cardTech": "Python · aiosmtpd · Exchange · LLM",
+    "aimail.valueTitle": "엣지에서 걸러내고, Exchange용으로 분류합니다.",
+    "aimail.valueIntro":
+      "확실한 악성 발신자는 SMTP 550으로 입구에서 거부할 수 있습니다. 그 외 메일은 분석 후 SCL·위험 헤더를 붙여 릴레이하므로, Exchange 전송 규칙으로 정크·격리하면서 사서함 경로를 바꾸지 않아도 됩니다.",
+    "aimail.value1Title": "다층 방어",
+    "aimail.value1Desc":
+      "블랙·화이트리스트, SPF/DKIM/DMARC, 첨부·URL 평판, 그다음 AI SCL — 단일 신호만으로 판단하지 않습니다.",
+    "aimail.value2Title": "Exchange 네이티브 SCL",
+    "aimail.value2Desc":
+      "AI가 Microsoft SCL 0–9를 부여하고, 선택적 Subject 접두사와 커스텀 헤더로 기존 전송 규칙과 연동합니다.",
+    "aimail.value3Title": "비용 인식 AI",
+    "aimail.value3Desc":
+      "본문 분류 캐시가 반복 캠페인을 몇 번 분석해 확정한 뒤, 동일·유사 메일은 추가 LLM 호출을 생략합니다.",
+    "aimail.featPipelineLabel": "검사 파이프라인",
+    "aimail.featPipelineTitle": "메일마다 전체 Check 로그.",
+    "aimail.featPipelineDesc":
+      "SMTP DATA 이후 파싱 → 인증·스캔 → AI/캐시 분류 → SCL floor → 릴레이 순으로 처리하며, 검사별 결과가 콘솔과 일별 로그에 남습니다.",
+    "aimail.featPipeline1": "Auth, 블랙리스트, peer IP, 첨부, URL 대상",
+    "aimail.featPipeline2": "캐시 hit/miss와 AI SCL·지연 시간",
+    "aimail.featPipeline3": "헤더 기록과 SMTP 릴레이 상태 (250 / 550)",
+    "aimail.featAiLabel": "AI SCL",
+    "aimail.featAiTitle": "Exchange SCL에 맞춘 LLM 분류.",
+    "aimail.featAiDesc":
+      "Cerebras 또는 Groq가 제목·발신·수신·첨부 파일명·본문 미리보기를 SCL 0–9로 분류합니다(핫 리로드 프롬프트). 인증 실패·브랜드 사칭·고위험 첨부는 floor로 점수를 올려 약한 신호도 릴레이 전에 반영합니다.",
+    "aimail.featAi1": "제공자: Cerebras / Groq (키 기준 선택)",
+    "aimail.featAi2": "화이트리스트 + Auth 조건 충족 시 AI만 생략 (링크·첨부는 계속)",
+    "aimail.featAi3": "AI 일시 장애 시 defer 큐",
+    "aimail.featThreatLabel": "위협 신호",
+    "aimail.featThreatTitle": "링크, 첨부, peer 평판.",
+    "aimail.featThreatDesc":
+      "URL은 APIVoid 후 VirusTotal로 검사합니다. 첨부는 금지 확장자, zip 재귀, magic-byte filetype, oletools 매크로 분석을 사용합니다. SMTP peer IP도 VirusTotal로 평가하며, 신뢰 TMES 게이트웨이 경유 시 원 발신 IP를 복원해 검증합니다.",
+    "aimail.featThreat1": "X-AiMailProxy-LinkRisk / PeerRisk / Malicious 헤더",
+    "aimail.featThreat2": "auth fail + 위협 + 높은 본문 SCL 동시 충족 시 선택적 composite 550",
+    "aimail.featThreat3": "blacklist, whitelist, prompt, spam_level 파일 핫 리로드",
+    "aimail.stepsTitle": "동작 방식",
+    "aimail.step1Title": "엣지에서 수신",
+    "aimail.step1Desc":
+      "인바운드 MX 또는 커넥터가 Exchange 앞의 AiMailProxy로 SMTP를 보냅니다. 수신 exact 블랙리스트는 RCPT에서 거부할 수 있습니다.",
+    "aimail.step2Title": "검사·분류",
+    "aimail.step2Desc":
+      "화이트·블랙리스트, Auth, 첨부, 링크, 캐시 또는 AI SCL, floor, 선택적 composite reject.",
+    "aimail.step3Title": "정책 훅과 함께 릴레이",
+    "aimail.step3Desc":
+      "X-AiMailProxy-* 헤더와 Subject 접두사를 붙인 뒤 Exchange로 SMTP 릴레이해 정크·피싱·격리 규칙에 사용합니다.",
+    "aimail.availTitle": "온프레미스 Exchange용",
+    "aimail.availDesc":
+      "안전한 롤아웃을 위한 모니터 모드, 일별 통계·선택적 리포트 메일, 스패머 누적, Windows 친화 운영을 갖춘 Python SMTP 엣지 서비스입니다.",
+    "aimail.role":
+      "AiMailProxy를 처음부터 끝까지 설계·구현합니다 — SMTP 수신·릴레이, 다층 검사 파이프라인, AI SCL 프로토콜과 캐시, Exchange 헤더 연동, 로그·통계·핫 리로드 정책 파일 운영 도구까지.",
+    "aimail.builtWith":
+      "Python, aiosmtpd, aiohttp, pyspf, dkimpy, VirusTotal / APIVoid 연동, LLM API(Cerebras / Groq)로 구축했습니다.",
+
+    "aiwork.metaDescription":
+      "Sidekick Work — 원하는 작업을 대신 실행하는 로컬 에이전트. 말로 요청하면 계획하고, PC에서 실행하며, 결과를 남깁니다.",
+    "aiwork.eyebrow": "로컬 CLI · Agentic AI",
+    "aiwork.subtitle": "범용 AI Work Agent",
+    "aiwork.tagline":
+      "평소 쓰는 말로 할 일을 말하세요. 에이전트가 계획하고, 내 PC에서 실행해 결과를 만듭니다 — 조언만 하지 않습니다.",
+    "aiwork.factMode": "Chat · Do 모드",
+    "aiwork.factProviders": "LLM 제공자 6종",
+    "aiwork.factSafety": "안전한 로컬 실행",
+    "aiwork.factTools": "파일 · Office · 이미지",
+    "aiwork.cardDesc":
+      "원하는 작업을 대신 해주는 로컬 에이전트 — 계획하고, 내 PC에서 실행하며, 결과를 전달합니다. 채팅만이 아닙니다.",
+    "aiwork.cardTech": "Python · Multi-LLM · Local execution",
+    "aiwork.valueTitle": "요청하세요. 에이전트가 처리합니다.",
+    "aiwork.valueIntro":
+      "챗봇은 제안에서 멈춥니다. Sidekick Work는 실행합니다 — 파일 찾기, 문서·이미지 변환, 샌드박스 attempt 폴더에 결과 저장, 실패 시 재시도까지.",
+    "aiwork.value1Title": "대화 또는 실행",
+    "aiwork.value1Desc":
+      "매 턴 질의응답(chat) 또는 PC에서 작업을 수행하는 do 모드를 고릅니다. /chat · /script으로 강제할 수 있습니다.",
+    "aiwork.value2Title": "내 PC에서 실행",
+    "aiwork.value2Desc":
+      "작업은 프로젝트 가상환경에서 로컬로 이뤄집니다. 읽기는 어디든 가능하고, 쓰기는 현재 attempt 폴더로만 제한해 원본을 읽기 전용으로 둡니다.",
+    "aiwork.value3Title": "바로 쓰는 헬퍼",
+    "aiwork.value3Desc":
+      "Excel · Word · PowerPoint · PDF · 이미지 빌트인 도구가 자동 등록되어, 흔한 작업은 임시 패키지 탐색 없이 끝냅니다.",
+    "aiwork.featLoopLabel": "실행 루프",
+    "aiwork.featLoopTitle": "계획하고, 실행하고, 고쳐서 — 일을 끝냅니다.",
+    "aiwork.featLoopDesc":
+      "에이전트가 계획을 스트리밍하고 단계를 수행하며, 필요하면 확인 후 패키지를 설치하고, 설정된 한도까지 자동 수리·재시도를 합니다.",
+    "aiwork.featLoop1": "Thinking 표시와 함께 계획 스트리밍",
+    "aiwork.featLoop2": "패키지·파일 변경 작업 전 선택적 확인",
+    "aiwork.featLoop3": "실패 시 자동 수리 재시도",
+    "aiwork.featSafetyLabel": "안전한 실행",
+    "aiwork.featSafetyTitle": "복사본으로 작업 — 원본은 그대로.",
+    "aiwork.featSafetyDesc":
+      "실행 전 정적 검사로 삭제·쓰기·이름변경 위험을 표시합니다. 런타임 가드가 변경을 attempt 폴더로 가둡니다. 변환은 원본을 읽고 새 결과물을 저장하며 Downloads·Desktop 파일을 그 자리에서 덮어쓰지 않습니다.",
+    "aiwork.featSafety1": "파괴적 동작에 대한 실행 전 위험 스캔",
+    "aiwork.featSafety2": "쓰기 루트: output/<timestamp>_attemptN/",
+    "aiwork.featSafety3": "파일 변경 감지 시 선택적 동의",
+    "aiwork.featToolsLabel": "할 수 있는 일",
+    "aiwork.featToolsTitle": "파일, Office 문서, 이미지 — 끝까지.",
+    "aiwork.featToolsDesc":
+      "/attach로 폴더를 붙인 뒤 실제 결과를 요청하세요 — 사진 리사이즈, 스프레드시트 정리, PDF 추출, 슬라이드 생성. agent_tools/ 헬퍼는 런타임에 카탈로그에 등록됩니다.",
+    "aiwork.featTools1": "Excel · Word · PowerPoint · PDF · Image 헬퍼",
+    "aiwork.featTools2": "/attach 경로를 컨텍스트에 주입",
+    "aiwork.featTools3": "상시 선호도를 위한 memory.txt",
+    "aiwork.stepsTitle": "동작 방식",
+    "aiwork.step1Title": "할 일을 말하세요",
+    "aiwork.step1Desc":
+      "필요한 작업을 말하고, 필요하면 /attach로 파일·폴더를 붙이며 /model로 모델을 고릅니다.",
+    "aiwork.step2Title": "에이전트가 계획",
+    "aiwork.step2Desc":
+      "chat 또는 do 모드를 고르고 계획을 스트리밍하며, “다음 폴더도 똑같이” 같은 후속 요청에 대화 이력을 씁니다.",
+    "aiwork.step3Title": "실행하고 결과 전달",
+    "aiwork.step3Desc":
+      "작업은 로컬에서 실행되고 결과는 attempt 폴더에 남습니다. 실패하면 설정한 한도 안에서 수리·재시도합니다.",
+    "aiwork.availTitle": "일을 끝내는 로컬 에이전트",
+    "aiwork.availDesc":
+      ".env로 OpenAI, Claude, Grok, Cerebras, Kimi, DeepSeek를 선택합니다. setup/run 스크립트로 Windows · macOS · Linux에서 .venv 안에서만 동작합니다. Python은 엔진일 뿐 — 제품의 핵심은 작업을 완료하는 것입니다.",
+    "aiwork.role":
+      "Sidekick Work를 처음부터 끝까지 설계·구현합니다 — 요청·실행 루프, 스트리밍 CLI, 멀티 제공자 LLM 클라이언트, 로컬 실행 샌드박스와 안전 검사, 자동 도구 레지스트리, history·첨부·저장 실행 운영 흐름까지.",
+    "aiwork.builtWith":
+      "Python, OpenAI·Anthropic SDK, prompt_toolkit, pandas/openpyxl, python-docx, python-pptx, pypdf, Pillow로 구축했습니다.",
+    "aiwork.videoOpen": "데모 영상 재생",
+    "aiwork.videoOpenLoop": "실행 루프 데모 재생",
+    "aiwork.videoTitle": "데모 영상",
+    "aiwork.videoClose": "영상 닫기",
+    "aiwork.videoTabs": "데모 클립",
+    "aiwork.videoTab1": "90초 데모",
+    "aiwork.videoTab2": "Plan → Run → Repair",
+
+    "resume.metaTitle": "이력서 — 성상훈",
+    "resume.metaDescription":
+      "성상훈 이력서 — 프로덕션 AI 에이전트와 상용 소프트웨어를 만드는 시니어 소프트웨어 엔지니어.",
+    "resume.print": "PDF로 저장",
+    "resume.summaryTitle": "요약",
+    "resume.productsTitle": "주요 제품",
+    "resume.commercialTitle": "상용 소프트웨어",
+    "resume.skillsTitle": "기술",
+    "resume.contactTitle": "연락처",
+    "resume.officeDesc":
+      "멀티 모델 게이트웨이, 인증, 사용 크레딧, 구독 인프라를 갖춘 Microsoft Office 프로덕션 에이전트. 구조화된 맥락만 보내고 변경은 로컬에서 실행합니다.",
+    "resume.workDesc":
+      "범용 로컬 워크 에이전트. 자연어 요청 → 계획 → 실행 → 수리/재시도 → 결과 전달. 샌드박스 쓰기와 파괴적 동작 검사.",
+    "resume.mailDesc":
+      "Microsoft Exchange용 인바운드 SMTP 엣지 필터. SPF/DKIM/DMARC, 첨부·URL 평판, LLM SCL 0–9, 캐시, 정책 헤더 후 릴레이.",
+    "resume.commercialIntro":
+      "2013년부터 App Store 제품을 출시·유지보수해 왔습니다. 그 제품 엔지니어링 경험이 지금 AI 에이전트 작업의 기반입니다.",
+
+    "treesize.metaDescription":
+      "TreeSize for Mac — Mac에서 디스크 공간을 어디에 쓰는지 보고, 큰 파일·중복을 찾아 공간을 되찾으세요. Mac App Store에서 제공.",
+    "treesize.eyebrow": "Mac App Store · 유틸리티",
+    "treesize.subtitle": "디스크 사용량 분석 도구",
+    "treesize.tagline":
+      "Mac에서 어디에 용량이 쓰였는지 한눈에 보고, 자신 있게 정리하세요.",
+    "treesize.ctaGallery": "스크린샷 보기",
+    "treesize.factPrice": "$3.99",
+    "treesize.factOs": "macOS 11.0+",
+    "treesize.factSince": "2013년부터",
+    "treesize.factLang": "EN · KO · DE · FR · IT",
+    "treesize.cardDesc":
+      "Mac App Store의 디스크 사용량 분석기. 폴더를 스캔하고 트리맵·차트로 시각화하며, 대용량·중복 파일을 찾아 공간을 되찾습니다.",
+    "treesize.cardTech": "macOS · App Store · 2013~",
+    "treesize.valueTitle": "찾고, 이해하고, 되찾으세요.",
+    "treesize.valueIntro":
+      "Finder는 파일을 여는 데는 좋지만, 디스크 공간이 어디로 갔는지에는 약합니다. TreeSize는 그 답을 분명히 보여줍니다.",
+    "treesize.value1Title": "용량이 어디로 갔는지 보기",
+    "treesize.value1Desc":
+      "폴더나 볼륨을 스캔하고 용량 순 트리와 컬러 바로 탐색하면, 큰 폴더가 바로 드러납니다.",
+    "treesize.value2Title": "한눈에 시각화",
+    "treesize.value2Desc":
+      "트리맵과 파이 차트를 전환해 폴더·파일 종류(오디오, 비디오, 사진, 문서, 압축 등)별 구성을 파악합니다.",
+    "treesize.value3Title": "필요한 것만 정리",
+    "treesize.value3Desc":
+      "Top 100 파일로 바로 이동하고, 중복 후보를 확인한 뒤 Quick Look·Finder·휴지통으로 앱을 떠나지 않고 정리합니다.",
+    "treesize.featScanLabel": "스캔 & 탐색",
+    "treesize.featScanTitle": "폴더를 놓으면, 전체가 보입니다.",
+    "treesize.featScanDesc":
+      "폴더나 디스크를 TreeSize에 드래그하거나 툴바에서 열면, 스캔이 진행되며 계층이 채워집니다. 크기·이름·날짜로 정렬하고, 진행 상태와 여유/전체 용량을 확인할 수 있습니다.",
+    "treesize.featScan1": "컬러 바가 있는 용량 순 폴더 트리",
+    "treesize.featScan2": "시스템 루트·클라우드 동기화 폴더 경고",
+    "treesize.featScan3": "Finder 서비스: 컨텍스트 메뉴의 “TreeSize Calculate…”",
+    "treesize.featCleanLabel": "인사이트 & 정리",
+    "treesize.featCleanTitle": "큰 파일과 중복, 바로 조치할 수 있게.",
+    "treesize.featCleanDesc":
+      "스캔 후 Top 100 Biggest Files로 공간을 많이 쓰는 파일을 빠르게 찾고, 중복 찾기는 이름·크기 기준으로 후보를 묶어 삭제 전에 절약 가능 용량을 확인할 수 있게 합니다.",
+    "treesize.featClean1": "Top 100 큰 파일 패널",
+    "treesize.featClean2": "절약 가능 용량이 보이는 중복 후보",
+    "treesize.featClean3": "Quick Look, Finder에서 보기, 열기, 휴지통으로 이동",
+    "treesize.featShareLabel": "결과 공유",
+    "treesize.featShareTitle": "필요할 때 HTML 리포트로 내보내기.",
+    "treesize.featShareDesc":
+      "폴더 트리와 차트가 포함된 리포트를 만들어, 앱 밖에서 검토하거나 다른 사람과 결과를 공유할 수 있습니다.",
+    "treesize.stepsTitle": "사용 방법",
+    "treesize.step1Title": "폴더 또는 디스크 선택",
+    "treesize.step1Desc":
+      "드래그 앤 드롭, 툴바에서 열기, 또는 Finder 서비스 메뉴로 시작합니다.",
+    "treesize.step2Title": "결과 탐색",
+    "treesize.step2Desc":
+      "트리를 보고, 트리맵·파이 차트를 전환하며 중요한 폴더로 들어갑니다.",
+    "treesize.step3Title": "정리하기",
+    "treesize.step3Desc":
+      "Top 파일이나 중복을 확인하고 Quick Look으로 미리본 뒤, 필요 없는 항목을 제거합니다.",
+    "treesize.galleryTitle": "앱 화면",
+    "treesize.galleryIntro": "Mac App Store 등록 스크린샷입니다.",
+    "treesize.cap1": "개요, 카테고리, 스캔 요약",
+    "treesize.cap2": "Top 100 큰 파일",
+    "treesize.cap3": "실시간 스캔 진행",
+    "treesize.availTitle": "Mac App Store에서 제공",
+    "treesize.availDesc":
+      "woojooin의 네이티브 macOS 유틸리티. 더 빠른 스캔, 트리맵, 파이 차트, 중복 찾기, HTML 리포트 등으로 꾸준히 업데이트됩니다.",
+    "treesize.role":
+      "TreeSize for Mac의 작성자이자 개발자입니다. 스캔·시각화부터 App Store 출시와 다국어까지 제품을 처음부터 끝까지 설계·출시·유지보수합니다.",
+    "treesize.builtWith": "Objective-C와 AppKit으로 만든 네이티브 Mac 앱입니다.",
+
+    "zcommander.metaDescription": "zCommander for Mac — 듀얼 패널 파일 관리자. 탭, 검색, zip, 멀티스레드 파일 작업. Mac App Store에서 제공.",
+    "zcommander.eyebrow": "Mac App Store · 생산성",
+    "zcommander.subtitle": "고급 파일 관리자",
+    "zcommander.tagline": "파워 유저를 위한 Mac 듀얼 패널 파일 관리자 — 탭, 속도, 키보드 중심 워크플로.",
+    "zcommander.ctaGallery": "스크린샷 보기",
+    "zcommander.factPrice": "$9.99",
+    "zcommander.factOs": "macOS 10.15+",
+    "zcommander.factSince": "2013년부터",
+    "zcommander.factLang": "EN · KO",
+    "zcommander.cardDesc": "탭, 빠른 검색, zip, 멀티스레드 복사/이동/삭제를 갖춘 Mac 듀얼 패널 파일 관리자. 2013년부터 Mac App Store.",
+    "zcommander.cardTech": "macOS · App Store · 2013~",
+    "zcommander.valueTitle": "두 패널. 더 많은 제어.",
+    "zcommander.valueIntro": "Finder를 넘어선 사용자를 위해 — 듀얼 패널, 탭, 빠른 검색, 실제 작업 속도에 맞는 파일 작업을 제공합니다.",
+    "zcommander.value1Title": "더 빠르게 탐색",
+    "zcommander.value1Desc": "패널마다 여러 탭을 쓰는 클래식 듀얼 패널로, 작업 중에도 원본과 대상이 함께 보입니다.",
+    "zcommander.value2Title": "필요한 파일을 찾기",
+    "zcommander.value2Desc": "목록에서 타이핑으로 바로 찾고, 고급 필터와 내용 검색을 지원합니다. 빠른 입력을 위한 한국어 지원 포함.",
+    "zcommander.value3Title": "작업을 빠르게 처리",
+    "zcommander.value3Desc": "멀티스레드 복사·이동·삭제, 내장 zip 압축/해제, 북마크, 방문 기록, Quick Look 미리보기.",
+    "zcommander.featALabel": "인터페이스",
+    "zcommander.featATitle": "작업 방식에 맞는 듀얼 패널, 탭, 뷰.",
+    "zcommander.featADesc": "리스트/썸네일 뷰를 전환하고, 색상 테마와 확장자별 색으로 중요한 파일을 한눈에 구분합니다.",
+    "zcommander.featA1": "다중 탭을 지원하는 듀얼 패널",
+    "zcommander.featA2": "리스트 및 썸네일 뷰",
+    "zcommander.featA3": "커스텀 테마와 확장자 색상",
+    "zcommander.featBLabel": "파일 작업",
+    "zcommander.featBTitle": "복사, 이동, 삭제 — 대량 작업에 맞게.",
+    "zcommander.featBDesc": "파일 작업은 멀티스레드로 빠르게 실행됩니다. 클릭으로 미리보고, 단축키나 마우스로 조작하며, 북마크와 기록으로 자주 쓰는 폴더를 가까이 둡니다.",
+    "zcommander.featB1": "멀티스레드 복사, 이동, 삭제",
+    "zcommander.featB2": "빠른 미리보기와 키보드 단축키",
+    "zcommander.featB3": "북마크, 기록, Finder 서비스(“Reveal in zCommander”)",
+    "zcommander.featCLabel": "압축",
+    "zcommander.featCTitle": "앱을 떠나지 않고 zip.",
+    "zcommander.featCDesc": "zCommander 안에서 바로 압축하고 해제할 수 있어, 미디어 라이브러리나 프로젝트 폴더를 정리할 때 유용합니다.",
+    "zcommander.stepsTitle": "사용 방법",
+    "zcommander.step1Title": "폴더 열기",
+    "zcommander.step1Desc": "듀얼 패널과 탭으로 원본과 대상을 나란히 둡니다.",
+    "zcommander.step2Title": "찾고 선택하기",
+    "zcommander.step2Desc": "목록에서 타이핑으로 이동하거나, 필터·내용 검색으로 찾습니다.",
+    "zcommander.step3Title": "자신 있게 실행",
+    "zcommander.step3Desc": "복사, 이동, 삭제, zip, 미리보기, Finder에서 보기 — 흐름을 끊지 않고 진행합니다.",
+    "zcommander.galleryTitle": "앱 화면",
+    "zcommander.galleryIntro": "Mac App Store 등록 스크린샷입니다.",
+    "zcommander.cap1": "듀얼 패널 탐색",
+    "zcommander.cap2": "탭, 테마, 파일 뷰",
+    "zcommander.cap3": "검색과 파일 작업",
+    "zcommander.cap4": "썸네일과 미리보기",
+    "zcommander.availTitle": "Mac App Store에서 제공",
+    "zcommander.availDesc": "woojooin의 네이티브 macOS 파일 관리자. 듀얼 패널, 탭, 검색, zip, 빠른 파일 작업을 중심으로 꾸준히 업데이트됩니다.",
+    "zcommander.role": "zCommander for Mac의 작성자이자 개발자입니다. 듀얼 패널 UI, 파일 작업, 검색, 로컬라이즈, App Store 출시까지 제품을 처음부터 끝까지 설계·출시·유지보수합니다.",
+    "zcommander.builtWith": "Objective-C와 Cocoa로 만든 네이티브 Mac 앱입니다.",
+
+    "zgallery.metaDescription": "zGallery for Mac — 썸네일, 슬라이드쇼, 간단한 편집과 파일 관리가 있는 이미지 뷰어. Mac App Store에서 제공.",
+    "zgallery.eyebrow": "Mac App Store · 사진 및 비디오",
+    "zgallery.subtitle": "우아한 이미지 뷰어",
+    "zgallery.tagline": "Mac에서 이미지를 보고, 살짝 편집하고, 따로 파일 관리 앱으로 옮기지 않아도 정리할 수 있습니다.",
+    "zgallery.ctaGallery": "스크린샷 보기",
+    "zgallery.factPrice": "$9.99",
+    "zgallery.factOs": "macOS 10.15+",
+    "zgallery.factSince": "2013년부터",
+    "zgallery.factLang": "EN · KO",
+    "zgallery.cardDesc": "썸네일, 슬라이드쇼, 가벼운 편집, 내장 파일 관리가 있는 Mac 이미지 뷰어. 2013년부터 Mac App Store.",
+    "zgallery.cardTech": "macOS · App Store · 2013~",
+    "zgallery.valueTitle": "이미지를 보고, 그 자리에서 관리.",
+    "zgallery.valueIntro": "zGallery는 빠른 이미지 탐색과 복사·이동·삭제·드래그 앤 드롭을 한곳에 모아, 보기와 정리를 같은 흐름으로 이어 줍니다.",
+    "zgallery.value1Title": "빠르게 찾아보기",
+    "zgallery.value1Desc": "일반 이미지 형식(및 비디오 썸네일)을 썸네일로 보고, 폴더 트리로 디스크를 이동해도 맥락을 잃지 않습니다.",
+    "zgallery.value2Title": "원하는 방식으로 보기",
+    "zgallery.value2Desc": "확대/축소, 전체 화면, 슬라이드쇼로 사진과 이미지 모음을 빠르게 검토합니다.",
+    "zgallery.value3Title": "편집하고 정리하기",
+    "zgallery.value3Desc": "회전, 뒤집기, 크기 변경, 포맷 변환, GIF 프레임 추출, 배경화면 설정, Finder처럼 드래그 앤 드롭으로 파일을 관리합니다.",
+    "zgallery.featALabel": "탐색",
+    "zgallery.featATitle": "방해되지 않는 썸네일과 폴더.",
+    "zgallery.featADesc": "폴더를 열고 썸네일 탐색과 트리 패널로 이미지를 이동합니다. 이미지가 있는 폴더 썸네일로 모음을 빠르게 찾을 수 있습니다.",
+    "zgallery.featA1": "일반 이미지 형식 지원",
+    "zgallery.featA2": "비디오 썸네일 포함 썸네일 탐색",
+    "zgallery.featA3": "폴더 트리와 이미지 폴더 썸네일",
+    "zgallery.featBLabel": "보기",
+    "zgallery.featBTitle": "확대, 전체 화면, 슬라이드쇼.",
+    "zgallery.featBDesc": "확대/축소, 전체 화면, 슬라이드쇼로 사진 세트를 편하게 검토합니다.",
+    "zgallery.featB1": "확대 / 축소",
+    "zgallery.featB2": "전체 화면 모드",
+    "zgallery.featB3": "슬라이드쇼",
+    "zgallery.featCLabel": "편집 & 파일",
+    "zgallery.featCTitle": "가벼운 편집과 파일 작업을 한 앱에서.",
+    "zgallery.featCDesc": "회전, 뒤집기, 크기 변경, 포맷 변환, 애니메이션 GIF 프레임 추출, 배경화면 설정, 복사·이동·삭제 — Copy & Paste와 Drag & Drop도 Finder처럼 지원합니다.",
+    "zgallery.stepsTitle": "사용 방법",
+    "zgallery.step1Title": "폴더 열기",
+    "zgallery.step1Desc": "썸네일과 폴더 트리로 필요한 이미지를 찾습니다.",
+    "zgallery.step2Title": "보고 검토하기",
+    "zgallery.step2Desc": "확대하거나 전체 화면으로 보고, 슬라이드쇼로 세트를 넘깁니다.",
+    "zgallery.step3Title": "편집하거나 정리하기",
+    "zgallery.step3Desc": "가벼운 편집, 배경화면 설정, 또는 복사·이동·삭제를 zGallery 안에서 끝냅니다.",
+    "zgallery.galleryTitle": "앱 화면",
+    "zgallery.galleryIntro": "Mac App Store 등록 스크린샷입니다.",
+    "zgallery.cap1": "이미지 탐색 개요",
+    "zgallery.cap2": "썸네일과 폴더 트리",
+    "zgallery.cap3": "전체 화면 보기",
+    "zgallery.cap4": "편집과 파일 작업",
+    "zgallery.availTitle": "Mac App Store에서 제공",
+    "zgallery.availDesc": "woojooin의 네이티브 macOS 이미지 뷰어. 빠른 탐색, 보기, 가벼운 편집, 앱 내 파일 관리를 중심으로 꾸준히 업데이트됩니다.",
+    "zgallery.role": "zGallery for Mac의 작성자이자 개발자입니다. 탐색, 보기, 가벼운 편집, 파일 작업, 로컬라이즈, App Store 출시까지 제품을 처음부터 끝까지 설계·출시·유지보수합니다.",
+    "zgallery.builtWith": "Objective-C와 Cocoa로 만든 네이티브 Mac 앱입니다.",
+
+    "clipboard.metaDescription": "1Clipboard for Mac — 클립보드 기록, 빠른 검색, 다중 클립 붙여넣기, iCloud 동기화. Mac App Store에서 제공.",
+    "clipboard.eyebrow": "Mac App Store · 생산성",
+    "clipboard.subtitle": "클립보드 기록 관리자",
+    "clipboard.tagline": "복사한 내용을 잃지 마세요 — 검색하고, 편집하고, 다시 붙여넣으세요.",
+    "clipboard.ctaGallery": "스크린샷 보기",
+    "clipboard.factPrice": "$2.99",
+    "clipboard.factOs": "macOS 11.0+",
+    "clipboard.factSince": "2019년부터",
+    "clipboard.factLang": "EN · KO",
+    "clipboard.cardDesc": "검색, 다중 클립 붙여넣기, 단축키, iCloud 동기화를 갖춘 Mac 클립보드 기록 관리자. 2019년부터 Mac App Store.",
+    "clipboard.cardTech": "macOS · App Store · 2019~",
+    "clipboard.valueTitle": "기억력을 가진 클립보드.",
+    "clipboard.valueIntro": "1Clipboard는 메뉴 바에 상주하며 텍스트, 이미지, PDF, 링크 등 복사한 내용을 기억해, 문서를 뒤지지 않고도 다시 찾아 쓸 수 있게 합니다.",
+    "clipboard.value1Title": "클립을 잃지 않기",
+    "clipboard.value1Desc": "클립보드 기록으로 최근 복사를 바로 쓸 수 있고, 키워드로 이전 항목을 검색합니다.",
+    "clipboard.value2Title": "편집하고 재정렬",
+    "clipboard.value2Desc": "드래그 앤 드롭으로 순서를 바꾸거나 삭제하고, 여러 클립을 합치거나 텍스트·이미지 등 원하는 형식으로 붙여넣습니다.",
+    "clipboard.value3Title": "Mac답게 동작",
+    "clipboard.value3Desc": "글로벌 단축키, 다크 모드·테마, 이미지/PDF 드래그 붙여넣기, Open with…, iCloud Cabinet 동기화.",
+    "clipboard.featALabel": "기록 & 검색",
+    "clipboard.featATitle": "지금 필요한 클립을 찾으세요.",
+    "clipboard.featADesc": "키워드로 기록을 빠르게 필터링합니다. URL 클립은 제목을 추출해 링크를 알아보기 쉽게 보여 줍니다.",
+    "clipboard.featA1": "복사 항목 클립보드 기록",
+    "clipboard.featA2": "빠른 키워드 검색",
+    "clipboard.featA3": "웹 URL 링크 자동 제목",
+    "clipboard.featBLabel": "원하는 방식으로 붙여넣기",
+    "clipboard.featBTitle": "하나, 여러 개, 또는 특정 형식.",
+    "clipboard.featBDesc": "여러 클립을 선택해 한꺼번에 붙여넣고, 지정한 형식으로 붙여넣으며, 유형별 보기와 고급 편집으로 다듬을 수 있습니다.",
+    "clipboard.featB1": "다중 클립 합치기 및 붙여넣기",
+    "clipboard.featB2": "텍스트, 이미지 등 형식 지정 붙여넣기",
+    "clipboard.featB3": "유형별 뷰어와 고급 클립 편집",
+    "clipboard.featCLabel": "단축키 & 동기화",
+    "clipboard.featCTitle": "메뉴 바에서 언제든.",
+    "clipboard.featCDesc": "사용자 지정 글로벌 단축키로 바로 열고, iCloud Cabinet으로 동기화하며, 특정 앱을 제외하고, macOS 다크 모드나 나만의 테마에 맞출 수 있습니다.",
+    "clipboard.stepsTitle": "사용 방법",
+    "clipboard.step1Title": "평소처럼 복사",
+    "clipboard.step1Desc": "1Clipboard가 메뉴 바에서 클립보드 기록을 남깁니다.",
+    "clipboard.step2Title": "클립 찾기",
+    "clipboard.step2Desc": "단축키로 열고 검색한 뒤 필요한 항목을 고릅니다.",
+    "clipboard.step3Title": "붙여넣거나 다듬기",
+    "clipboard.step3Desc": "하나 또는 여러 클립을 붙여넣고, 형식을 바꾸거나 다른 앱으로 드래그합니다.",
+    "clipboard.galleryTitle": "앱 화면",
+    "clipboard.galleryIntro": "Mac App Store 등록 스크린샷입니다.",
+    "clipboard.cap1": "클립보드 기록",
+    "clipboard.cap2": "검색과 정리",
+    "clipboard.cap3": "다중 클립 작업",
+    "clipboard.cap4": "테마와 단축키",
+    "clipboard.availTitle": "Mac App Store에서 제공",
+    "clipboard.availDesc": "woojooin의 네이티브 macOS 클립보드 관리자. 기록, 검색, 다중 붙여넣기, 단축키, iCloud 동기화를 중심으로 꾸준히 업데이트됩니다.",
+    "clipboard.role": "1Clipboard for Mac의 작성자이자 개발자입니다. 클립보드 기록, 검색, 붙여넣기 워크플로, 단축키, 로컬라이즈, App Store 출시까지 제품을 처음부터 끝까지 설계·출시·유지보수합니다.",
+    "clipboard.builtWith": "Objective-C와 AppKit으로 만든 네이티브 Mac 메뉴 바 앱입니다.",
+
+    "dreamview.metaDescription": "DreamView for Mac — 책장 UI, CBZ/CBR·압축 파일·PDF 지원, 만화·웹툰 읽기 모드가 있는 디지털 만화·이미지 뷰어. Mac App Store에서 제공.",
+    "dreamview.eyebrow": "Mac App Store · 엔터테인먼트",
+    "dreamview.subtitle": "디지털 만화 뷰어",
+    "dreamview.tagline": "폴더나 압축 파일에서 만화와 이미지를 읽으세요 — 책장, 책갈피, 만화·웹툰에 맞춘 읽기 모드를 갖추었습니다.",
+    "dreamview.ctaGallery": "스크린샷 보기",
+    "dreamview.factPrice": "$3.99",
+    "dreamview.factOs": "macOS 12.4+",
+    "dreamview.factSince": "2014년부터",
+    "dreamview.factLang": "EN · JA · KO",
+    "dreamview.cardDesc": "책장 UI, CBZ/CBR·압축 파일 지원, 책갈피, 만화·웹툰 읽기 모드가 있는 Mac 만화·이미지 뷰어. 2014년부터 Mac App Store.",
+    "dreamview.cardTech": "macOS · App Store · 2014~",
+    "dreamview.valueTitle": "압축 파일을 열고, 이어서 읽으세요.",
+    "dreamview.valueIntro": "DreamView는 디지털 만화와 이미지 모음을 위해 만들었습니다 — 폴더나 압축 파일을 탐색하고, 책장에서 라이브러리를 관리하며, 긴 독서에 맞춘 컨트롤로 읽을 수 있습니다.",
+    "dreamview.value1Title": "폴더와 압축 파일",
+    "dreamview.value1Desc": "이미지 폴더나 CBZ, CBR, CB7, ZIP, RAR, 7z, LHA, ALZ, ISO, PDF 만화 아카이브를 압축 해제 없이 엽니다.",
+    "dreamview.value2Title": "책장 워크플로",
+    "dreamview.value2Desc": "최근 항목, 책갈피, 한 번의 클릭으로 다음·이전 권 이동 — 큰 라이브러리도 관리하기 쉽습니다.",
+    "dreamview.value3Title": "읽는 방식에 맞게",
+    "dreamview.value3Desc": "일본 만화용 읽기 방향 전환, 단면·양면 보기, 웹툰처럼 세로로 긴 이미지 스크롤을 지원합니다.",
+    "dreamview.featALabel": "아카이브",
+    "dreamview.featATitle": "만화 형식과 압축 파일, 하나의 뷰어에서.",
+    "dreamview.featADesc": "DreamView는 The Unarchiver(XADMaster)로 분할·암호화 아카이브와 비영문 파일명을 읽고, 별도 추출 없이 안의 이미지를 표시합니다.",
+    "dreamview.featA1": "CBZ · CBR · CB7 · ZIP · RAR · 7z · LHA · ALZ · ISO",
+    "dreamview.featA2": "폴더 내 PDF 및 일반 이미지 형식",
+    "dreamview.featA3": "암호화·분할 압축 파일 지원",
+    "dreamview.featBLabel": "읽기",
+    "dreamview.featBTitle": "방향, 페이지, 진행률 — 원하는 대로.",
+    "dreamview.featBDesc": "좌→우·우→좌 읽기, 단면·양면, 이미지에 맞춘 스마트 뷰 모드를 전환합니다. 책갈피와 최근 항목으로 진행 상황을 기억합니다.",
+    "dreamview.featB1": "만화용 읽기 방향 전환",
+    "dreamview.featB2": "단면 / 양면 및 스마트 뷰 모드",
+    "dreamview.featB3": "최근 항목, 책갈피, 다음·이전 권",
+    "dreamview.featCLabel": "보기",
+    "dreamview.featCTitle": "확대, 필터, 슬라이드쇼, 웹툰.",
+    "dreamview.featCDesc": "전체 화면, 썸네일 탐색, 이미지 필터(선명, 흑백, 세피아), 전환 효과, 클립보드 복사, 긴 웹툰 페이지 세로 스크롤 — 트랙패드 스와이프·확대 지원.",
+    "dreamview.stepsTitle": "사용 방법",
+    "dreamview.step1Title": "책장에 추가",
+    "dreamview.step1Desc": "폴더나 아카이브를 DreamView에 드래그하거나, 책장에서 탐색해 라이브러리를 만듭니다.",
+    "dreamview.step2Title": "열고 읽기",
+    "dreamview.step2Desc": "제목을 고르고 읽기 방향·페이지 모드를 설정한 뒤, 키보드·트랙패드·화면 컨트롤로 넘깁니다.",
+    "dreamview.step3Title": "나중에 이어 읽기",
+    "dreamview.step3Desc": "최근 항목과 책갈피가 멈춘 위치를 기억합니다 — 시리즈의 다음 권으로 한 번에 이동할 수 있습니다.",
+    "dreamview.availTitle": "Mac App Store에서 제공",
+    "dreamview.availDesc": "woojooin의 네이티브 macOS 만화·이미지 뷰어. 2014년부터 꾸준히 업데이트 — 아카이브 지원, 책장 UI, 읽기 모드, 웹툰 친화적 스크롤.",
+    "dreamview.role": "DreamView for Mac의 작성자이자 개발자입니다. 아카이브 연동, 책장·읽기 UX, 이미지 렌더링·필터, 로컬라이즈, App Store 출시까지 제품을 처음부터 끝까지 설계·출시·유지보수합니다.",
+    "dreamview.builtWith": "Objective-C, AppKit, The Unarchiver(XADMaster) 프레임워크로 만든 네이티브 Mac 앱입니다.",
+
+    "cloudplayer.metaDescription": "Cloud Player for iPhone — Google Drive, Dropbox, OneDrive, iCloud에서 음악·영상을 내려받아 재생. App Store에서 제공.",
+    "cloudplayer.eyebrow": "App Store · 음악",
+    "cloudplayer.subtitle": "클라우드 음악·영상 플레이어",
+    "cloudplayer.tagline": "클라우드의 음악과 영상을 내려받아 — 재생하고, 정리하고, 가지고 다니세요.",
+    "cloudplayer.ctaGallery": "스크린샷 보기",
+    "cloudplayer.factPrice": "무료",
+    "cloudplayer.factOs": "iOS 15.0+",
+    "cloudplayer.factSince": "2024년부터",
+    "cloudplayer.factLang": "EN · KO",
+    "cloudplayer.cardDesc": "Google Drive, Dropbox, OneDrive, iCloud에서 내려받아 재생하는 iPhone 음악·영상 플레이어. 플레이리스트와 CarPlay 지원.",
+    "cloudplayer.cardTech": "iOS · App Store · 2024~",
+    "cloudplayer.valueTitle": "클라우드 미디어, iTunes 우회 없이.",
+    "cloudplayer.valueIntro": "Cloud Player는 주요 클라우드에서 음악·영상을 iPhone으로 가져와 플레이리스트로 정리하고, CarPlay로 차에서도 들을 수 있게 합니다.",
+    "cloudplayer.value1Title": "네 가지 클라우드, 하나의 플레이어",
+    "cloudplayer.value1Desc": "Google Drive, Dropbox, OneDrive, iCloud에 연결해 미디어를 몇 번의 탭으로 찾아 내려받습니다.",
+    "cloudplayer.value2Title": "내려받으면서 정리",
+    "cloudplayer.value2Desc": "다운로드 직후 플레이리스트에 넣고, 스와이프로 이름 바꾸고, 드래그로 순서를 바꾸며, 필요 없는 항목은 바로 지웁니다.",
+    "cloudplayer.value3Title": "원하는 방식으로 재생",
+    "cloudplayer.value3Desc": "CarPlay, 트랙 전환 또는 ±10초 이동, 템포·피치 조절, 자동 앨범아트, 다른 앱에서 공유 확장으로 다운로드.",
+    "cloudplayer.featALabel": "클라우드 다운로드",
+    "cloudplayer.featATitle": "Drive, Dropbox, OneDrive, iCloud에서 폰으로.",
+    "cloudplayer.featADesc": "클라우드 폴더를 탐색하고 원하는 트랙·영상을 내려받아, 데스크톱 동기화 절차 없이도 바로 듣기 시작합니다.",
+    "cloudplayer.featA1": "Google Drive, Dropbox, OneDrive, iCloud",
+    "cloudplayer.featA2": "다른 앱에서 공유된 미디어 다운로드",
+    "cloudplayer.featA3": "다운로드 완료 즉시 플레이리스트에 추가",
+    "cloudplayer.featBLabel": "라이브러리 & 플레이리스트",
+    "cloudplayer.featBTitle": "간단한 제스처로 관리.",
+    "cloudplayer.featBDesc": "길게 눌러 드래그하면 재생 순서를 바꾸고, 오른쪽 스와이프로 플레이리스트 추가·생성·이름 변경, 왼쪽 스와이프로 삭제합니다.",
+    "cloudplayer.featB1": "드래그로 재생 순서 변경",
+    "cloudplayer.featB2": "플레이리스트·이름 변경 스와이프",
+    "cloudplayer.featB3": "필요 없는 파일 빠른 정리",
+    "cloudplayer.featCLabel": "청취 기능",
+    "cloudplayer.featCTitle": "CarPlay, 템포, 피치, 앨범아트.",
+    "cloudplayer.featCDesc": "운전 중 CarPlay로 간단히 조작하고, 앞/뒤 버튼을 트랙 전환 또는 10초 이동으로 쓰며, 템포·피치를 조절하고 재생 중 앨범아트를 자동으로 표시합니다.",
+    "cloudplayer.stepsTitle": "사용 방법",
+    "cloudplayer.step1Title": "클라우드 연결",
+    "cloudplayer.step1Desc": "Google Drive, Dropbox, OneDrive에 로그인하거나 iCloud를 사용합니다.",
+    "cloudplayer.step2Title": "미디어 다운로드",
+    "cloudplayer.step2Desc": "음악·영상 파일을 골라 라이브러리 또는 플레이리스트에 저장합니다.",
+    "cloudplayer.step3Title": "어디서나 재생",
+    "cloudplayer.step3Desc": "iPhone에서 듣고 제스처로 정리하거나, CarPlay로 차에서도 이어 듣습니다.",
+    "cloudplayer.galleryTitle": "앱 화면",
+    "cloudplayer.galleryIntro": "App Store 등록 스크린샷입니다.",
+    "cloudplayer.cap1": "라이브러리와 재생",
+    "cloudplayer.cap2": "클라우드 탐색",
+    "cloudplayer.cap3": "플레이리스트와 정리",
+    "cloudplayer.cap4": "플레이어 컨트롤",
+    "cloudplayer.availTitle": "App Store에서 제공",
+    "cloudplayer.availDesc": "woojooin의 iPhone·iPad 미디어 플레이어. 클라우드 다운로드, 플레이리스트, CarPlay, 일상적인 청취를 위해 만들었습니다.",
+    "cloudplayer.role": "Cloud Player의 작성자이자 개발자입니다. 클라우드 연동, 재생, 플레이리스트, CarPlay, 로컬라이즈, App Store 출시까지 제품을 처음부터 끝까지 설계·출시·유지보수합니다.",
+    "cloudplayer.builtWith": "Swift로 만든 iPhone·iPad 앱이며 Google Drive, Dropbox, OneDrive, iCloud를 연동합니다.",
+  },
+};
+</script><script>
+/* Resume-specific translations; original portfolio translations remain available. */
+Object.assign(window.PORTFOLIO_I18N["en"], {"resume.summary1": "Senior Software Engineer and product builder with experience designing, shipping, and maintaining commercial software across desktop, mobile, web, cloud, and enterprise environments. Current focus: Agentic AI systems that plan, execute, validate, recover, and complete real-world work.", "resume.summary2": "Creator of Sidekick, a family of AI products for local work automation and Microsoft Office, supported by multi-model integration and production product infrastructure.", "resume.workDesc": "Designed and built the agent orchestration and local execution architecture: natural-language requests become plans, tool actions, validated results, and repair/retry steps. Includes sandboxed local execution, safety checks, an auto-discovered tool registry, and multi-model LLM integration.", "resume.officeDesc": "Designed and built AI workflows for Excel, Word, PowerPoint, and Outlook. A shared multi-model gateway supports authentication, usage credits, and subscription infrastructure; agents send structured context and apply changes locally.", "resume.mailDesc": "Built an inbound SMTP edge filter for Microsoft Exchange, combining SPF/DKIM/DMARC checks, attachment and URL reputation, LLM-based SCL 0–9 scoring, caching, policy headers, and relay. Demonstrates enterprise integration and security-focused production engineering.", "resume.commercialIntro": "Since 2013, designed, shipped, and maintained commercial App Store software. This long-running product engineering work spans release, maintenance, and user-facing delivery across Mac and iOS.", "resume.agentic": "Agentic AI", "resume.platform": "AI Platforms & Integration", "resume.engineering": "Software Engineering", "resume.enterprise": "Microsoft & Enterprise", "resume.product": "Product & Cloud", "resume.agentic1": "LLM agents · planning · tool calling", "resume.agentic2": "Validation · repair/retry loops", "resume.agentic3": "Sandboxed local execution · safety checks", "resume.platform1": "Multi-provider LLM integration", "resume.platform2": "OpenAI · Anthropic · Cerebras · Groq", "resume.platform3": "REST / SSE gateways · structured context", "resume.engineering1": "Python · TypeScript · Swift · Objective-C", "resume.engineering2": "React · Vite · .NET / VSTO", "resume.engineering3": "Desktop · mobile · web software", "resume.enterprise1": "Office.js: Excel · Word · PowerPoint", "resume.enterprise2": "Outlook VSTO · WebView2", "resume.enterprise3": "Exchange SMTP · SCL · SPF / DKIM / DMARC", "resume.product1": "App Store product design · release · maintenance", "resume.product2": "Cloudflare Pages · Wrangler", "resume.product3": "Authentication · usage credits · Stripe · BYOK"});
+Object.assign(window.PORTFOLIO_I18N["ko"], {"resume.summary1": "데스크톱, 모바일, 웹, 클라우드, 엔터프라이즈 환경에서 상용 소프트웨어를 설계·출시·유지보수해 온 시니어 소프트웨어 엔지니어이자 제품 개발자입니다. 현재는 실제 업무를 계획·실행·검증하고 오류에서 복구해 완료하는 Agentic AI 시스템에 집중합니다.", "resume.summary2": "로컬 업무 자동화와 Microsoft Office를 위한 AI 제품군 Sidekick을 만들고 있습니다. 멀티 모델 연동과 실제 제품 운영을 위한 인프라도 함께 구축했습니다.", "resume.workDesc": "자연어 요청을 계획, 도구 실행, 결과 검증, 수정·재시도로 연결하는 에이전트 오케스트레이션 및 로컬 실행 구조를 설계·구현했습니다. 샌드박스 로컬 실행, 안전성 검사, 자동 탐색 도구 레지스트리, 멀티 모델 LLM 연동을 포함합니다.", "resume.officeDesc": "Excel, Word, PowerPoint, Outlook용 AI 워크플로를 설계·구현했습니다. 공통 멀티 모델 게이트웨이가 인증, 사용 크레딧, 구독 인프라를 지원하며, 에이전트는 구조화된 맥락을 보내고 변경은 로컬에서 적용합니다.", "resume.mailDesc": "Microsoft Exchange용 인바운드 SMTP 엣지 필터를 구축했습니다. SPF/DKIM/DMARC 검사, 첨부파일·URL 평판, LLM 기반 SCL 0–9 점수, 캐시, 정책 헤더, 릴레이를 결합한 엔터프라이즈 보안 시스템입니다.", "resume.commercialIntro": "2013년부터 Mac 및 iOS용 상용 App Store 소프트웨어를 설계·출시·유지보수했습니다. 장기간의 제품 엔지니어링 경험에는 릴리스, 유지보수, 사용자 대상 제공이 포함됩니다.", "resume.agentic": "Agentic AI", "resume.platform": "AI 플랫폼 및 연동", "resume.engineering": "소프트웨어 엔지니어링", "resume.enterprise": "Microsoft 및 엔터프라이즈", "resume.product": "제품 및 클라우드", "resume.agentic1": "LLM 에이전트 · 계획 · 도구 호출", "resume.agentic2": "검증 · 수정/재시도 루프", "resume.agentic3": "샌드박스 로컬 실행 · 안전성 검사", "resume.platform1": "멀티 공급자 LLM 연동", "resume.platform2": "OpenAI · Anthropic · Cerebras · Groq", "resume.platform3": "REST / SSE 게이트웨이 · 구조화된 맥락", "resume.engineering1": "Python · TypeScript · Swift · Objective-C", "resume.engineering2": "React · Vite · .NET / VSTO", "resume.engineering3": "데스크톱 · 모바일 · 웹 소프트웨어", "resume.enterprise1": "Office.js: Excel · Word · PowerPoint", "resume.enterprise2": "Outlook VSTO · WebView2", "resume.enterprise3": "Exchange SMTP · SCL · SPF / DKIM / DMARC", "resume.product1": "App Store 제품 설계 · 출시 · 유지보수", "resume.product2": "Cloudflare Pages · Wrangler", "resume.product3": "인증 · 사용 크레딧 · Stripe · BYOK"});
+</script>
+<script>/**
+ * Portfolio site interactions
+ * - Theme (light / dark) with localStorage + system preference
+ * - Language (en / ko) site-wide via localStorage + ?lang= URL
+ * - Mobile navigation
+ * - Active nav link highlighting
+ */
+
+(function () {
+  "use strict";
+
+  var STORAGE_THEME = "portfolio-theme";
+  var STORAGE_LANG = "portfolio-lang";
+
+  /* ------------------------------------------------------------------------
+     Theme
+     -------------------------------------------------------------------- */
+
+  function getPreferredTheme() {
+    var stored = null;
+    try {
+      stored = localStorage.getItem(STORAGE_THEME);
+    } catch (e) {
+      /* ignore */
+    }
+    if (stored === "light" || stored === "dark") return stored;
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      return "dark";
+    }
+    return "light";
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    try {
+      localStorage.setItem(STORAGE_THEME, theme);
+    } catch (e) {
+      /* ignore */
+    }
+    updateThemeToggle(theme);
+  }
+
+  function updateThemeToggle(theme) {
+    var btn = document.querySelector("[data-theme-toggle]");
+    if (!btn) return;
+    var next = theme === "dark" ? "light" : "dark";
+    var key = next === "dark" ? "a11y.themeToDark" : "a11y.themeToLight";
+    var label = t(key);
+    btn.setAttribute("aria-label", label);
+    btn.setAttribute("title", label);
+    btn.setAttribute("data-theme-state", theme);
+    var labelEl = btn.querySelector("[data-theme-label]");
+    if (labelEl) {
+      labelEl.textContent = theme === "dark" ? "Light" : "Dark";
+    }
+  }
+
+  function initTheme() {
+    applyTheme(getPreferredTheme());
+
+    var btn = document.querySelector("[data-theme-toggle]");
+    if (btn) {
+      btn.addEventListener("click", function () {
+        var current =
+          document.documentElement.getAttribute("data-theme") || "light";
+        applyTheme(current === "dark" ? "light" : "dark");
+      });
+    }
+
+    if (window.matchMedia) {
+      var mq = window.matchMedia("(prefers-color-scheme: dark)");
+      var onChange = function (event) {
+        var stored = null;
+        try {
+          stored = localStorage.getItem(STORAGE_THEME);
+        } catch (e) {
+          /* ignore */
+        }
+        if (stored === "light" || stored === "dark") return;
+        applyTheme(event.matches ? "dark" : "light");
+      };
+      if (mq.addEventListener) mq.addEventListener("change", onChange);
+      else if (mq.addListener) mq.addListener(onChange);
+    }
+  }
+
+  /* ------------------------------------------------------------------------
+     i18n
+     -------------------------------------------------------------------- */
+
+  function getLangFromUrl() {
+    try {
+      var params = new URLSearchParams(window.location.search);
+      var lang = params.get("lang");
+      if (lang === "en" || lang === "ko") return lang;
+    } catch (e) {
+      /* ignore */
+    }
+    return null;
+  }
+
+  function getPreferredLang() {
+    var fromUrl = getLangFromUrl();
+    if (fromUrl) return fromUrl;
+
+    var stored = null;
+    try {
+      stored = localStorage.getItem(STORAGE_LANG);
+    } catch (e) {
+      /* ignore */
+    }
+    if (stored === "en" || stored === "ko") return stored;
+
+    var nav = (navigator.language || "").toLowerCase();
+    if (nav.indexOf("ko") === 0) return "ko";
+    return "en";
+  }
+
+  function t(key) {
+    var lang = document.documentElement.getAttribute("lang") || "en";
+    var dict = (window.PORTFOLIO_I18N && window.PORTFOLIO_I18N[lang]) || {};
+    var fallback =
+      (window.PORTFOLIO_I18N && window.PORTFOLIO_I18N.en) || {};
+    return dict[key] != null
+      ? dict[key]
+      : fallback[key] != null
+        ? fallback[key]
+        : key;
+  }
+
+  function withLangParam(href, lang) {
+    if (!href) return href;
+    if (/^(https?:|mailto:|tel:|javascript:)/i.test(href)) return href;
+
+    var hash = "";
+    var hashIdx = href.indexOf("#");
+    if (hashIdx >= 0) {
+      hash = href.slice(hashIdx);
+      href = href.slice(0, hashIdx);
+    }
+
+    var path = href;
+    var query = "";
+    var qIdx = href.indexOf("?");
+    if (qIdx >= 0) {
+      path = href.slice(0, qIdx);
+      query = href.slice(qIdx + 1);
+    }
+
+    var params = new URLSearchParams(query);
+    params.set("lang", lang);
+    var qs = params.toString();
+    return path + (qs ? "?" + qs : "") + hash;
+  }
+
+  function syncUrlLang(lang) {
+    try {
+      var url = new URL(window.location.href);
+      url.searchParams.set("lang", lang);
+      var next = url.pathname + url.search + url.hash;
+      if (next !== window.location.pathname + window.location.search + window.location.hash) {
+        history.replaceState(null, "", next);
+      }
+    } catch (e) {
+      /* ignore */
+    }
+  }
+
+  function syncInternalLinks(lang) {
+    document.querySelectorAll("a[href]").forEach(function (anchor) {
+      var href = anchor.getAttribute("href");
+      if (!href) return;
+      if (/^(https?:|mailto:|tel:|javascript:)/i.test(href)) return;
+      anchor.setAttribute("href", withLangParam(href, lang));
+    });
+  }
+
+  function applyLang(lang) {
+    if (lang !== "en" && lang !== "ko") lang = "en";
+    document.documentElement.setAttribute("lang", lang);
+    try {
+      localStorage.setItem(STORAGE_LANG, lang);
+    } catch (e) {
+      /* ignore */
+    }
+
+    syncUrlLang(lang);
+
+    document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n");
+      if (!key) return;
+      el.textContent = t(key);
+    });
+
+    document.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n-aria");
+      if (!key) return;
+      el.setAttribute("aria-label", t(key));
+    });
+
+    document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n-html");
+      if (!key) return;
+      el.innerHTML = t(key);
+    });
+
+    /* Document title / meta */
+    var projectTitle = document.body.getAttribute("data-project-title");
+    var projectId = document.body.getAttribute("data-project-id");
+    var titleEl = document.querySelector("title");
+    var descEl = document.querySelector('meta[name="description"]');
+
+    if (projectTitle) {
+      if (titleEl) {
+        titleEl.textContent = t("meta.projectTitle").replace(
+          "{title}",
+          projectTitle
+        );
+      }
+      if (descEl) {
+        var customDesc =
+          projectId &&
+          t(projectId + ".metaDescription") !== projectId + ".metaDescription"
+            ? t(projectId + ".metaDescription")
+            : t("meta.projectDescription").replace("{title}", projectTitle);
+        descEl.setAttribute("content", customDesc);
+      }
+    } else if (document.body.getAttribute("data-page") === "resume") {
+      if (titleEl) titleEl.textContent = t("resume.metaTitle");
+      if (descEl) descEl.setAttribute("content", t("resume.metaDescription"));
+    } else {
+      if (titleEl) titleEl.textContent = t("meta.title");
+      if (descEl) descEl.setAttribute("content", t("meta.description"));
+    }
+
+    /* Language toggle UI state */
+    document.querySelectorAll("[data-lang]").forEach(function (btn) {
+      var isActive = btn.getAttribute("data-lang") === lang;
+      btn.setAttribute("aria-pressed", String(isActive));
+      btn.classList.toggle("is-active", isActive);
+    });
+
+    /* Keep language on next internal navigation */
+    syncInternalLinks(lang);
+
+    /* Refresh theme button label in current language */
+    updateThemeToggle(
+      document.documentElement.getAttribute("data-theme") || "light"
+    );
+  }
+
+  function initLang() {
+    applyLang(getPreferredLang());
+
+    document.querySelectorAll("[data-lang]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        applyLang(btn.getAttribute("data-lang"));
+      });
+    });
+
+    window.addEventListener("storage", function (event) {
+      if (event.key !== STORAGE_LANG) return;
+      if (event.newValue === "en" || event.newValue === "ko") {
+        applyLang(event.newValue);
+      }
+    });
+  }
+
+  /* ------------------------------------------------------------------------
+     Navigation
+     -------------------------------------------------------------------- */
+
+  function initNav() {
+    var toggle = document.querySelector(".nav__toggle");
+    var menu = document.querySelector(".nav__menu");
+
+    if (toggle && menu) {
+      toggle.addEventListener("click", function () {
+        var expanded = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!expanded));
+        menu.classList.toggle("is-open", !expanded);
+      });
+
+      menu.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          toggle.setAttribute("aria-expanded", "false");
+          menu.classList.remove("is-open");
+        });
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && menu.classList.contains("is-open")) {
+          toggle.setAttribute("aria-expanded", "false");
+          menu.classList.remove("is-open");
+          toggle.focus();
+        }
+      });
+    }
+
+    var sectionIds = ["projects", "skills", "about", "contact"];
+    var sections = sectionIds
+      .map(function (id) {
+        return document.getElementById(id);
+      })
+      .filter(Boolean);
+
+    var navLinks = document.querySelectorAll('.nav__links a[href*="#"]');
+
+    if (sections.length && navLinks.length && "IntersectionObserver" in window) {
+      var observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            var id = entry.target.id;
+            navLinks.forEach(function (link) {
+              var href = link.getAttribute("href") || "";
+              var hashIdx = href.indexOf("#");
+              var hash = hashIdx >= 0 ? href.slice(hashIdx + 1) : "";
+              var isActive = hash === id;
+              if (isActive) {
+                link.setAttribute("aria-current", "page");
+              } else {
+                link.removeAttribute("aria-current");
+              }
+            });
+          });
+        },
+        {
+          rootMargin: "-30% 0px -55% 0px",
+          threshold: 0,
+        }
+      );
+
+      sections.forEach(function (section) {
+        observer.observe(section);
+      });
+    }
+  }
+
+  function initPrint() {
+    document.querySelectorAll("[data-print]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        window.print();
+      });
+    });
+  }
+
+  /* Boot ----------------------------------------------------------------- */
+
+  initTheme();
+  initLang();
+  initNav();
+  initPrint();
+})();
+</script>
 </body>
 </html>
