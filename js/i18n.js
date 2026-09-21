@@ -378,6 +378,8 @@ window.PORTFOLIO_I18N = {
     "resume.commercialTitle": "Commercial software",
     "resume.skillsTitle": "Skills",
     "resume.contactTitle": "Contact",
+    "resume.linkEmail": "Email",
+    "resume.linkPortfolio": "Portfolio",
     "resume.officeDesc":
       "Production Microsoft Office agent with a multi-model gateway, authentication, usage credits, and subscription infrastructure. Structured context only; changes run locally.",
     "resume.workDesc":
@@ -1083,6 +1085,8 @@ window.PORTFOLIO_I18N = {
     "resume.commercialTitle": "상용 소프트웨어",
     "resume.skillsTitle": "기술",
     "resume.contactTitle": "연락처",
+    "resume.linkEmail": "이메일",
+    "resume.linkPortfolio": "포트폴리오",
     "resume.officeDesc":
       "멀티 모델 게이트웨이, 인증, 사용 크레딧, 구독 인프라를 갖춘 Microsoft Office 프로덕션 에이전트. 구조화된 맥락만 보내고 변경은 로컬에서 실행합니다.",
     "resume.workDesc":

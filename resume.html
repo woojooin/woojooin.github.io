@@ -930,11 +930,40 @@ a.contact__value:hover {
 }
 
 .resume__contacts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2) var(--space-4);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3) var(--space-6);
   list-style: none;
+}
+
+.resume__contacts li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.resume__contact-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.resume__contacts a {
   font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+  overflow-wrap: anywhere;
+}
+
+.resume__contacts a:hover {
+  color: var(--color-accent-hover);
 }
 
 .resume__section {
@@ -1024,6 +1053,12 @@ a.contact__value:hover {
   a {
     color: inherit;
     text-decoration: none;
+  }
+
+  .resume__contacts a {
+    color: #16324f;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
   }
 }
 
@@ -2115,7 +2150,8 @@ html[data-theme="dark"] .product-strip .btn--primary {
     font-size: var(--text-base);
   }
 
-  .resume__skills {
+  .resume__skills,
+  .resume__contacts {
     grid-template-columns: 1fr;
   }
 
@@ -2178,10 +2214,22 @@ html[data-theme="dark"] .product-strip .btn--primary {
           <span data-i18n="hero.role3">Product Engineering</span>
 </p>
 <ul class="resume__contacts">
-<li><a href="mailto:woojooin@outlook.com">woojooin@outlook.com</a></li>
-<li><a href="https://www.linkedin.com/in/sanghoons/" rel="noopener noreferrer" target="_blank">linkedin.com/in/sanghoons</a></li>
-<li><a href="https://github.com/woojooin" rel="noopener noreferrer" target="_blank">github.com/woojooin</a></li>
-<li><a href="https://woojooin.github.io/index.html">woojooin.github.io</a></li>
+<li>
+<span class="resume__contact-label" data-i18n="resume.linkEmail">Email</span>
+<a href="mailto:woojooin@outlook.com">woojooin@outlook.com</a>
+</li>
+<li>
+<span class="resume__contact-label">LinkedIn</span>
+<a href="https://www.linkedin.com/in/sanghoons/" rel="noopener noreferrer" target="_blank">linkedin.com/in/sanghoons</a>
+</li>
+<li>
+<span class="resume__contact-label" data-i18n="resume.linkPortfolio">Portfolio</span>
+<a href="https://woojooin.github.io/">woojooin.github.io</a>
+</li>
+<li>
+<span class="resume__contact-label">GitHub</span>
+<a href="https://github.com/woojooin" rel="noopener noreferrer" target="_blank">github.com/woojooin</a>
+</li>
 </ul>
 </header>
 <section aria-labelledby="resume-summary" class="resume__section">
@@ -2616,6 +2664,8 @@ window.PORTFOLIO_I18N = {
     "resume.commercialTitle": "Commercial software",
     "resume.skillsTitle": "Skills",
     "resume.contactTitle": "Contact",
+    "resume.linkEmail": "Email",
+    "resume.linkPortfolio": "Portfolio",
     "resume.officeDesc":
       "Production Microsoft Office agent with a multi-model gateway, authentication, usage credits, and subscription infrastructure. Structured context only; changes run locally.",
     "resume.workDesc":
@@ -3321,6 +3371,8 @@ window.PORTFOLIO_I18N = {
     "resume.commercialTitle": "상용 소프트웨어",
     "resume.skillsTitle": "기술",
     "resume.contactTitle": "연락처",
+    "resume.linkEmail": "이메일",
+    "resume.linkPortfolio": "포트폴리오",
     "resume.officeDesc":
       "멀티 모델 게이트웨이, 인증, 사용 크레딧, 구독 인프라를 갖춘 Microsoft Office 프로덕션 에이전트. 구조화된 맥락만 보내고 변경은 로컬에서 실행합니다.",
     "resume.workDesc":
