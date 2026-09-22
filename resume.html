@@ -998,6 +998,20 @@ a.contact__value:hover {
   font-weight: 600;
 }
 
+.resume__item h3 a,
+.resume__list a {
+  color: var(--color-accent);
+  font-weight: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+}
+
+.resume__item h3 a:hover,
+.resume__list a:hover {
+  color: var(--color-accent-hover);
+}
+
 .resume__item-meta {
   font-size: var(--text-sm);
   color: var(--color-text-secondary);
@@ -1055,7 +1069,7 @@ a.contact__value:hover {
     text-decoration: none;
   }
 
-  .resume__contacts a {
+  .resume a[href] {
     color: #16324f;
     text-decoration: underline;
     text-underline-offset: 0.15em;
@@ -2224,7 +2238,7 @@ html[data-theme="dark"] .product-strip .btn--primary {
 </li>
 <li>
 <span class="resume__contact-label" data-i18n="resume.linkPortfolio">Portfolio</span>
-<a href="https://woojooin.github.io/">woojooin.github.io</a>
+<a href="https://woojooin.github.io/" rel="noopener noreferrer" target="_blank">woojooin.github.io</a>
 </li>
 <li>
 <span class="resume__contact-label">GitHub</span>
@@ -2244,15 +2258,15 @@ html[data-theme="dark"] .product-strip .btn--primary {
 
 
 <article class="resume__item">
-<h3>Sidekick Work</h3>
+<h3><a href="https://woojooin.github.io/projects/ai-work-agent.html" rel="noopener noreferrer" target="_blank">Sidekick Work</a></h3>
 <p class="resume__item-meta" data-i18n="aiwork.cardSubtitle">General-purpose AI Work Agent</p>
 <p data-i18n="resume.workDesc">Designed and built the agent orchestration and local execution architecture: natural-language requests become plans, tool actions, validated results, and repair/retry steps. Includes sandboxed local execution, safety checks, an auto-discovered tool registry, and multi-model LLM integration.</p>
 </article><article class="resume__item">
-<h3>Sidekick Office</h3>
+<h3><a href="https://woojooin.github.io/projects/office-ai-agent.html" rel="noopener noreferrer" target="_blank">Sidekick Office</a></h3>
 <p class="resume__item-meta" data-i18n="officeai.cardSubtitle">AI Agent for Microsoft Office</p>
 <p data-i18n="resume.officeDesc">Designed and built AI workflows for Excel, Word, PowerPoint, and Outlook. A shared multi-model gateway supports authentication, usage credits, and subscription infrastructure; agents send structured context and apply changes locally.</p>
 </article><article class="resume__item">
-<h3>AI Mail Gateway</h3>
+<h3><a href="https://woojooin.github.io/projects/ai-mail-gateway.html" rel="noopener noreferrer" target="_blank">AI Mail Gateway</a></h3>
 <p class="resume__item-meta" data-i18n="aimail.cardSubtitle">AI-powered Email Security for Microsoft Exchange</p>
 <p data-i18n="resume.mailDesc">Built an inbound SMTP edge filter for Microsoft Exchange, combining SPF/DKIM/DMARC checks, attachment and URL reputation, LLM-based SCL 0–9 scoring, caching, policy headers, and relay. Demonstrates enterprise integration and security-focused production engineering.</p>
 </article></section>
@@ -2260,17 +2274,17 @@ html[data-theme="dark"] .product-strip .btn--primary {
 <h2 data-i18n="resume.commercialTitle" id="resume-commercial">Commercial software</h2>
 <p data-i18n="resume.commercialIntro">Since 2013, designed, shipped, and maintained commercial App Store software. This long-running product engineering work spans release, maintenance, and user-facing delivery across Mac and iOS.</p>
 <ul class="resume__list">
-<li>TreeSize — Mac App Store since 2013</li>
-<li>zCommander — Mac App Store since 2013</li>
-<li>zGallery — Mac App Store since 2013</li>
-<li>DreamView — Mac App Store since 2014</li>
-<li>1Clipboard — Mac App Store since 2019</li>
-<li>Cloud Player — iOS App Store since 2024</li>
+<li><a href="https://woojooin.github.io/projects/treesize.html" rel="noopener noreferrer" target="_blank">TreeSize</a> — Mac App Store since 2013</li>
+<li><a href="https://woojooin.github.io/projects/zcommander.html" rel="noopener noreferrer" target="_blank">zCommander</a> — Mac App Store since 2013</li>
+<li><a href="https://woojooin.github.io/projects/zgallery.html" rel="noopener noreferrer" target="_blank">zGallery</a> — Mac App Store since 2013</li>
+<li><a href="https://woojooin.github.io/projects/dreamview.html" rel="noopener noreferrer" target="_blank">DreamView</a> — Mac App Store since 2014</li>
+<li><a href="https://woojooin.github.io/projects/1clipboard.html" rel="noopener noreferrer" target="_blank">1Clipboard</a> — Mac App Store since 2019</li>
+<li><a href="https://woojooin.github.io/projects/cloud-player.html" rel="noopener noreferrer" target="_blank">Cloud Player</a> — iOS App Store since 2024</li>
 </ul>
 </section>
 <section aria-labelledby="resume-skills" class="resume__section">
 <h2 data-i18n="resume.skillsTitle" id="resume-skills">Skills</h2>
-<div class="resume__skills"><div><h3 data-i18n="resume.agentic">Agentic AI</h3><ul class="resume__list"><li data-i18n="resume.agentic1">LLM agents · planning · tool calling</li><li data-i18n="resume.agentic2">Validation · repair/retry loops</li><li data-i18n="resume.agentic3">Sandboxed local execution · safety checks</li></ul></div><div><h3 data-i18n="resume.platform">AI Platforms &amp; Integration</h3><ul class="resume__list"><li data-i18n="resume.platform1">Multi-provider LLM integration</li><li data-i18n="resume.platform2">OpenAI · Anthropic · Cerebras · Groq</li><li data-i18n="resume.platform3">REST / SSE gateways · structured context</li></ul></div><div><h3 data-i18n="resume.engineering">Software Engineering</h3><ul class="resume__list"><li data-i18n="resume.engineering1">C · C++ · C# · Python · TypeScript · Swift · Objective-C</li><li data-i18n="resume.engineering2">React · Vite · .NET / VSTO</li><li data-i18n="resume.engineering3">Desktop · mobile · web software</li></ul></div><div><h3 data-i18n="resume.enterprise">Microsoft &amp; Enterprise</h3><ul class="resume__list"><li data-i18n="resume.enterprise1">Office.js: Excel · Word · PowerPoint</li><li data-i18n="resume.enterprise2">Outlook VSTO · WebView2</li><li data-i18n="resume.enterprise3">Exchange SMTP · SCL · SPF / DKIM / DMARC</li></ul></div><div><h3 data-i18n="resume.product">Product &amp; Cloud</h3><ul class="resume__list"><li data-i18n="resume.product1">App Store product design · release · maintenance</li><li data-i18n="resume.product2">Cloudflare Pages · Wrangler</li><li data-i18n="resume.product3">Authentication · usage credits · Stripe · BYOK</li></ul></div></div>
+<div class="resume__skills"><div><h3 data-i18n="resume.agentic">Agentic AI</h3><ul class="resume__list"><li data-i18n="resume.agentic1">LLM agents · planning · tool calling</li><li data-i18n="resume.agentic2">Validation · repair/retry loops</li><li data-i18n="resume.agentic3">Sandboxed local execution · safety checks</li></ul></div><div><h3 data-i18n="resume.platform">AI Platforms &amp; Integration</h3><ul class="resume__list"><li data-i18n="resume.platform1">Multi-provider LLM integration</li><li data-i18n="resume.platform2">OpenAI · Anthropic · Cerebras · Groq</li><li data-i18n="resume.platform3">REST / SSE gateways · structured context</li></ul></div><div><h3 data-i18n="resume.engineering">Software Engineering</h3><ul class="resume__list"><li data-i18n="resume.engineering1">C · C++ · C# · Python · TypeScript · Swift · Objective-C</li><li data-i18n="resume.engineering2">React · Vite · FastAPI · .NET / VSTO</li><li data-i18n="resume.engineering3">Desktop · mobile · web software</li></ul></div><div><h3 data-i18n="resume.enterprise">Microsoft &amp; Enterprise</h3><ul class="resume__list"><li data-i18n="resume.enterprise1">Office.js: Excel · Word · PowerPoint</li><li data-i18n="resume.enterprise2">Outlook VSTO · WebView2</li><li data-i18n="resume.enterprise3">Exchange SMTP · SCL · SPF / DKIM / DMARC</li></ul></div><div><h3 data-i18n="resume.product">Product &amp; Cloud</h3><ul class="resume__list"><li data-i18n="resume.product1">App Store product design · release · maintenance</li><li data-i18n="resume.product2">Cloudflare Pages · Wrangler</li><li data-i18n="resume.product3">Authentication · usage credits · Stripe · BYOK</li></ul></div></div>
 <!-- Add Professional Experience and Education only after employers, roles, dates, and credentials are verified. --></section>
 </div>
 </main>
@@ -2356,7 +2370,7 @@ window.PORTFOLIO_I18N = {
     "skills.ai3": "Prompt & RESULT protocols",
     "skills.ai4": "Local execution sandboxes",
     "skills.eng1": "C · C++ · C# · Python · TypeScript · Swift · Objective-C",
-    "skills.eng2": "React · Vite · .NET / VSTO",
+    "skills.eng2": "React · Vite · FastAPI · .NET / VSTO",
     "skills.eng3": "Product design to App Store release",
     "skills.eng4": "EN / KO localization",
     "skills.m3651": "Office.js add-ins (Word · Excel · PowerPoint)",
@@ -3063,7 +3077,7 @@ window.PORTFOLIO_I18N = {
     "skills.ai3": "프롬프트 · RESULT 프로토콜",
     "skills.ai4": "로컬 실행 샌드박스",
     "skills.eng1": "C · C++ · C# · Python · TypeScript · Swift · Objective-C",
-    "skills.eng2": "React · Vite · .NET / VSTO",
+    "skills.eng2": "React · Vite · FastAPI · .NET / VSTO",
     "skills.eng3": "제품 설계부터 App Store 출시",
     "skills.eng4": "EN / KO 로컬라이즈",
     "skills.m3651": "Office.js 추가 기능 (Word · Excel · PowerPoint)",
@@ -3705,8 +3719,8 @@ window.PORTFOLIO_I18N = {
 };
 </script><script>
 /* Resume-specific translations; original portfolio translations remain available. */
-Object.assign(window.PORTFOLIO_I18N["en"], {"resume.summary1": "Senior Software Engineer and product builder with experience designing, shipping, and maintaining commercial software across desktop, mobile, web, cloud, and enterprise environments. Current focus: Agentic AI systems that plan, execute, validate, recover, and complete real-world work.", "resume.summary2": "Creator of Sidekick, a family of AI products for local work automation and Microsoft Office, supported by multi-model integration and production product infrastructure.", "resume.workDesc": "Designed and built the agent orchestration and local execution architecture: natural-language requests become plans, tool actions, validated results, and repair/retry steps. Includes sandboxed local execution, safety checks, an auto-discovered tool registry, and multi-model LLM integration.", "resume.officeDesc": "Designed and built AI workflows for Excel, Word, PowerPoint, and Outlook. A shared multi-model gateway supports authentication, usage credits, and subscription infrastructure; agents send structured context and apply changes locally.", "resume.mailDesc": "Built an inbound SMTP edge filter for Microsoft Exchange, combining SPF/DKIM/DMARC checks, attachment and URL reputation, LLM-based SCL 0–9 scoring, caching, policy headers, and relay. Demonstrates enterprise integration and security-focused production engineering.", "resume.commercialIntro": "Since 2013, designed, shipped, and maintained commercial App Store software. This long-running product engineering work spans release, maintenance, and user-facing delivery across Mac and iOS.", "resume.agentic": "Agentic AI", "resume.platform": "AI Platforms & Integration", "resume.engineering": "Software Engineering", "resume.enterprise": "Microsoft & Enterprise", "resume.product": "Product & Cloud", "resume.agentic1": "LLM agents · planning · tool calling", "resume.agentic2": "Validation · repair/retry loops", "resume.agentic3": "Sandboxed local execution · safety checks", "resume.platform1": "Multi-provider LLM integration", "resume.platform2": "OpenAI · Anthropic · Cerebras · Groq", "resume.platform3": "REST / SSE gateways · structured context", "resume.engineering1": "C · C++ · C# · Python · TypeScript · Swift · Objective-C", "resume.engineering2": "React · Vite · .NET / VSTO", "resume.engineering3": "Desktop · mobile · web software", "resume.enterprise1": "Office.js: Excel · Word · PowerPoint", "resume.enterprise2": "Outlook VSTO · WebView2", "resume.enterprise3": "Exchange SMTP · SCL · SPF / DKIM / DMARC", "resume.product1": "App Store product design · release · maintenance", "resume.product2": "Cloudflare Pages · Wrangler", "resume.product3": "Authentication · usage credits · Stripe · BYOK"});
-Object.assign(window.PORTFOLIO_I18N["ko"], {"resume.summary1": "데스크톱, 모바일, 웹, 클라우드, 엔터프라이즈 환경에서 상용 소프트웨어를 설계·출시·유지보수해 온 시니어 소프트웨어 엔지니어이자 제품 개발자입니다. 현재는 실제 업무를 계획·실행·검증하고 오류에서 복구해 완료하는 Agentic AI 시스템에 집중합니다.", "resume.summary2": "로컬 업무 자동화와 Microsoft Office를 위한 AI 제품군 Sidekick을 만들고 있습니다. 멀티 모델 연동과 실제 제품 운영을 위한 인프라도 함께 구축했습니다.", "resume.workDesc": "자연어 요청을 계획, 도구 실행, 결과 검증, 수정·재시도로 연결하는 에이전트 오케스트레이션 및 로컬 실행 구조를 설계·구현했습니다. 샌드박스 로컬 실행, 안전성 검사, 자동 탐색 도구 레지스트리, 멀티 모델 LLM 연동을 포함합니다.", "resume.officeDesc": "Excel, Word, PowerPoint, Outlook용 AI 워크플로를 설계·구현했습니다. 공통 멀티 모델 게이트웨이가 인증, 사용 크레딧, 구독 인프라를 지원하며, 에이전트는 구조화된 맥락을 보내고 변경은 로컬에서 적용합니다.", "resume.mailDesc": "Microsoft Exchange용 인바운드 SMTP 엣지 필터를 구축했습니다. SPF/DKIM/DMARC 검사, 첨부파일·URL 평판, LLM 기반 SCL 0–9 점수, 캐시, 정책 헤더, 릴레이를 결합한 엔터프라이즈 보안 시스템입니다.", "resume.commercialIntro": "2013년부터 Mac 및 iOS용 상용 App Store 소프트웨어를 설계·출시·유지보수했습니다. 장기간의 제품 엔지니어링 경험에는 릴리스, 유지보수, 사용자 대상 제공이 포함됩니다.", "resume.agentic": "Agentic AI", "resume.platform": "AI 플랫폼 및 연동", "resume.engineering": "소프트웨어 엔지니어링", "resume.enterprise": "Microsoft 및 엔터프라이즈", "resume.product": "제품 및 클라우드", "resume.agentic1": "LLM 에이전트 · 계획 · 도구 호출", "resume.agentic2": "검증 · 수정/재시도 루프", "resume.agentic3": "샌드박스 로컬 실행 · 안전성 검사", "resume.platform1": "멀티 공급자 LLM 연동", "resume.platform2": "OpenAI · Anthropic · Cerebras · Groq", "resume.platform3": "REST / SSE 게이트웨이 · 구조화된 맥락", "resume.engineering1": "C · C++ · C# · Python · TypeScript · Swift · Objective-C", "resume.engineering2": "React · Vite · .NET / VSTO", "resume.engineering3": "데스크톱 · 모바일 · 웹 소프트웨어", "resume.enterprise1": "Office.js: Excel · Word · PowerPoint", "resume.enterprise2": "Outlook VSTO · WebView2", "resume.enterprise3": "Exchange SMTP · SCL · SPF / DKIM / DMARC", "resume.product1": "App Store 제품 설계 · 출시 · 유지보수", "resume.product2": "Cloudflare Pages · Wrangler", "resume.product3": "인증 · 사용 크레딧 · Stripe · BYOK"});
+Object.assign(window.PORTFOLIO_I18N["en"], {"resume.summary1": "Senior Software Engineer and product builder with experience designing, shipping, and maintaining commercial software across desktop, mobile, web, cloud, and enterprise environments. Current focus: Agentic AI systems that plan, execute, validate, recover, and complete real-world work.", "resume.summary2": "Creator of Sidekick, a family of AI products for local work automation and Microsoft Office, supported by multi-model integration and production product infrastructure.", "resume.workDesc": "Designed and built the agent orchestration and local execution architecture: natural-language requests become plans, tool actions, validated results, and repair/retry steps. Includes sandboxed local execution, safety checks, an auto-discovered tool registry, and multi-model LLM integration.", "resume.officeDesc": "Designed and built AI workflows for Excel, Word, PowerPoint, and Outlook. A shared multi-model gateway supports authentication, usage credits, and subscription infrastructure; agents send structured context and apply changes locally.", "resume.mailDesc": "Built an inbound SMTP edge filter for Microsoft Exchange, combining SPF/DKIM/DMARC checks, attachment and URL reputation, LLM-based SCL 0–9 scoring, caching, policy headers, and relay. Demonstrates enterprise integration and security-focused production engineering.", "resume.commercialIntro": "Since 2013, designed, shipped, and maintained commercial App Store software. This long-running product engineering work spans release, maintenance, and user-facing delivery across Mac and iOS.", "resume.agentic": "Agentic AI", "resume.platform": "AI Platforms & Integration", "resume.engineering": "Software Engineering", "resume.enterprise": "Microsoft & Enterprise", "resume.product": "Product & Cloud", "resume.agentic1": "LLM agents · planning · tool calling", "resume.agentic2": "Validation · repair/retry loops", "resume.agentic3": "Sandboxed local execution · safety checks", "resume.platform1": "Multi-provider LLM integration", "resume.platform2": "OpenAI · Anthropic · Cerebras · Groq", "resume.platform3": "REST / SSE gateways · structured context", "resume.engineering1": "C · C++ · C# · Python · TypeScript · Swift · Objective-C", "resume.engineering2": "React · Vite · FastAPI · .NET / VSTO", "resume.engineering3": "Desktop · mobile · web software", "resume.enterprise1": "Office.js: Excel · Word · PowerPoint", "resume.enterprise2": "Outlook VSTO · WebView2", "resume.enterprise3": "Exchange SMTP · SCL · SPF / DKIM / DMARC", "resume.product1": "App Store product design · release · maintenance", "resume.product2": "Cloudflare Pages · Wrangler", "resume.product3": "Authentication · usage credits · Stripe · BYOK"});
+Object.assign(window.PORTFOLIO_I18N["ko"], {"resume.summary1": "데스크톱, 모바일, 웹, 클라우드, 엔터프라이즈 환경에서 상용 소프트웨어를 설계·출시·유지보수해 온 시니어 소프트웨어 엔지니어이자 제품 개발자입니다. 현재는 실제 업무를 계획·실행·검증하고 오류에서 복구해 완료하는 Agentic AI 시스템에 집중합니다.", "resume.summary2": "로컬 업무 자동화와 Microsoft Office를 위한 AI 제품군 Sidekick을 만들고 있습니다. 멀티 모델 연동과 실제 제품 운영을 위한 인프라도 함께 구축했습니다.", "resume.workDesc": "자연어 요청을 계획, 도구 실행, 결과 검증, 수정·재시도로 연결하는 에이전트 오케스트레이션 및 로컬 실행 구조를 설계·구현했습니다. 샌드박스 로컬 실행, 안전성 검사, 자동 탐색 도구 레지스트리, 멀티 모델 LLM 연동을 포함합니다.", "resume.officeDesc": "Excel, Word, PowerPoint, Outlook용 AI 워크플로를 설계·구현했습니다. 공통 멀티 모델 게이트웨이가 인증, 사용 크레딧, 구독 인프라를 지원하며, 에이전트는 구조화된 맥락을 보내고 변경은 로컬에서 적용합니다.", "resume.mailDesc": "Microsoft Exchange용 인바운드 SMTP 엣지 필터를 구축했습니다. SPF/DKIM/DMARC 검사, 첨부파일·URL 평판, LLM 기반 SCL 0–9 점수, 캐시, 정책 헤더, 릴레이를 결합한 엔터프라이즈 보안 시스템입니다.", "resume.commercialIntro": "2013년부터 Mac 및 iOS용 상용 App Store 소프트웨어를 설계·출시·유지보수했습니다. 장기간의 제품 엔지니어링 경험에는 릴리스, 유지보수, 사용자 대상 제공이 포함됩니다.", "resume.agentic": "Agentic AI", "resume.platform": "AI 플랫폼 및 연동", "resume.engineering": "소프트웨어 엔지니어링", "resume.enterprise": "Microsoft 및 엔터프라이즈", "resume.product": "제품 및 클라우드", "resume.agentic1": "LLM 에이전트 · 계획 · 도구 호출", "resume.agentic2": "검증 · 수정/재시도 루프", "resume.agentic3": "샌드박스 로컬 실행 · 안전성 검사", "resume.platform1": "멀티 공급자 LLM 연동", "resume.platform2": "OpenAI · Anthropic · Cerebras · Groq", "resume.platform3": "REST / SSE 게이트웨이 · 구조화된 맥락", "resume.engineering1": "C · C++ · C# · Python · TypeScript · Swift · Objective-C", "resume.engineering2": "React · Vite · FastAPI · .NET / VSTO", "resume.engineering3": "데스크톱 · 모바일 · 웹 소프트웨어", "resume.enterprise1": "Office.js: Excel · Word · PowerPoint", "resume.enterprise2": "Outlook VSTO · WebView2", "resume.enterprise3": "Exchange SMTP · SCL · SPF / DKIM / DMARC", "resume.product1": "App Store 제품 설계 · 출시 · 유지보수", "resume.product2": "Cloudflare Pages · Wrangler", "resume.product3": "인증 · 사용 크레딧 · Stripe · BYOK"});
 </script>
 <script>/**
  * Portfolio site interactions

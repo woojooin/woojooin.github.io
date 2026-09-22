@@ -958,6 +958,20 @@ a.contact__value:hover {
   font-weight: 600;
 }
 
+.resume__item h3 a,
+.resume__list a {
+  color: var(--color-accent);
+  font-weight: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+}
+
+.resume__item h3 a:hover,
+.resume__list a:hover {
+  color: var(--color-accent-hover);
+}
+
 .resume__item-meta {
   font-size: var(--text-sm);
   color: var(--color-text-secondary);
@@ -1015,7 +1029,7 @@ a.contact__value:hover {
     text-decoration: none;
   }
 
-  .resume__contacts a {
+  .resume a[href] {
     color: #16324f;
     text-decoration: underline;
     text-underline-offset: 0.15em;
